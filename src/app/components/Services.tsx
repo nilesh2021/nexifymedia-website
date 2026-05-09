@@ -3,7 +3,7 @@ import { Search, Target, TrendingUp, Megaphone, BarChart3, Mail } from 'lucide-r
 const services = [
   {
     icon: Search,
-    title: "SEO Optimization",
+    title: "SEO Growth",
     description: "Boost your organic visibility and rank higher on search engines with our proven SEO strategies."
   },
   {

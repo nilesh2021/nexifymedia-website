@@ -34,7 +34,7 @@ export default function Career() {
 
   return (
     <div> 
-    <section id="careers" className=" py-24 bg-gradient-to-br from-[#202851] to-[#2a3561] text-white">
+    <section id="internship-program" className="py-24 bg-gradient-to-br from-[#202851] to-[#2a3561] text-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl mb-4">Join Our Team</h2>
@@ -44,7 +44,7 @@ export default function Career() {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 md:p-12 mb-8">
+          <div className=" rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10  p-8 md:p-12 mb-8">
             <div className="flex items-start gap-4 mb-6">
               <div className="w-12 h-12 bg-[#24c2f2] rounded-xl flex items-center justify-center flex-shrink-0">
                 <Briefcase className="w-6 h-6 text-white" />
@@ -67,19 +67,19 @@ export default function Career() {
               <div>
                 <h4 className="text-white mb-2">Responsibilities:</h4>
                 <ul className="list-disc list-inside space-y-1 ml-2">
-                  <li>Assist in keyword research and competitive analysis</li>
-                  <li>Help optimize website content for search engines</li>
-                  <li>Monitor and report on SEO performance metrics</li>
-                  <li>Support link building and content marketing initiatives</li>
+                  <li>Assist with keyword research and SEO optimization</li>
+                  <li>Support content marketing and link-building activities</li>
+                  <li>Monitor basic SEO performance metrics</li>
+                 
                 </ul>
               </div>
               <div>
                 <h4 className="text-white mb-2">Requirements:</h4>
                 <ul className="list-disc list-inside space-y-1 ml-2">
-                  <li>Basic understanding of SEO principles</li>
-                  <li>Strong analytical and communication skills</li>
-                  <li>Familiarity with Google Analytics and Search Console (preferred)</li>
-                  <li>Eagerness to learn and grow in digital marketing</li>
+                  <li>Basic knowledge of SEO concepts</li>
+                  <li>Good communication and analytical skills</li>
+                  <li>Willingness to learn digital marketing tools and strategies</li>
+              
                 </ul>
               </div>
             </div>
@@ -87,8 +87,8 @@ export default function Career() {
 
             
           </div>
-          <div className="bg-white rounded-3xl p-8 md:p-12">
-            <h3 className="text-2xl mb-6 text-[#202851]">Apply for This Position</h3>
+          <div className="bg-light rounded-3xl ">
+            <h3 className="text-2xl mb-6 text-[#fff]">Apply for This Position</h3>
           <CareerForm/>
   </div>
          
