@@ -71,7 +71,7 @@ export default function Navigation() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? 'bg-white/80 backdrop-blur-xl shadow-lg py-1'
+          ? 'bg-white/80 backdrop-blur-xl shadow-lg'
           : 'bg-transparent py-2'
       }`}
     >
@@ -81,16 +81,16 @@ export default function Navigation() {
           {/* Logo */}
           <div
             onClick={scrollToTop}
-            className="flex items-center gap-3 group cursor-pointer"
+            className="flex items-center gap-2 group cursor-pointer"
           >
-            <div className="w-11 h-11 bg-gradient-to-br from-[#24c2f2] to-[#202851] rounded-xl flex items-center justify-center shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
+            <div className="w-9 h-9 bg-gradient-to-br from-[#24c2f2] to-[#202851] rounded-xl flex items-center justify-center shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
               <span className="text-white text-xl font-bold">
                 N
               </span>
             </div>
 
             <span
-              className={`text-2xl font-bold tracking-wide transition-all duration-500 ${
+              className={`text-xl font-bold tracking-wide transition-all duration-500 ${
                 isScrolled
                   ? 'text-[#202851]'
                   : 'text-white'

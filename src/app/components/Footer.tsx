@@ -43,16 +43,16 @@ export default function Footer() {
           {/* Column 1 - Brand */}
           <div className="max-w-md">
 
-            <div className="flex items-center gap-3 mb-5">
+            <div className="flex items-center gap-2 mb-5">
 
-              <div className="w-12 h-12 bg-gradient-to-br from-[#24c2f2] to-[#202851] rounded-xl flex items-center justify-center shadow-lg">
+              <div className="w-9 h-9 bg-gradient-to-br from-[#24c2f2] to-[#202851] rounded-xl flex items-center justify-center shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
                 <span className="text-white text-2xl font-bold">
                   N
                 </span>
               </div>
 
-              <span className="text-3xl font-semibold">
-              <b>Nexify</b><span style={{fontWeight: "lighter"}}>Media</span>
+              <span className="text-2xl font-semibold">
+              <b>Nexify</b> <span style={{fontWeight: "lighter"}}>Media</span>
               </span>
 
             </div>

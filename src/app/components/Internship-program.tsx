@@ -37,7 +37,7 @@ export default function Career() {
     <section id="internship-program" className="py-24 bg-gradient-to-br from-[#202851] to-[#2a3561] text-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl mb-4">Join Our Team</h2>
+          <h2 className="text-3xl md:text-4xl mb-4">Join Our Team</h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Be part of a dynamic team that's shaping the future of digital marketing
           </p>
@@ -78,7 +78,7 @@ export default function Career() {
                 <ul className="list-disc list-inside space-y-1 ml-2">
                   <li>Basic knowledge of SEO concepts</li>
                   <li>Good communication and analytical skills</li>
-                  <li>Willingness to learn digital marketing tools and strategies</li>
+                  <li>Willingness to NexifyMedia tools and strategies</li>
               
                 </ul>
               </div>

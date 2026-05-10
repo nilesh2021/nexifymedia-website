@@ -40,8 +40,8 @@ const scrollToInternship = () => {
             Join NexifyMedia
           </span>
 
-          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 leading-tight">
-            Learn Digital Marketing <br />
+          <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-6 leading-tight">
+            NexifyMedia  
             With Real Opportunities
           </h2>
 
@@ -71,7 +71,7 @@ const scrollToInternship = () => {
                 </h3>
 
                 <p className="text-gray-400">
-                  hello@nexifymedia.co.in
+                  contact@nexifymedia.co.in
                 </p>
               </div>
 

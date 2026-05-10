@@ -38,9 +38,9 @@ export default function Services() {
     <section id="services" className="py-24 bg-gray-50">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl mb-4 text-[#202851]">Our Services</h2>
+          <h2 className="text-3xl md:text-4xl mb-4 text-[#202851]"> Digital Marketing Services</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Comprehensive digital marketing solutions tailored to your business goals
+          Comprehensive digital marketing solutions tailored to help your business grow online.
           </p>
         </div>
 

@@ -6,7 +6,7 @@ export default function About() {
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-4xl md:text-5xl mb-6 text-[#202851]">
+            <h2 className="text-3xl md:text-4xl mb-6 text-[#202851]">
               Why Choose Us?
             </h2>
             <p className="text-lg text-gray-600 mb-8">

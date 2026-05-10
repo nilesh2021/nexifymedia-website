@@ -177,7 +177,7 @@ export default function PrivacyPolicyPage() {
 
             <div className="space-y-2 text-lg">
               <p>
-                Email: hello@nexifymedia.co.in
+                Email: contact@nexifymedia.co.in
               </p>
 
               <p>
