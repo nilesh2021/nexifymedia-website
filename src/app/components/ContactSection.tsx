@@ -41,8 +41,8 @@ const scrollToInternship = () => {
           </span>
 
           <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-6 leading-tight">
-            NexifyMedia  
-            With Real Opportunities
+            Learn Digital Marketing 
+            With <br />Real Opportunities
           </h2>
 
           <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-8">
