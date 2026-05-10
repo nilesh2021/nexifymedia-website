@@ -30,20 +30,20 @@ const jobs = [
     description:
       'Work on social media marketing, ad campaigns, content creation, and growth strategies.',
   },
-  // {
-  //   title: 'UI/UX Design Intern',
-  //   type: 'Internship',
-  //   location: 'Remote / Worldwide',
-  //   description:
-  //     'Design modern websites and mobile apps using Figma, wireframes, and user-centered design.',
-  // },
-  // {
-  //   title: 'Frontend Developer Intern',
-  //   type: 'Internship',
-  //   location: 'Remote / Worldwide',
-  //   description:
-  //     'Build responsive websites using React, Tailwind CSS, and modern UI practices.',
-  // },
+   {
+    title: 'UI/UX Design Intern',
+    type: 'Internship',
+    location: 'Remote / Worldwide',
+     description:
+      'Design modern websites and mobile apps using Figma, wireframes, and user-centered design.',
+  },
+  {
+    title: 'Content Writing Intern',
+   type: 'Internship',
+     location: 'Remote / Worldwide',
+     description:
+       'Create engaging content for websites, blogs, and social media platforms.',
+   },
 ];
 
 const benefits = [
@@ -316,7 +316,7 @@ export default function CareersPage() {
               </p>
             </div>
 
-     
+
             <CareerForm />
 
           </div>
