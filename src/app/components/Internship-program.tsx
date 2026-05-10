@@ -50,7 +50,7 @@ export default function Career() {
                 <Briefcase className="w-6 h-6 text-white" />
               </div>
               <div className="flex-1">
-                <h3 className="text-2xl mb-2">SEO Intern</h3>
+                <h3 className="text-2xl mb-2">SEO Intern/Digital Marketer Intern</h3>
                 <div className="flex flex-wrap gap-3 text-sm text-gray-300">
                   <span className="px-3 py-1 bg-white/10 rounded-full">Internship</span>
                   <span className="px-3 py-1 bg-white/10 rounded-full">Remote</span>

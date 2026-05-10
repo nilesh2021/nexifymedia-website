@@ -16,7 +16,7 @@ export default function CareerForm() {
 
   try {
     const response = await fetch(
-      "https://formsubmit.co/ajax/youremail@gmail.com",
+      "https://formsubmit.co/ajax/contact@nexifymedia.co.in",
       {
         method: "POST",
         body: formData,
