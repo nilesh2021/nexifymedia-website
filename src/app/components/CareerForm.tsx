@@ -50,7 +50,7 @@ export default function CareerForm() {
         <input
           type="hidden"
           name="_subject"
-          value="New Career Application"
+          value="New Application"
         />
 
         <input

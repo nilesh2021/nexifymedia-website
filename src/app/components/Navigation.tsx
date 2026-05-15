@@ -157,7 +157,7 @@ export default function Navigation() {
 </Link>
 
             {/* Internship Program */}
-            <button
+            {/* <button
               onClick={() => scrollToSection('internship-program')}
               className={`cursor-pointer relative text-[15px] font-medium transition-all duration-300 hover:text-[#24c2f2]
               after:absolute after:left-0 after:-bottom-1 after:h-[2px]
@@ -169,7 +169,7 @@ export default function Navigation() {
               }`}
             >
               Internship Program
-            </button>
+            </button> */}
 
             {/* Blog */}
             <a
