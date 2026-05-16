@@ -73,10 +73,10 @@ export default function Hero() {
           {/* Main Heading */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl leading-tight tracking-tight font-semibold mb-6">
 
-            Build Your Career in{" "}
+          Grow Your Brand With Smart {} 
 
             <span className="text-[#24c2f2]">
-              Digital Marketing
+               Digital Marketing
             </span>
 
           </h1>
@@ -84,8 +84,7 @@ export default function Hero() {
           {/* Description */}
           <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto mb-10">
 
-            Work on real projects, learn industry tools,
-            and grow with a creative digital marketing team.
+         We help businesses grow online through SEO, website design, content marketing, and performance-driven digital strategies.
 
           </p>
 
@@ -117,7 +116,7 @@ export default function Hero() {
           "
             >
 
-              Apply for Internship
+          View Careers
 
               <ArrowRight
                 className="
@@ -151,7 +150,7 @@ export default function Hero() {
           "
             >
 
-              Explore Services
+          Explore Services
 
             </button>
 
