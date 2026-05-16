@@ -4,28 +4,29 @@ import {
   GraduationCap,
   ArrowRight,
 } from 'lucide-react';
-
+import { useNavigate } from "react-router-dom";
 export default function ContactSection() {
+  const navigate = useNavigate();
 
-const scrollToInternship = () => {
+  const scrollToInternship = () => {
 
-  const element = document.getElementById('seo-program');
+    const element = document.getElementById('seo-program');
 
-  if (element) {
+    if (element) {
 
-    const navbarOffset = 100;
+      const navbarOffset = 100;
 
-    const elementPosition =
-      element.getBoundingClientRect().top + window.pageYOffset;
+      const elementPosition =
+        element.getBoundingClientRect().top + window.pageYOffset;
 
-    const offsetPosition = elementPosition - navbarOffset;
+      const offsetPosition = elementPosition - navbarOffset;
 
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: 'smooth',
-    });
-  }
-};
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }
+  };
 
   return (
 
@@ -40,8 +41,8 @@ const scrollToInternship = () => {
             Join NexifyMedia
           </span>
 
-          <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-6 leading-tight">
-            Learn Digital Marketing 
+          <h2 className="text-3xl md:text-5xl font-semibold text-[#fff] mb-6 leading-tight">
+            Learn Digital Marketing
             With <br />Real Opportunities
           </h2>
 
@@ -139,8 +140,8 @@ const scrollToInternship = () => {
             </p>
 
             <button
-  onClick={scrollToInternship}
-  className="
+               onClick={() => navigate("/careers")}
+              className="
     inline-flex items-center gap-3
     px-8 py-4
     rounded-2xl
@@ -155,11 +156,11 @@ const scrollToInternship = () => {
 
     transition-all duration-300 ease-in-out
   "
->
-  Apply for Internship
+            >
+              Apply for Internship
 
-  <ArrowRight className="w-5 h-5" />
-</button>
+              <ArrowRight className="w-5 h-5" />
+            </button>
 
           </div>
 
