@@ -12,7 +12,7 @@ export default function FeaturedWork() {
             Featured Work
           </span>
 
-          <h2 className="text-3xl md:text-5xl font-semibold text-[#202851] mb-6 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-semibold text-[#202851] mb-6 leading-tight">
             Digital Solutions Built For Modern Brands
           </h2>
 

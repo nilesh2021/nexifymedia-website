@@ -41,7 +41,7 @@ export default function ContactSection() {
             Join NexifyMedia
           </span>
 
-          <h2 className="text-3xl md:text-5xl font-semibold text-[#fff] mb-6 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-semibold text-[#fff] mb-6 leading-tight">
             Learn Digital Marketing
             With <br />Real Opportunities
           </h2>
