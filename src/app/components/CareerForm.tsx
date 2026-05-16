@@ -1,56 +1,55 @@
-import { useState } from "react";
-import { Upload } from "lucide-react";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import { Loader2, CheckCircle2 } from "lucide-react";
 
 export default function CareerForm() {
 
-  const [result, setResult] = useState("");
+  const form = useRef<HTMLFormElement>(null);
 
-  const onSubmit = async (
-    event: React.FormEvent<HTMLFormElement>
+  const [loading, setLoading] = useState(false);
+
+  const [submitted, setSubmitted] = useState(false);
+
+  const [error, setError] = useState("");
+
+  const sendEmail = async (
+    e: React.FormEvent<HTMLFormElement>
   ) => {
 
-    event.preventDefault();
+    e.preventDefault();
 
-    setResult("Sending...");
+    if (!form.current) return;
 
-    const formData = new FormData(event.currentTarget);
+    setLoading(true);
 
-    formData.append(
-      "access_key",
-      "8152f111-227a-4737-9f7a-48f995a81cf7"
-    );
+    setError("");
 
     try {
 
-      const response = await fetch(
-        "https://api.web3forms.com/submit",
-        {
-          method: "POST",
-          body: formData,
-        }
+      await emailjs.sendForm(
+
+        "service_1mafq3h",
+        "template_8qo8xva",
+        form.current,
+        "Jv-lCqWDru7C9PiVP"
+
       );
 
-      const data = await response.json();
+      setSubmitted(true);
 
-      console.log(data);
+      form.current.reset();
 
-      if (data.success) {
+    } catch (err) {
 
-        setResult("Application submitted successfully!");
+      console.log(err);
 
-        event.currentTarget.reset();
+      setError(
+        "Something went wrong. Please try again."
+      );
 
-      } else {
+    } finally {
 
-        setResult(data.message || "Something went wrong.");
-
-      }
-
-    } catch (error) {
-
-      console.log(error);
-
-      setResult("Network error. Please try again.");
+      setLoading(false);
 
     }
   };
@@ -59,134 +58,233 @@ export default function CareerForm() {
 
     <div className="rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 p-6 sm:p-8 md:p-10">
 
-      <h3 className="text-2xl font-semibold text-white mb-8">
-        Apply Now
-      </h3>
+      {submitted ? (
 
-      <form
-        onSubmit={onSubmit}
-        className="space-y-6"
-      >
+        <div className="text-center py-10">
 
-        {/* SUBJECT */}
-        <input
-          type="hidden"
-          name="subject"
-          value="New Career Application - NexifyMedia"
-        />
+          <CheckCircle2 className="w-16 h-16 text-[#24c2f2] mx-auto mb-5" />
 
-        {/* NAME */}
-        <div>
+          <h3 className="text-3xl font-semibold text-white mb-4">
+            Application Submitted
+          </h3>
 
-          <label className="block text-sm text-gray-300 mb-2">
-            Full Name
-          </label>
+          <p className="text-gray-300 mb-8 max-w-lg mx-auto leading-relaxed">
+            Thank you for applying to NexifyMedia.
+            Our team will review your application and
+            contact you shortly.
+          </p>
 
-          <input
-            type="text"
-            name="name"
-            required
-            placeholder="Enter your full name"
-            className="w-full px-5 py-4 rounded-2xl bg-white/5 border border-white/10 text-white outline-none focus:border-[#24c2f2]"
-          />
+          <button
+            onClick={() => setSubmitted(false)}
+            className="
+              px-8
+              py-4
+              rounded-full
+              bg-[#24c2f2]
+              text-white
+              hover:bg-[#1da8d4]
+              hover:scale-105
+              transition-all
+              duration-300
+              shadow-xl
+            "
+          >
 
-        </div>
+            Submit Another Application
 
-        {/* EMAIL */}
-        <div>
-
-          <label className="block text-sm text-gray-300 mb-2">
-            Email Address
-          </label>
-
-          <input
-            type="email"
-            name="email"
-            required
-            placeholder="Enter your email"
-            className="w-full px-5 py-4 rounded-2xl bg-white/5 border border-white/10 text-white outline-none focus:border-[#24c2f2]"
-          />
+          </button>
 
         </div>
 
-        {/* PHONE */}
-        <div>
+      ) : (
 
-          <label className="block text-sm text-gray-300 mb-2">
-            Phone Number
-          </label>
+        <>
 
-          <input
-            type="tel"
-            name="phone"
-            required
-            placeholder="Enter your phone number"
-            className="w-full px-5 py-4 rounded-2xl bg-white/5 border border-white/10 text-white outline-none focus:border-[#24c2f2]"
-          />
+          <h3 className="text-2xl font-semibold text-white mb-8">
+            Apply Now
+          </h3>
 
-        </div>
+          <form
+  action="https://formsubmit.co/contact@nexifymedia.co.in"
+  method="POST"
+  className="space-y-6"
+>
 
-        {/* RESUME */}
-       {/* RESUME LINK */}
-<div>
+  {/* Disable captcha */}
+  <input type="hidden" name="_captcha" value="false" />
 
-  <label className="block text-sm text-gray-300 mb-2">
-    Resume / Portfolio Link (Optional)
-  </label>
-
+  {/* Email Subject */}
   <input
-    type="url"
-    name="resume_link"
-    placeholder="Paste Google Drive, LinkedIn, or portfolio link"
-    className="
-      w-full
-      px-5
-      py-4
-      rounded-2xl
-      bg-white/5
-      border
-      border-white/10
-      text-white
-      outline-none
-      focus:border-[#24c2f2]
-    "
+    type="hidden"
+    name="_subject"
+    value="New Career Application - NexifyMedia"
   />
 
-</div>
-        {/* MESSAGE */}
-        <div>
+  {/* Redirect After Submit */}
+  <input
+    type="hidden"
+    name="_next"
+    value="https://nexifymedia.co.in/thank-you"
+  />
 
-          <label className="block text-sm text-gray-300 mb-2">
-            Why do you want to join NexifyMedia? (Optional)
-          </label>
+  {/* Full Name */}
+  <div>
+    <label className="block text-sm text-gray-300 mb-2">
+      Full Name
+    </label>
 
-          <textarea
-            name="message"
-            rows={5}
-            placeholder="Write a short message..."
-            className="w-full px-5 py-4 rounded-2xl bg-white/5 border border-white/10 text-white outline-none focus:border-[#24c2f2] resize-none"
-          />
+    <input
+      type="text"
+      name="name"
+      required
+      placeholder="Enter your full name"
+      className="
+        w-full
+        px-5
+        py-4
+        rounded-2xl
+        bg-white/5
+        border
+        border-white/10
+        focus:border-[#24c2f2]
+        outline-none
+        text-white
+        placeholder:text-gray-500
+      "
+    />
+  </div>
 
-        </div>
+  {/* Email */}
+  <div>
+    <label className="block text-sm text-gray-300 mb-2">
+      Email Address
+    </label>
 
-        {/* BUTTON */}
-        <button
-          type="submit"
-          className="w-full py-4 rounded-full bg-[#24c2f2] text-white font-medium hover:bg-[#1da8d4] transition-all duration-300"
-        >
+    <input
+      type="email"
+      name="email"
+      required
+      placeholder="Enter your email"
+      className="
+        w-full
+        px-5
+        py-4
+        rounded-2xl
+        bg-white/5
+        border
+        border-white/10
+        focus:border-[#24c2f2]
+        outline-none
+        text-white
+        placeholder:text-gray-500
+      "
+    />
+  </div>
 
-          Submit Application
+  {/* Phone */}
+  <div>
+    <label className="block text-sm text-gray-300 mb-2">
+      Phone Number
+    </label>
 
-        </button>
+    <input
+      type="tel"
+      name="phone"
+      required
+      placeholder="Enter your phone number"
+      className="
+        w-full
+        px-5
+        py-4
+        rounded-2xl
+        bg-white/5
+        border
+        border-white/10
+        focus:border-[#24c2f2]
+        outline-none
+        text-white
+        placeholder:text-gray-500
+      "
+    />
+  </div>
 
-        {/* RESULT */}
-        {result && (
-          <p className="text-center text-sm text-white">
-            {result}
-          </p>
-        )}
+  {/* Resume Link */}
+  <div>
+    <label className="block text-sm text-gray-300 mb-2">
+      Resume / Portfolio Link (Optional)
+    </label>
 
-      </form>
+    <input
+      type="url"
+      name="resume"
+      placeholder="Paste Google Drive, LinkedIn, or portfolio link"
+      className="
+        w-full
+        px-5
+        py-4
+        rounded-2xl
+        bg-white/5
+        border
+        border-white/10
+        focus:border-[#24c2f2]
+        outline-none
+        text-white
+        placeholder:text-gray-500
+      "
+    />
+  </div>
+
+  {/* Message */}
+  <div>
+    <label className="block text-sm text-gray-300 mb-2">
+      Why do you want to join NexifyMedia? (Optional)
+    </label>
+
+    <textarea
+      name="message"
+      rows={5}
+      placeholder="Write a short message..."
+      className="
+        w-full
+        px-5
+        py-4
+        rounded-2xl
+        bg-white/5
+        border
+        border-white/10
+        focus:border-[#24c2f2]
+        outline-none
+        text-white
+        placeholder:text-gray-500
+        resize-none
+      "
+    />
+  </div>
+
+  {/* Submit Button */}
+  <button
+    type="submit"
+    className="
+      w-full
+      py-4
+      rounded-full
+      bg-[#24c2f2]
+      text-white
+      font-medium
+      hover:bg-[#1da8d4]
+      hover:scale-[1.01]
+      transition-all
+      duration-300
+      shadow-xl
+    "
+  >
+    Submit Application
+  </button>
+
+</form>
+
+        </>
+      )}
 
     </div>
   );
