@@ -33,74 +33,164 @@ export default function Career() {
   };
 
   return (
-    <div> 
-    <section id="internship-program" className="py-24 bg-gradient-to-br from-[#202851] to-[#2a3561] text-white">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl mb-4">Join Our Team</h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Be part of a dynamic team that's shaping the future of digital marketing
+    <div> <section className="py-20 bg-white">
+  <div className="container mx-auto px-6">
+
+    <div className="max-w-5xl mx-auto rounded-[32px] overflow-hidden bg-gradient-to-br from-[#202851] to-[#2a3561] p-10 md:p-14 relative">
+
+      {/* BACKGROUND GLOW */}
+
+      <div className="absolute top-0 right-0 w-72 h-72 bg-[#24c2f2]/10 rounded-full blur-3xl"></div>
+
+      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10">
+
+        {/* LEFT CONTENT */}
+
+        <div className="max-w-2xl">
+
+          <span className="inline-block px-4 py-2 rounded-full bg-white/10 text-[#24c2f2] text-sm mb-5">
+            Careers at Nexify Media
+          </span>
+
+          <h2 className="text-3xl md:text-4xl font-semibold text-white leading-tight mb-5">
+            Interested in Building Your Career in Digital Marketing?
+          </h2>
+
+          <p className="text-lg text-gray-300 leading-relaxed">
+            Explore internship and career opportunities to gain practical
+            experience in SEO, content marketing, and modern digital solutions.
           </p>
+
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className=" rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10  p-8 md:p-12 mb-8">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="w-12 h-12 bg-[#24c2f2] rounded-xl flex items-center justify-center flex-shrink-0">
-                <Briefcase className="w-6 h-6 text-white" />
-              </div>
-              <div className="flex-1">
-                <h3 className="text-2xl mb-2">SEO Intern/Digital Marketer Intern</h3>
-                <div className="flex flex-wrap gap-3 text-sm text-gray-300">
-                  <span className="px-3 py-1 bg-white/10 rounded-full">Internship</span>
-                  <span className="px-3 py-1 bg-white/10 rounded-full">Remote</span>
-                  <span className="px-3 py-1 bg-white/10 rounded-full">3-6 months</span>
-                </div>
-              </div>
-            </div>
+        {/* RIGHT BUTTON */}
 
-            <div className="space-y-4 mb-6 text-gray-300">
-              <p>
-                We're looking for a passionate SEO Intern to join our growing team. This is an excellent
-                opportunity to learn and grow in the digital marketing field.
-              </p>
-              <div>
-                <h4 className="text-white mb-2">Responsibilities:</h4>
-                <ul className="list-disc list-inside space-y-1 ml-2">
-                  <li>Assist with keyword research and SEO optimization</li>
-                  <li>Support content marketing and link-building activities</li>
-                  <li>Monitor basic SEO performance metrics</li>
-                 
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-white mb-2">Requirements:</h4>
-                <ul className="list-disc list-inside space-y-1 ml-2">
-                  <li>Basic knowledge of SEO concepts</li>
-                  <li>Good communication and analytical skills</li>
-                  <li>Willingness to NexifyMedia tools and strategies</li>
-              
-                </ul>
-              </div>
-            </div>
+        <div className="flex-shrink-0">
 
+          <button
+            onClick={() => {
+              window.location.href = "/careers";
+            }}
+            className="px-8 py-4 rounded-full bg-[#24c2f2] text-white font-medium hover:scale-105 hover:bg-[#1bb3df] transition-all duration-300 shadow-xl"
+          >
+            View Careers
+          </button>
 
-            
-          </div>
-          <div className="bg-light rounded-3xl ">
-            <h3 className="text-2xl mb-6 text-[#fff]">Apply for This Position</h3>
-          <CareerForm/>
-  </div>
-         
         </div>
+
       </div>
 
-  
+    </div>
 
+  </div>
+</section>
+    <section
+  id="careers"
+  className="py-24 bg-gradient-to-br from-[#202851] to-[#2a3561] text-white"
+>
+  <div className="container mx-auto px-6">
 
-        
-      </section>
+    {/* SECTION HEADER */}
 
+    <div className="text-center mb-14">
+      <h2 className="text-3xl md:text-4xl font-semibold mb-4">
+        Careers at Nexify Media
+      </h2>
+
+      <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
+        Join a growing digital team and gain practical experience in SEO,
+        content marketing, and modern web solutions.
+      </p>
+    </div>
+
+    {/* CAREER CARD */}
+
+    <div className="max-w-4xl mx-auto">
+
+      <div className="rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 p-8 md:p-10 mb-10">
+
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+
+          {/* LEFT */}
+
+          <div className="flex items-start gap-4">
+
+            <div className="w-14 h-14 bg-[#24c2f2] rounded-2xl flex items-center justify-center flex-shrink-0">
+              <Briefcase className="w-7 h-7 text-white" />
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold mb-3">
+                SEO / Digital Marketing Intern
+              </h3>
+
+              <div className="flex flex-wrap gap-3 text-sm text-gray-300 mb-4">
+
+                <span className="px-3 py-1 bg-white/10 rounded-full">
+                  Remote
+                </span>
+
+                <span className="px-3 py-1 bg-white/10 rounded-full">
+                  Internship
+                </span>
+
+                <span className="px-3 py-1 bg-white/10 rounded-full">
+                  3–6 Months
+                </span>
+
+              </div>
+
+              <p className="text-gray-300 leading-relaxed max-w-2xl">
+                Learn practical SEO strategies, content optimization,
+                keyword research, and digital marketing workflows while
+                working on real-world projects.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* SKILLS */}
+
+        <div className="flex flex-wrap gap-3 mt-8">
+
+          {[
+            "SEO Basics",
+            "Keyword Research",
+            "Content Marketing",
+            "Analytics",
+            "Communication Skills",
+          ].map((skill, index) => (
+            <span
+              key={index}
+              className="px-4 py-2 rounded-full bg-white/10 text-sm text-gray-200"
+            >
+              {skill}
+            </span>
+          ))}
+
+        </div>
+
+      </div>
+
+      {/* FORM SECTION */}
+
+      <div className="rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 p-8 md:p-10">
+
+        <h3 className="text-2xl font-semibold mb-6">
+          Apply for This Position
+        </h3>
+
+        <CareerForm />
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
       
 
 </div>

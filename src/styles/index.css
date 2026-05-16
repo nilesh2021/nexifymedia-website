@@ -5,17 +5,26 @@
 html {
   scroll-behavior: smooth;
 }
+
 .transition-colors {
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
 }
 
-.file{     background:f9fafb;  
-    width: 100%; 
-    padding: 20px;
-    border-radius: 16px;
-    border: 2px dashed #ddd;
-    color: #000;}
+.file {
+  background: f9fafb;
+  width: 100%;
+  padding: 20px;
+  border-radius: 16px;
+  border: 2px dashed #ddd;
+  color: #000;
+}
 
-    .file:hover{ border-color: #24c2f2;}
+.file:hover {
+  border-color: #24c2f2;
+}
+
+nav button {
+  letter-spacing: 1.2px; font-size: 14px;
+}

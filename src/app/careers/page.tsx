@@ -60,7 +60,7 @@ export default function CareersPage() {
     <>
       <Navigation />
       <ScrollToTop />
-      <main className="bg-[#0f172a] text-white min-h-screen overflow-hidden pt-24">
+      <main className="bg-[#0f172a] text-white min-h-screen overflow-hidden ">
 
         {/* Hero Section */}
         <section className="relative py-32 px-6">
@@ -96,14 +96,22 @@ export default function CareersPage() {
               <div className="mt-10 flex flex-wrap justify-center gap-4">
                 <a
                   href="#openings"
-                  className="px-8 py-4 rounded-full bg-gradient-to-r from-[#24c2f2] to-[#202851] hover:scale-105 transition-all duration-300 shadow-2xl"
+                  className="px-8 py-4 rounded-full bg-gradient-to-r from-[#24c2f2] to-[#202851] hover:scale-105 transition-all duration-300 shadow-2xl  group
+            w-full
+            sm:w-auto
+            px-8
+            py-4"
                 >
                   View Open Roles
                 </a>
 
                 <a
                   href="#apply"
-                  className="px-8 py-4 rounded-full border border-white/20 bg-white/10 hover:bg-white/20 transition-all duration-300"
+                  className="cursor-pointer px-8 py-4 rounded-full border border-white/20 bg-white/10 hover:bg-white/20 transition-all duration-300  group
+            w-full
+            sm:w-auto
+            px-8
+            py-4"
                 >
                   Apply Now
                 </a>
@@ -113,7 +121,7 @@ export default function CareersPage() {
         </section>
 
         {/* Why Join Us */}
-        <section className="py-24 px-6">
+        <section className="py-14 sm:py-18 lg:py-24 px-4 sm:px-6">
           <div className="max-w-7xl mx-auto">
 
             <div className="text-center mb-16">
@@ -183,7 +191,7 @@ export default function CareersPage() {
         {/* Open Positions */}
         <section
           id="openings"
-          className="py-24 px-6 bg-white/[0.03]"
+          className="py-14 sm:py-18 lg:py-24 px-4 sm:px-6 bg-white/[0.03]"
         >
           <div className="max-w-7xl mx-auto">
 
@@ -244,7 +252,7 @@ export default function CareersPage() {
                         });
                       }
                     }}
-                    className="
+                    className="cursor-pointer
     mt-8
     inline-flex
     items-center
@@ -267,7 +275,7 @@ export default function CareersPage() {
         </section>
 
         {/* Benefits */}
-        <section className="py-24 px-6">
+        <section className="py-14 sm:py-18 lg:py-24 px-4 sm:px-6">
           <div className="max-w-5xl mx-auto">
 
             <div className="text-center mb-16">
@@ -302,7 +310,7 @@ export default function CareersPage() {
         {/* Application Form */}
         <section
           id="apply"
-          className="py-24 px-6 bg-white/[0.03]"
+          className="py-14 sm:py-18 lg:py-24 px-4 sm:px-6 bg-white/[0.03]"
         >
           <div className="max-w-3xl mx-auto">
 

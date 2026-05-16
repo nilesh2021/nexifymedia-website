@@ -29,7 +29,7 @@ const scrollToInternship = () => {
 
   return (
 
-    <section className="bg-[#1a2248] text-white py-24 px-6">
+    <section className="bg-[#1a2248] text-white py-24 sm:py-18 lg:py-24 px-4 sm:px-6">
 
       <div className="max-w-7xl mx-auto">
 

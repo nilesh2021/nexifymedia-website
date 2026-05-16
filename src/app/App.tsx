@@ -10,6 +10,7 @@ import ScrollToTop from './components/ScrollToTop';
 
 import CareerForm from './components/CareerForm';
 import ContactSection from './components/ContactSection';
+import FeaturedWork from './components/FeaturedWork';
 
 export default function App() {
 
@@ -55,28 +56,29 @@ export default function App() {
 
 
       <Navigation />
-    
+
       <div id="home">
         <Hero />
       </div>
 
-     
+
       <div id="services">
         <Services />
       </div>
 
-    
+
       <div id="about">
         <About />
       </div>
-      
-      <div id="seo-program">
-        <Career />
+      <div id="featured-work">
+        <FeaturedWork />
       </div>
-<div id="contact">
-  <ContactSection />
-</div>
-     
+
+
+      <div id="contact">
+        <ContactSection />
+      </div>
+
       <ScrollToTop />
       <Footer />
     </div>
