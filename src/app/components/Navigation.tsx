@@ -68,16 +68,20 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
-        ? 'bg-white/80 backdrop-blur-xl shadow-lg'
-        : 'bg-transparent py-2'
-        }`}
+      className={`
+    fixed top-0 left-0 right-0 z-50
+    transition-all duration-500
+    ${isScrolled
+          ? "bg-white/80 backdrop-blur-2xl shadow-lg border-b border-white/20 py-3"
+          : "bg-transparent py-5"
+        }
+  `}
     >
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between">
 
           {/* Logo */}
-          <div
+          {/* <div
             onClick={scrollToTop}
             className="flex items-center gap-2 group cursor-pointer"
           >
@@ -95,7 +99,41 @@ export default function Navigation() {
             >
               <b>Nexify</b><span style={{ fontWeight: "lighter" }}>Media</span>
             </span>
-          </div>
+          </div> */}
+
+          <Link
+            to="/"
+            className="flex items-center gap-3 group"
+          >
+            <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#24c2f2] to-[#202851] flex items-center justify-center shadow-xl group-hover:scale-105 transition-all duration-300">
+              <span className="text-white font-bold text-lg">N</span>
+            </div>
+
+            <div className="flex flex-col leading-none">
+              <span
+                className={`
+    text-xl
+    font-bold
+    transition-colors
+    duration-300
+    ${isScrolled ? "text-[#202851]" : "text-white"}
+  `}
+              >
+                Nexify<span
+                  className={`
+    font-medium
+    transition-colors
+    duration-300
+    ${isScrolled ? "text-gray-600" : "text-gray-300"}
+  `}
+                >Media</span>
+              </span>
+
+              <span className="text-[11px] uppercase tracking-[0.2em] text-[#24c2f2] mt-1">
+                Digital Agency
+              </span>
+            </div>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center gap-8">
@@ -124,7 +162,7 @@ export default function Navigation() {
                   : 'text-white'
                 }`}
             >
-              SERVICES            </button>
+              Services            </button>
 
             {/* About */}
             <button
@@ -137,7 +175,7 @@ export default function Navigation() {
                   : 'text-white'
                 }`}
             >
-              ABOUT
+              About
             </button>
             <button
               onClick={() => scrollToSection('featured-work')}
@@ -149,7 +187,7 @@ export default function Navigation() {
                   : 'text-white'
                 }`}
             >
-              FEATURED WORK
+              Featuered Work
             </button>
 
 
@@ -168,7 +206,7 @@ export default function Navigation() {
                   : 'text-white'
                 }`}
             >
-              BLOG
+              Blog
             </a>
 
             {/* careers */}
@@ -182,11 +220,22 @@ export default function Navigation() {
 
                 setIsMobileMenuOpen(false);
               }}
-              className="px-6 py-2.5 bg-gradient-to-r from-[#24c2f2] to-[#202851]
-              text-white rounded-full shadow-lg hover:scale-105
-              hover:shadow-2xl transition-all duration-300 cursor-pointer"
+              className="px-6
+    py-3
+    rounded-full
+    bg-gradient-to-r
+    from-[#24c2f2]
+    to-[#202851]
+    text-white
+    text-sm
+    font-medium
+    shadow-lg
+    hover:shadow-2xl
+    hover:scale-105
+    transition-all
+    duration-300 cursor-pointer"
             >
-              CAREERS
+              Careers
             </Link>
           </div>
 
@@ -226,7 +275,7 @@ export default function Navigation() {
               rounded-xl hover:bg-[#f4f9ff]
               hover:text-[#24c2f2] transition-all duration-300 cursor-pointer"
             >
-              SERVICES
+              Services
             </button>
 
             {/* About */}
@@ -236,7 +285,7 @@ export default function Navigation() {
               rounded-xl hover:bg-[#f4f9ff]
               hover:text-[#24c2f2] transition-all duration-300 cursor-pointer"
             >
-              ABOUT
+              About
             </button>
 
             {/* FEATURED WORK */}
@@ -247,7 +296,7 @@ export default function Navigation() {
               rounded-xl hover:bg-[#f4f9ff]
               hover:text-[#24c2f2] transition-all duration-300 cursor-pointer"
             >
-              FEATURED WORK
+              Featured Work
             </button>
 
             {/* Blog */}
@@ -259,7 +308,7 @@ export default function Navigation() {
               rounded-xl hover:bg-[#f4f9ff]
               hover:text-[#24c2f2] transition-all duration-300"
             >
-              BLOG
+              Blog
             </a>
 
             {/* Careers */}
@@ -280,7 +329,7 @@ export default function Navigation() {
     text-white rounded-full shadow-lg hover:scale-105
     hover:shadow-2xl transition-all duration-300"
               >
-                CAREERS
+                Careers
               </Link>
             </div>
 
