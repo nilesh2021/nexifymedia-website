@@ -38,7 +38,7 @@ export default function Footer() {
         <div className="h-[1px] bg-gradient-to-r from-transparent via-[#24c2f2]/40 to-transparent mb-16"></div>
 
         {/* Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.2fr_1fr_1fr] gap-12 xl:gap-24 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 xl:gap-16 mb-16">
 
           {/* Column 1 - Brand */}
           <div className="max-w-md">
@@ -52,7 +52,10 @@ export default function Footer() {
               </div>
 
               <span className="text-2xl font-semibold">
-              <b>Nexify</b> <span style={{fontWeight: "lighter"}}>Media</span>
+                <b>Nexify</b>{' '}
+                <span style={{ fontWeight: 'lighter' }}>
+                  Media
+                </span>
               </span>
 
             </div>
@@ -83,11 +86,11 @@ export default function Footer() {
 
           </div>
 
-          {/* Column 2 - Quick Links */}
-          <div className="lg:justify-self-center">
+          {/* Column 2 - Company */}
+          <div>
 
             <h3 className="text-xl font-semibold mb-6">
-              Quick Links
+              Company
             </h3>
 
             <ul className="space-y-4 text-gray-400">
@@ -126,19 +129,6 @@ export default function Footer() {
               </li>
 
               <li>
-                <a
-                  href="https://blog.nexifymedia.co.in"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block hover:text-[#24c2f2]
-                  transition-all duration-300
-                  hover:translate-x-1"
-                >
-                  Blog
-                </a>
-              </li>
-
-              <li>
                 <button
                   onClick={() => scrollToSection('contact')}
                   className="hover:text-[#24c2f2]
@@ -153,32 +143,156 @@ export default function Footer() {
 
           </div>
 
-          {/* Column 3 - Legal */}
-          <div className="space-y-4 lg:justify-self-end">
+          {/* Column 3 - Resources */}
+          <div>
 
             <h3 className="text-xl font-semibold mb-6">
-              Legal
+              Resources
             </h3>
+
+            <ul className="space-y-4 text-gray-400">
+
+              <li>
+                <Link
+                  to="/case-studies"
+                  className="block hover:text-[#24c2f2]
+                  transition-all duration-300
+                  hover:translate-x-1"
+                >
+                  Case Studies
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/learning-hub"
+                  className="block hover:text-[#24c2f2]
+                  transition-all duration-300
+                  hover:translate-x-1"
+                >
+                  Learning Hub
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/digital-products"
+                  className="block hover:text-[#24c2f2]
+                  transition-all duration-300
+                  hover:translate-x-1"
+                >
+                  Digital Products
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/free-tools"
+                  className="block hover:text-[#24c2f2]
+                  transition-all duration-300
+                  hover:translate-x-1"
+                >
+                  Free Tools
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/templates"
+                  className="block hover:text-[#24c2f2]
+                  transition-all duration-300
+                  hover:translate-x-1"
+                >
+                  Templates
+                </Link>
+              </li>
+
+            </ul>
+
+          </div>
+
+          {/* Column 4 - Services */}
+          <div>
+
+            <h3 className="text-xl font-semibold mb-6">
+              Services
+            </h3>
+
+            <ul className="space-y-4 text-gray-400">
+
+              <li>
+                <Link
+                  to="/seo-services"
+                  className="block hover:text-[#24c2f2]
+                  transition-all duration-300
+                  hover:translate-x-1"
+                >
+                  SEO Services
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/web-design"
+                  className="block hover:text-[#24c2f2]
+                  transition-all duration-300
+                  hover:translate-x-1"
+                >
+                  Web Design
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/ui-ux-design"
+                  className="block hover:text-[#24c2f2]
+                  transition-all duration-300
+                  hover:translate-x-1"
+                >
+                  UI/UX Design
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/social-media-marketing"
+                  className="block hover:text-[#24c2f2]
+                  transition-all duration-300
+                  hover:translate-x-1"
+                >
+                  Social Media Marketing
+                </Link>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+        {/* Bottom Footer */}
+       <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-sm">
+
+          <p>
+            © 2026 Nexify Media. All rights reserved.
+          </p>
+
+          <div className="flex gap-6">
 
             <Link
               to="/privacy-policy"
-              className="block text-gray-400 hover:text-[#24c2f2]
-              transition-all duration-300
-              hover:translate-x-1"
+              className="hover:text-[#24c2f2] transition-all duration-300"
             >
               Privacy Policy
             </Link>
 
             <Link
               to="/terms-and-conditions"
-              className="block text-gray-400 hover:text-[#24c2f2]
-              transition-all duration-300
-              hover:translate-x-1"
+              className="hover:text-[#24c2f2] transition-all duration-300"
             >
               Terms & Conditions
             </Link>
-
-            <Link
+             <Link
               to="/disclaimer"
               className="block text-gray-400 hover:text-[#24c2f2]
               transition-all duration-300
@@ -187,39 +301,27 @@ export default function Footer() {
               Disclaimer
             </Link>
 
-            <Link
+            {/* <Link
               to="/affiliate-disclosure"
               className="block text-gray-400 hover:text-[#24c2f2]
               transition-all duration-300
               hover:translate-x-1"
             >
               Affiliate Disclosure
-            </Link>
+            </Link> */}
 
-            <Link
+            {/* <Link
               to="/cookie-policy"
               className="block text-gray-400 hover:text-[#24c2f2]
               transition-all duration-300
               hover:translate-x-1"
             >
               Cookie Policy
-            </Link>
+            </Link> */}
 
           </div>
 
         </div>
-
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10 text-center">
-
-          <p className="text-gray-400 text-sm leading-7">
-            © 2026 NexifyMedia. All rights reserved.
-            <br />
-            Helping businesses grow through modern digital marketing solutions.
-          </p>
-
-        </div>
-
       </div>
 
     </footer>

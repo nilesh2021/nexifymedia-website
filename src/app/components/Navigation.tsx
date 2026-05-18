@@ -154,7 +154,7 @@ export default function Navigation() {
             {/* Services */}
             <button
               onClick={() => scrollToSection('services')}
-              className={`cursor-pointer relative text-[15px] font-medium transition-all duration-300 hover:text-[#24c2f2]
+              className={`cursor-pointer relative text-[15px] font-normal transition-all duration-300 hover:text-[#24c2f2]
               after:absolute after:left-0 after:-bottom-1 after:h-[2px]
               after:w-0 after:bg-[#24c2f2]
               after:transition-all after:duration-300 hover:after:w-full ${isScrolled
@@ -167,7 +167,7 @@ export default function Navigation() {
             {/* About */}
             <button
               onClick={() => scrollToSection('about')}
-              className={`cursor-pointer relative text-[15px] font-medium transition-all duration-300 hover:text-[#24c2f2]
+              className={`cursor-pointer relative text-[15px] font-normal transition-all duration-300 hover:text-[#24c2f2]
               after:absolute after:left-0 after:-bottom-1 after:h-[2px]
               after:w-0 after:bg-[#24c2f2]
               after:transition-all after:duration-300 hover:after:w-full ${isScrolled
@@ -179,7 +179,7 @@ export default function Navigation() {
             </button>
             <button
               onClick={() => scrollToSection('featured-work')}
-              className={`cursor-pointer relative text-[15px] font-medium transition-all duration-300 hover:text-[#24c2f2]
+              className={`cursor-pointer relative text-[15px] font-normal transition-all duration-300 hover:text-[#24c2f2]
               after:absolute after:left-0 after:-bottom-1 after:h-[2px]
               after:w-0 after:bg-[#24c2f2]
               after:transition-all after:duration-300 hover:after:w-full ${isScrolled
@@ -198,7 +198,7 @@ export default function Navigation() {
               href="https://blog.nexifymedia.co.in"
               target="_blank"
               rel="noopener noreferrer"
-              className={`relative text-[15px] font-medium transition-all duration-300 hover:text-[#24c2f2]
+              className={`relative text-[15px] font-normal transition-all duration-300 hover:text-[#24c2f2]
               after:absolute after:left-0 after:-bottom-1 after:h-[2px]
               after:w-0 after:bg-[#24c2f2]
               after:transition-all after:duration-300 hover:after:w-full ${isScrolled
@@ -228,7 +228,7 @@ export default function Navigation() {
     to-[#202851]
     text-white
     text-sm
-    font-medium
+    font-normal
     shadow-lg
     hover:shadow-2xl
     hover:scale-105
