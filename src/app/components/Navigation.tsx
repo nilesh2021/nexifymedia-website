@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import logo from "../../assets/images/nexify_n_logo.png";
 
 
 export default function Navigation() {
@@ -80,37 +81,26 @@ export default function Navigation() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
 
-          {/* Logo */}
-          {/* <div
-            onClick={scrollToTop}
-            className="flex items-center gap-2 group cursor-pointer"
-          >
-            <div className="w-9 h-9 bg-gradient-to-br from-[#24c2f2] to-[#202851] rounded-xl flex items-center justify-center shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
-              <span className="text-white text-xl font-bold">
-                N
-              </span>
-            </div>
 
-            <span
-              className={`text-xl font-bold tracking-wide transition-all duration-500 ${isScrolled
-                ? 'text-[#202851]'
-                : 'text-white'
-                } group-hover:text-[#24c2f2]`}
-            >
-              <b>Nexify</b><span style={{ fontWeight: "lighter" }}>Media</span>
-            </span>
-          </div> */}
 
+         
           <Link
             to="/"
             className="flex items-center gap-3 group"
           >
-            <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#24c2f2] to-[#202851] flex items-center justify-center shadow-xl group-hover:scale-105 transition-all duration-300">
-              <span className="text-white font-bold text-lg">N</span>
-            </div>
+            {<div className="w-14 h-14   flex items-center justify-center  duration-300">
+              {/* <span className="text-white font-bold text-lg">N</span> */}
+               <img
+            src={logo}
+            alt="Nexify Media Logo"
+            className=" "
+          />
+            </div>}
 
             <div className="flex flex-col leading-none">
-              <span
+
+
+              {<span
                 className={`
     text-xl
     font-bold
@@ -127,7 +117,7 @@ export default function Navigation() {
     ${isScrolled ? "text-gray-600" : "text-gray-300"}
   `}
                 >Media</span>
-              </span>
+              </span>}
 
               <span className="text-[11px] uppercase tracking-[0.2em] text-[#24c2f2] mt-1">
                 Digital Agency
