@@ -154,7 +154,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  to="/case-studies"
+                  to="/#case-studies"
                   className="block hover:text-[#24c2f2]
                   transition-all duration-300
                   hover:translate-x-1"
@@ -165,7 +165,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  to="/learning-hub"
+                  to="/#learning-hub"
                   className="block hover:text-[#24c2f2]
                   transition-all duration-300
                   hover:translate-x-1"
@@ -176,7 +176,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  to="/digital-products"
+                  to="/#digital-products"
                   className="block hover:text-[#24c2f2]
                   transition-all duration-300
                   hover:translate-x-1"
@@ -187,7 +187,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  to="/free-tools"
+                  to="/#free-tools"
                   className="block hover:text-[#24c2f2]
                   transition-all duration-300
                   hover:translate-x-1"
@@ -198,7 +198,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  to="/templates"
+                  to="/#templates"
                   className="block hover:text-[#24c2f2]
                   transition-all duration-300
                   hover:translate-x-1"
@@ -222,7 +222,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  to="/seo-services"
+                  to="/#seo-services"
                   className="block hover:text-[#24c2f2]
                   transition-all duration-300
                   hover:translate-x-1"
@@ -233,7 +233,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  to="/web-design"
+                  to="/#web-design"
                   className="block hover:text-[#24c2f2]
                   transition-all duration-300
                   hover:translate-x-1"
@@ -255,7 +255,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  to="/social-media-marketing"
+                  to="/#social-media-marketing"
                   className="block hover:text-[#24c2f2]
                   transition-all duration-300
                   hover:translate-x-1"
