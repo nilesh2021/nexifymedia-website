@@ -5,15 +5,15 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import logo from "../../assets/images/nexify_n_logo.png";
 
-
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 40);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -23,183 +23,172 @@ export default function Navigation() {
     };
   }, []);
 
-  // Smooth scroll + homepage redirect
+  // Smooth scroll
   const scrollToSection = (id: string) => {
-
-    // If already on homepage
     if (window.location.pathname === '/') {
-
       const element = document.getElementById(id);
 
       if (element) {
-
         element.scrollIntoView({
           behavior: 'smooth',
           block: 'start',
         });
-
       }
-
     } else {
-
-      // Redirect to homepage section
       navigate(`/#${id}`);
     }
 
     setIsMobileMenuOpen(false);
   };
 
-  // Scroll to top
+  // Scroll top
   const scrollToTop = () => {
-
     if (window.location.pathname === '/') {
-
       window.scrollTo({
         top: 0,
         behavior: 'smooth',
       });
-
     } else {
-
       window.location.href = '/';
     }
 
     setIsMobileMenuOpen(false);
   };
 
+  const navLinkClass = `
+    relative
+    text-[15px]
+    font-medium
+    transition-all
+    duration-300
+    hover:text-[#24c2f2]
+    after:absolute
+    after:left-0
+    after:-bottom-1
+    after:h-[2px]
+    after:w-0
+    after:bg-[#24c2f2]
+    after:transition-all
+    after:duration-300
+    hover:after:w-full
+    cursor-pointer
+  `;
+
   return (
     <nav
       className={`
-    fixed top-0 left-0 right-0 z-50
-    transition-all duration-500
-    ${isScrolled
-          ? "bg-white/80 backdrop-blur-2xl shadow-lg border-b border-white/20 py-3"
-          : "bg-transparent py-5"
+        fixed
+        top-0
+        left-0
+        right-0
+        z-50
+        transition-all
+        duration-500
+        ${isScrolled
+          ? 'bg-white/75 backdrop-blur-xl shadow-lg border-b border-[#202851]/10 py-4'
+          : 'bg-transparent py-6'
         }
-  `}
+      `}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
 
+          {/* Logo */}
 
-
-         
-          <Link
-            to="/"
-            className="flex items-center gap-3 group"
+          <button
+            onClick={scrollToTop}
+            className="flex items-center gap-3 group cursor-pointer"
           >
-            {<div className="w-14 h-14   flex items-center justify-center  duration-300">
-              {/* <span className="text-white font-bold text-lg">N</span> */}
-               <img
-            src={logo}
-            alt="Nexify Media Logo"
-            className=" "
-          />
-            </div>}
+            <div className="w-14 h-14 flex items-center justify-center">
+              <img
+                src={logo}
+                alt="Nexify Media Logo"
+                className="w-full h-full object-contain"
+              />
+            </div>
 
-            <div className="flex flex-col leading-none">
-
-
-              {<span
+            <div className="flex flex-col leading-none text-left">
+              <span
                 className={`
-    text-xl
-    font-bold
-    transition-colors
-    duration-300
-    ${isScrolled ? "text-[#202851]" : "text-white"}
-  `}
+                  text-[18px]
+                  sm:text-[20px]
+                  font-bold
+                  transition-colors
+                  duration-300
+                  ${isScrolled ? 'text-[#202851]' : 'text-white'}
+                `}
               >
-                Nexify<span
+                Nexify
+                <span
                   className={`
-    font-medium
-    transition-colors
-    duration-300
-    ${isScrolled ? "text-gray-600" : "text-gray-300"}
-  `}
-                >Media</span>
-              </span>}
+                    font-medium
+                    transition-colors
+                    duration-300
+                    ${isScrolled ? 'text-gray-500' : 'text-gray-300'}
+                  `}
+                >
+                  Media
+                </span>
+              </span>
 
-              <span className="text-[11px] uppercase tracking-[0.2em] text-[#24c2f2] mt-1">
+              <span className="text-[11px] uppercase tracking-[0.25em] text-[#24c2f2] mt-1">
                 Digital Agency
               </span>
             </div>
-          </Link>
+          </button>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center gap-8">
 
-            {/* <button
-              onClick={() => {
-                window.location.href = "/";
-              }}
-              className={`relative text-[15px] font-medium transition-all duration-300 hover:text-[#24c2f2]
-  after:absolute after:left-0 after:-bottom-1 after:h-[2px]
-  after:w-0 after:bg-[#24c2f2]
-  after:transition-all after:duration-300 hover:after:w-full cursor-pointer ${isScrolled ? "text-[#202851]" : "text-white"
-                }`}
-            >
-              HOME
-            </button> */}
+          <div className="hidden lg:flex items-center gap-10">
 
             {/* Services */}
+
             <button
               onClick={() => scrollToSection('services')}
-              className={`cursor-pointer relative text-[15px] font-normal transition-all duration-300 hover:text-[#24c2f2]
-              after:absolute after:left-0 after:-bottom-1 after:h-[2px]
-              after:w-0 after:bg-[#24c2f2]
-              after:transition-all after:duration-300 hover:after:w-full ${isScrolled
-                  ? 'text-[#202851]'
-                  : 'text-white'
-                }`}
+              className={`${navLinkClass} ${
+                isScrolled ? 'text-[#202851]' : 'text-white'
+              }`}
             >
-              Services            </button>
+              Services
+            </button>
 
             {/* About */}
+
             <button
               onClick={() => scrollToSection('about')}
-              className={`cursor-pointer relative text-[15px] font-normal transition-all duration-300 hover:text-[#24c2f2]
-              after:absolute after:left-0 after:-bottom-1 after:h-[2px]
-              after:w-0 after:bg-[#24c2f2]
-              after:transition-all after:duration-300 hover:after:w-full ${isScrolled
-                  ? 'text-[#202851]'
-                  : 'text-white'
-                }`}
+              className={`${navLinkClass} ${
+                isScrolled ? 'text-[#202851]' : 'text-white'
+              }`}
             >
               About
             </button>
+
+            {/* Featured Work */}
+
             <button
               onClick={() => scrollToSection('featured-work')}
-              className={`cursor-pointer relative text-[15px] font-normal transition-all duration-300 hover:text-[#24c2f2]
-              after:absolute after:left-0 after:-bottom-1 after:h-[2px]
-              after:w-0 after:bg-[#24c2f2]
-              after:transition-all after:duration-300 hover:after:w-full ${isScrolled
-                  ? 'text-[#202851]'
-                  : 'text-white'
-                }`}
+              className={`${navLinkClass} ${
+                isScrolled ? 'text-[#202851]' : 'text-white'
+              }`}
             >
-              Featuered Work
+              Featured Work
             </button>
 
-
-
-
             {/* Blog */}
+
             <a
               href="https://blog.nexifymedia.co.in"
               target="_blank"
               rel="noopener noreferrer"
-              className={`relative text-[15px] font-normal transition-all duration-300 hover:text-[#24c2f2]
-              after:absolute after:left-0 after:-bottom-1 after:h-[2px]
-              after:w-0 after:bg-[#24c2f2]
-              after:transition-all after:duration-300 hover:after:w-full ${isScrolled
-                  ? 'text-[#202851]'
-                  : 'text-white'
-                }`}
+              className={`${navLinkClass} ${
+                isScrolled ? 'text-[#202851]' : 'text-white'
+              }`}
             >
               Blog
             </a>
 
-            {/* careers */}
+            {/* Careers Button */}
+
             <Link
               to="/careers"
               onClick={() => {
@@ -210,34 +199,51 @@ export default function Navigation() {
 
                 setIsMobileMenuOpen(false);
               }}
-              className="px-6
-    py-3
-    rounded-full
-    bg-gradient-to-r
-    from-[#24c2f2]
-    to-[#202851]
-    text-white
-    text-sm
-    font-normal
-    shadow-lg
-    hover:shadow-2xl
-    hover:scale-105
-    transition-all
-    duration-300 cursor-pointer"
+              className="
+                group
+relative
+inline-flex
+items-center
+justify-center
+px-7
+py-3
+rounded-2xl
+bg-gradient-to-r
+from-[#24c2f2]
+via-[#1da1f2]
+to-[#1d4ed8]
+text-white
+text-sm
+font-semibold
+shadow-[0_8px_30px_rgba(36,194,242,0.18)]
+hover:shadow-[0_16px_50px_rgba(36,194,242,0.28)]
+hover:-translate-y-[2px]
+transition-all
+duration-300
+overflow-hidden
+              "
             >
               Careers
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
+
           <button
             onClick={() =>
               setIsMobileMenuOpen(!isMobileMenuOpen)
             }
-            className={`lg:hidden p-2 rounded-lg transition-all duration-300 ${isScrolled
-              ? 'text-[#202851] hover:bg-gray-100'
-              : 'text-white hover:bg-white/10'
-              }`}
+            className={`
+              lg:hidden
+              p-2
+              rounded-xl
+              transition-all
+              duration-300
+              ${isScrolled
+                ? 'text-[#202851] hover:bg-[#202851]/5'
+                : 'text-white hover:bg-white/10'
+              }
+            `}
           >
             {isMobileMenuOpen ? (
               <X className="w-7 h-7" />
@@ -249,75 +255,137 @@ export default function Navigation() {
       </div>
 
       {/* Mobile Menu */}
+
       <div
-        className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out ${isMobileMenuOpen
-          ? 'max-h-[600px] opacity-100'
-          : 'max-h-0 opacity-0'
-          }`}
+        className={`
+          lg:hidden
+          overflow-hidden
+          transition-all
+          duration-500
+          ease-in-out
+          ${isMobileMenuOpen
+            ? 'max-h-[600px] opacity-100'
+            : 'max-h-0 opacity-0'
+          }
+        `}
       >
-        <div className="bg-white/95 backdrop-blur-xl border-t border-gray-200 shadow-2xl">
+        <div className="bg-white/90 backdrop-blur-xl border-t border-[#202851]/10 shadow-2xl">
           <div className="container mx-auto px-6 py-5 space-y-3">
 
             {/* Services */}
+
             <button
               onClick={() => scrollToSection('services')}
-              className="block w-full text-left px-4 py-2 text-[#202851]
-              rounded-xl hover:bg-[#f4f9ff]
-              hover:text-[#24c2f2] transition-all duration-300 cursor-pointer"
+              className="
+                block
+                w-full
+                text-left
+                px-4
+                py-3
+                text-[#202851]
+                rounded-xl
+                hover:bg-[#f4f9ff]
+                hover:text-[#24c2f2]
+                transition-all
+                duration-300
+              "
             >
               Services
             </button>
 
             {/* About */}
+
             <button
               onClick={() => scrollToSection('about')}
-              className="block w-full text-left px-4 py-2 text-[#202851]
-              rounded-xl hover:bg-[#f4f9ff]
-              hover:text-[#24c2f2] transition-all duration-300 cursor-pointer"
+              className="
+                block
+                w-full
+                text-left
+                px-4
+                py-3
+                text-[#202851]
+                rounded-xl
+                hover:bg-[#f4f9ff]
+                hover:text-[#24c2f2]
+                transition-all
+                duration-300
+              "
             >
               About
             </button>
 
-            {/* FEATURED WORK */}
+            {/* Featured Work */}
 
             <button
               onClick={() => scrollToSection('featured-work')}
-              className="block w-full text-left px-4 py-2 text-[#202851]
-              rounded-xl hover:bg-[#f4f9ff]
-              hover:text-[#24c2f2] transition-all duration-300 cursor-pointer"
+              className="
+                block
+                w-full
+                text-left
+                px-4
+                py-3
+                text-[#202851]
+                rounded-xl
+                hover:bg-[#f4f9ff]
+                hover:text-[#24c2f2]
+                transition-all
+                duration-300
+              "
             >
               Featured Work
             </button>
 
             {/* Blog */}
+
             <a
               href="https://blog.nexifymedia.co.in"
               target="_blank"
               rel="noopener noreferrer"
-              className="block px-4 py-2 text-[#202851]
-              rounded-xl hover:bg-[#f4f9ff]
-              hover:text-[#24c2f2] transition-all duration-300"
+              className="
+                block
+                px-4
+                py-3
+                text-[#202851]
+                rounded-xl
+                hover:bg-[#f4f9ff]
+                hover:text-[#24c2f2]
+                transition-all
+                duration-300
+              "
             >
               Blog
             </a>
 
             {/* Careers */}
-            {/* Careers */}
+
             <div className="flex justify-center pt-4">
               <Link
                 to="/careers"
                 onClick={() => {
                   window.scrollTo({
                     top: 0,
-                    behavior: "smooth",
+                    behavior: 'smooth',
                   });
 
                   setIsMobileMenuOpen(false);
                 }}
-                className="inline-flex items-center justify-center
-    px-8 py-3 bg-gradient-to-r from-[#24c2f2] to-[#202851]
-    text-white rounded-full shadow-lg hover:scale-105
-    hover:shadow-2xl transition-all duration-300"
+                className="
+                  inline-flex
+                  items-center
+                  justify-center
+                  px-8
+                  py-3
+                  bg-gradient-to-r
+                  from-[#24c2f2]
+                  to-[#202851]
+                  text-white
+                  rounded-full
+                  shadow-lg
+                  hover:scale-105
+                  hover:shadow-2xl
+                  transition-all
+                  duration-300
+                "
               >
                 Careers
               </Link>

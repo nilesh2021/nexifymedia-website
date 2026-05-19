@@ -142,19 +142,25 @@ export default function ContactSection() {
             <button
                onClick={() => navigate("/careers")}
               className="
-    inline-flex items-center gap-3
-    px-8 py-4
-    rounded-2xl
-    bg-gradient-to-r from-[#24c2f2] to-[#1b2c7a]
-    text-white font-semibold
-
-    hover:scale-105
-    hover:shadow-2xl
-    hover:shadow-cyan-500/30
-
-    active:scale-95
-
-    transition-all duration-300 ease-in-out
+    group
+inline-flex
+items-center
+gap-3
+px-8
+py-4
+rounded-2xl
+bg-gradient-to-r
+from-[#24c2f2]
+via-[#1da1f2]
+to-[#1d4ed8]
+text-white
+font-semibold
+text-lg
+shadow-[0_10px_40px_rgba(36,194,242,0.18)]
+hover:shadow-[0_20px_60px_rgba(36,194,242,0.28)]
+hover:-translate-y-1
+transition-all
+duration-300
   "
             >
               Apply for Internship

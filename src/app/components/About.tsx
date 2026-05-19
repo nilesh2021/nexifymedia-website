@@ -58,16 +58,17 @@ export default function About() {
           }}
           className="
             px-8
-            py-4
-            bg-[#202851]
-            text-white
-            rounded-full
-            hover:bg-[#2a3561]
-            hover:scale-105
-            transition-all
-            duration-300
-            shadow-lg
-            hover:shadow-2xl
+py-4
+bg-[#202851]
+text-white
+rounded-full
+font-medium
+hover:bg-[#28346a]
+hover:scale-105
+transition-all
+duration-300
+shadow-md
+hover:shadow-xl
           "
         >
           Explore Our Services
