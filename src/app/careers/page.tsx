@@ -221,11 +221,11 @@ export default function CareersPage() {
       {/* Primary CTA */}
 
       <button
-        onClick={() => {
-          document.getElementById("open-roles")?.scrollIntoView({
+         onClick={() => {
+          document.getElementById("openings")?.scrollIntoView({
             behavior: "smooth",
           });
-        }}
+        }}  
         className="
           group
           inline-flex
