@@ -5,7 +5,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import logo from "../../assets/images/nexify_n_logo.png";
 
-export default function Navigation() {
+export default function Navigation({
+  light = false,
+}: {
+  light?: boolean;
+}) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
