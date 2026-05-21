@@ -21,6 +21,13 @@ import RemoteSeoInternship from './app/Internship/RemoteSeoInternship';
 import RouteScrollToTop from './app/components/RouteScrollToTop';
 import BestAiToolsForMarketers from './app/Resources/BestAiToolsForMarketers';
 import BestChatgptToolsForMarketers from './app/Resources/BestChatgptToolsForMarketers';
+
+import ServicesPage from './app/services/page';
+import SeoServicesPage from './app/services/seo-services/page';
+import WebDesignPage from './app/services/web-design/page';
+import UiUxDesignPage from './app/services/ui-ux-design/page';
+import SocialMediaMarketingPage from './app/services/social-media-marketing/page';
+import UiUxFuture2026Page from './app/blog/ui-ux-design-in-2026/page';
 createRoot(document.getElementById('root')!).render(
   <HelmetProvider>
     <BrowserRouter>
@@ -62,11 +69,41 @@ createRoot(document.getElementById('root')!).render(
           path="/best-ai-tools-for-marketers"
           element={<BestAiToolsForMarketers />}
         /><Route
-  path="/best-chatgpt-tools-for-marketers"
-  element={<BestChatgptToolsForMarketers />}
-/>
+          path="/best-chatgpt-tools-for-marketers"
+          element={<BestChatgptToolsForMarketers />}
+        />
+
+
+        <Route
+          path="/services"
+          element={<ServicesPage />}
+        />
+
+        <Route
+          path="/services/seo-services"
+          element={<SeoServicesPage />}
+        />
+
+        <Route
+          path="/services/web-design"
+          element={<WebDesignPage />}
+        />
+
+        <Route
+          path="/services/ui-ux-design"
+          element={<UiUxDesignPage />}
+        />
+
+        <Route
+          path="/services/social-media-marketing"
+          element={<SocialMediaMarketingPage />}
+        />
+        <Route
+          path="/blog/ui-ux-design-in-2026"
+          element={<UiUxFuture2026Page />}
+        />
       </Routes>
-      
+
     </BrowserRouter>
 
   </HelmetProvider>
