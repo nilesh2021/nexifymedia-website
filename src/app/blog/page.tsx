@@ -16,9 +16,9 @@ export default function BlogPage() {
     activeCategory === "All"
       ? blogs
       : blogs.filter(
-          (blog) =>
-            blog.categoryLabel === activeCategory
-        );
+        (blog) =>
+          blog.categoryLabel === activeCategory
+      );
 
   const featuredBlog = blogs.find(
     (blog) => blog.featured
@@ -42,42 +42,139 @@ export default function BlogPage() {
       <main className="min-h-screen bg-white">
 
         {/* HERO */}
-        <section className="relative overflow-hidden bg-[#edf3fb] pt-40 pb-24">
+        {/* HERO */}
+        <section className="relative overflow-hidden bg-[#0f172a] pt-44 pb-32 text-white">
 
-          {/* Glow */}
+          {/* Background Glow */}
           <div className="absolute inset-0 overflow-hidden">
 
-            <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-cyan-300/20 rounded-full blur-3xl" />
+            <div className="absolute top-0 left-[-100px] w-[500px] h-[500px] bg-cyan-500/20 rounded-full blur-3xl" />
 
-            <div className="absolute top-10 right-0 w-[500px] h-[500px] bg-blue-300/20 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 right-[-100px] w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-3xl" />
 
           </div>
 
-          {/* Grid */}
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.5)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.5)_1px,transparent_1px)] bg-[size:60px_60px] opacity-40" />
+          {/* Grid Pattern */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:70px_70px]" />
+
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0f172a]/40 to-[#0f172a]" />
 
           <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
 
-            <div className="max-w-4xl">
+            <div className="max-w-5xl">
 
-              <div className="inline-flex rounded-full border border-cyan-200 bg-white/80 backdrop-blur-md px-5 py-2 text-sm font-medium text-cyan-700 shadow-md">
-                Nexify Media Blog
+              {/* Badge */}
+              <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl px-6 py-3 shadow-2xl">
+
+                <div className="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse" />
+
+                <span className="text-sm font-medium text-cyan-100 tracking-wide">
+                  Nexify Media Insights
+                </span>
+
               </div>
 
-              <h1 className="mt-8 text-5xl md:text-7xl font-bold leading-[1.05] tracking-tight text-[#111827]">
-                Insights on
-                <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">
-                  {" "}
-                  SEO, UI/UX & Digital Growth
+              {/* Title */}
+              <h1 className="mt-10 text-5xl md:text-7xl xl:text-8xl font-bold leading-[0.95] tracking-tight">
+
+                Digital Growth,
+                <br />
+
+                <span className="bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-500 bg-clip-text text-transparent">
+                  SEO & UI/UX
                 </span>
+
+                <br />
+
+                Insights for 2026
+
               </h1>
 
-              <p className="mt-8 max-w-3xl text-xl leading-9 text-gray-600">
-                Explore articles on UI/UX design, SEO,
-                digital marketing, affiliate marketing,
-                AI tools, web design, and modern
-                digital experiences.
+              {/* Description */}
+              <p className="mt-10 max-w-3xl text-xl md:text-2xl leading-10 text-slate-300">
+
+                Explore actionable insights on SEO,
+                UI/UX design, AI tools, affiliate marketing,
+                digital branding, and modern web experiences
+                shaping the future of online business.
+
               </p>
+
+              {/* CTA + STATS */}
+              <div className="mt-14 flex flex-col lg:flex-row lg:items-center gap-8">
+
+                {/* CTA */}
+                <a
+                  href="#featured-posts"
+                  className="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 font-semibold text-white shadow-2xl shadow-cyan-500/20 hover:scale-105 transition-all duration-300"
+                >
+
+                  Explore Articles
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="ml-3 w-5 h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+
+                </a>
+
+                {/* Stats */}
+                <div className="flex flex-wrap items-center gap-8 text-slate-300">
+
+                  <div>
+
+                    <div className="text-3xl font-bold text-white">
+                      50+
+                    </div>
+
+                    <div className="text-sm mt-1">
+                      Expert Articles
+                    </div>
+
+                  </div>
+
+                  <div className="w-px h-12 bg-white/10 hidden sm:block" />
+
+                  <div>
+
+                    <div className="text-3xl font-bold text-white">
+                      SEO
+                    </div>
+
+                    <div className="text-sm mt-1">
+                      Growth Strategies
+                    </div>
+
+                  </div>
+
+                  <div className="w-px h-12 bg-white/10 hidden sm:block" />
+
+                  <div>
+
+                    <div className="text-3xl font-bold text-white">
+                      UI/UX
+                    </div>
+
+                    <div className="text-sm mt-1">
+                      Design Insights
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
 
             </div>
 
@@ -86,7 +183,10 @@ export default function BlogPage() {
         </section>
 
         {/* BLOG SECTION */}
-        <section className="py-24">
+        <section
+          id="featured-posts"
+          className="py-24"
+        >
 
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
@@ -106,11 +206,10 @@ export default function BlogPage() {
                   onClick={() =>
                     setActiveCategory(item)
                   }
-                  className={`rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 ${
-                    activeCategory === item
-                      ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-200"
-                      : "border border-gray-200 bg-white text-gray-700 hover:border-cyan-200 hover:text-cyan-600"
-                  }`}
+                  className={`rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 ${activeCategory === item
+                    ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-200"
+                    : "border border-gray-200 bg-white text-gray-700 hover:border-cyan-200 hover:text-cyan-600"
+                    }`}
                 >
                   {item}
                 </button>
@@ -118,122 +217,24 @@ export default function BlogPage() {
 
             </div>
 
-            {/* FEATURED BLOG */}
-            {activeCategory === "All" &&
-              featuredBlog && (
-
-                <div className="mb-20">
-
-                  <div className="group grid lg:grid-cols-2 overflow-hidden rounded-[32px] border border-gray-200 bg-white shadow-xl shadow-cyan-100/30">
-
-                    {/* Image */}
-                    <div className="relative overflow-hidden min-h-[420px]">
-
-                      <img
-                        src={featuredBlog.image}
-                        alt={featuredBlog.title}
-                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
-
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-
-                      <div className="absolute top-6 left-6">
-
-                        <span className="rounded-full bg-white/90 backdrop-blur-md px-5 py-2 text-sm font-semibold text-cyan-700">
-                          Featured Article
-                        </span>
-
-                      </div>
-
-                    </div>
-
-                    {/* Content */}
-                    <div className="p-10 lg:p-14 flex flex-col justify-center">
-
-                      {/* Meta */}
-                      <div className="flex items-center gap-4 text-sm text-gray-500">
-
-                        <span>
-                          {featuredBlog.categoryLabel}
-                        </span>
-
-                        <span className="w-1 h-1 rounded-full bg-gray-400" />
-
-                        <span>
-                          {featuredBlog.readTime}
-                        </span>
-
-                      </div>
-
-                      {/* Title */}
-                      <h2 className="mt-6 text-4xl lg:text-5xl font-bold leading-tight text-[#111827] group-hover:text-cyan-600 transition-colors">
-
-                        {featuredBlog.title}
-
-                      </h2>
-
-                      {/* Excerpt */}
-                      <p className="mt-6 text-lg leading-8 text-gray-600">
-
-                        {featuredBlog.excerpt}
-
-                      </p>
-
-                      {/* CTA */}
-                      <div className="mt-10">
-
-                        <a
-                          href={`/blog/${featuredBlog.category}/${featuredBlog.slug}`}
-                          className="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 font-semibold text-white shadow-lg shadow-cyan-200 hover:scale-105 transition-all duration-300"
-                        >
-                          Read Featured Article
-
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="ml-3 w-5 h-5"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M9 5l7 7-7 7"
-                            />
-                          </svg>
-
-                        </a>
-
-                      </div>
-
-                    </div>
-
-                  </div>
-
-                </div>
-
-              )}
 
             {/* BLOG GRID */}
-            <div className="grid lg:grid-cols-2 gap-10">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-              {filteredBlogs
-                .filter((blog) => !blog.featured)
-                .map((blog) => (
+              {filteredBlogs.map((blog) => (
 
-                  <BlogCard
-                    key={blog.id}
-                    title={blog.title}
-                    excerpt={blog.excerpt}
-                    image={blog.image}
-                    category={blog.categoryLabel}
-                    readTime={blog.readTime}
-                    date={blog.date}
-                    link={`/blog/${blog.category}/${blog.slug}`}
-                  />
+                <BlogCard
+                  key={blog.id}
+                  title={blog.title}
+                  excerpt={blog.excerpt}
+                  image={blog.image}
+                  category={blog.categoryLabel}
+                  readTime={blog.readTime}
+                  date={blog.date}
+                  link={`/blog/${blog.category}/${blog.slug}`}
+                />
 
-                ))}
+              ))}
 
             </div>
 
