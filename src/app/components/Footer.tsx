@@ -149,6 +149,7 @@ export default function Footer() {
 
                 <Link
                   to="/careers"
+                  onClick={() => window.scrollTo(0, 0)}
                   className="block hover:text-[#24c2f2] transition-all duration-300"
                 >
                   Careers
