@@ -7,13 +7,14 @@ import {
 
 import { Link } from "react-router-dom";
 
-// Update path if needed
 import logo from "../../assets/images/nexify_n_logo.png";
 
 export default function Footer() {
-  // Smooth scroll logic
+
   const scrollToSection = (id: string) => {
+
     if (window.location.pathname === "/") {
+
       const element = document.getElementById(id);
 
       if (element) {
@@ -22,223 +23,279 @@ export default function Footer() {
           block: "start",
         });
       }
+
     } else {
+
       window.location.href = `/#${id}`;
+
     }
+
   };
 
   return (
-    <footer className="bg-[#202851] text-white pt-24 pb-10 border-t border-white/10">
+
+    <footer className="bg-[#202851] text-white pt-16 pb-6 border-t border-white/10">
+
       <div className="w-full px-6 md:px-10 lg:px-16 xl:px-24">
-        {/* Top Gradient Line */}
-        <div className="h-[1px] bg-gradient-to-r from-transparent via-[#24c2f2]/40 to-transparent mb-16"></div>
 
-        {/* Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 xl:gap-16 mb-16">
-          
-          {/* Column 1 - Brand */}
-          <div className="max-w-md">
-            <div className="flex items-center gap-2 mb-5">
-              <Link
-                to="/"
-                className="flex items-center gap-3 group"
-              >
-                <div className="w-14 h-14 flex items-center justify-center duration-300">
-                  <img
-                    src={logo}
-                    alt="Nexify Media Logo"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
+        {/* Top Line */}
+        <div className="h-[1px] bg-gradient-to-r from-transparent via-[#24c2f2]/40 to-transparent mb-10" />
 
-                <div className="flex flex-col leading-none">
-                  <span className="text-xl font-bold text-white">
-                    Nexify
-                    <span className="font-medium text-gray-300">
-                      Media
-                    </span>
+        {/* GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 xl:gap-12 mb-10">
+
+          {/* BRAND */}
+          <div className="max-w-sm">
+
+            <Link
+              to="/"
+              className="flex items-center gap-3 group"
+            >
+
+              <div className="w-11 h-11 flex items-center justify-center duration-300">
+
+                <img
+                  src={logo}
+                  alt="Nexify Media Logo"
+                  className="w-full h-full object-contain"
+                />
+
+              </div>
+
+              <div className="flex flex-col leading-none">
+
+                <span className="text-lg font-bold text-white">
+
+                  Nexify
+                  <span className="font-medium text-gray-300">
+                    Media
                   </span>
 
-                  <span className="text-[11px] uppercase tracking-[0.2em] text-[#24c2f2] mt-1">
-                    Digital Agency
-                  </span>
-                </div>
-              </Link>
-            </div>
+                </span>
 
-            <p className="text-gray-400 mb-6 leading-8 text-[17px]">
-              Helping brands grow through SEO, performance marketing,
-              social media, and creative digital experiences.
+                <span className="text-[10px] uppercase tracking-[0.2em] text-[#24c2f2] mt-1">
+
+                  Digital Agency
+
+                </span>
+
+              </div>
+
+            </Link>
+
+            <p className="text-gray-400 mt-5 mb-5 leading-7 text-[15px]">
+
+              Helping brands grow through SEO,
+              performance marketing, social media,
+              and modern digital experiences.
+
             </p>
 
-            {/* Social Icons */}
-            <div className="flex gap-4">
+            {/* SOCIAL */}
+            <div className="flex gap-3">
+
               {[Facebook, Twitter, Instagram, Linkedin].map(
                 (Icon, index) => (
+
                   <a
                     key={index}
                     href="#"
-                    className="w-11 h-11 rounded-xl bg-white/10 backdrop-blur-xl border border-white/10 flex items-center justify-center hover:bg-[#24c2f2] hover:scale-110 transition-all duration-300"
+                    className="w-9 h-9 rounded-lg bg-white/10 backdrop-blur-xl border border-white/10 flex items-center justify-center hover:bg-[#24c2f2] hover:scale-110 transition-all duration-300"
                   >
-                    <Icon className="w-5 h-5" />
+
+                    <Icon className="w-4 h-4" />
+
                   </a>
+
                 )
               )}
+
             </div>
+
           </div>
 
-          {/* Column 2 - Company */}
+          {/* COMPANY */}
           <div>
-            <h3 className="text-xl font-semibold mb-6">
+
+            <h3 className="text-lg font-semibold mb-4">
               Company
             </h3>
 
-            <ul className="space-y-4 text-gray-400">
+            <ul className="space-y-3 text-gray-400 text-[15px]">
+
               <li>
+
                 <button
                   onClick={() => scrollToSection("about")}
-                  className="hover:text-[#24c2f2] transition-all duration-300 hover:translate-x-1"
+                  className="hover:text-[#24c2f2] transition-all duration-300"
                 >
                   About Us
                 </button>
+
               </li>
 
               <li>
+
                 <button
                   onClick={() => scrollToSection("services")}
-                  className="hover:text-[#24c2f2] transition-all duration-300 hover:translate-x-1"
+                  className="hover:text-[#24c2f2] transition-all duration-300"
                 >
                   Services
                 </button>
+
               </li>
 
               <li>
+
                 <Link
                   to="/careers"
-                  className="block hover:text-[#24c2f2] transition-all duration-300 hover:translate-x-1"
+                  className="block hover:text-[#24c2f2] transition-all duration-300"
                 >
                   Careers
                 </Link>
+
               </li>
 
               <li>
+
                 <button
                   onClick={() => scrollToSection("contact")}
-                  className="hover:text-[#24c2f2] transition-all duration-300 hover:translate-x-1"
+                  className="hover:text-[#24c2f2] transition-all duration-300"
                 >
                   Contact
                 </button>
+
               </li>
+
             </ul>
+
           </div>
 
-          {/* Column 3 - Resources */}
+          {/* RESOURCES */}
           <div>
-            <h3 className="text-xl font-semibold mb-6">
+
+            <h3 className="text-lg font-semibold mb-4">
               Resources
             </h3>
 
-            <ul className="space-y-4 text-gray-400">
+            <ul className="space-y-3 text-gray-400 text-[15px]">
+
               <li>
+
                 <Link
-                  to="/#case-studies"
-                  className="block hover:text-[#24c2f2] transition-all duration-300 hover:translate-x-1"
+                  to="/blog"
+                  className="block hover:text-[#24c2f2] transition-all duration-300"
                 >
-                  Case Studies
+                  Blog
                 </Link>
+
               </li>
 
               <li>
+
                 <Link
-                  to="/#learning-hub"
-                  className="block hover:text-[#24c2f2] transition-all duration-300 hover:translate-x-1"
+                  to="/best-ai-tools-for-marketers"
+                  className="block hover:text-[#24c2f2] transition-all duration-300"
                 >
-                  Learning Hub
+                  AI Tools
                 </Link>
+
               </li>
 
               <li>
+
                 <Link
-                  to="/#digital-products"
-                  className="block hover:text-[#24c2f2] transition-all duration-300 hover:translate-x-1"
+                  to="/best-chatgpt-tools-for-marketers"
+                  className="block hover:text-[#24c2f2] transition-all duration-300"
                 >
-                  Digital Products
+                  Marketing Tools
                 </Link>
+
               </li>
 
               <li>
+
                 <Link
-                  to="/#free-tools"
-                  className="block hover:text-[#24c2f2] transition-all duration-300 hover:translate-x-1"
+                  to="/blog/ui-ux/ui-ux-design-in-2026"
+                  className="block hover:text-[#24c2f2] transition-all duration-300"
                 >
-                  Free Tools
+                  UI/UX Trends
                 </Link>
+
               </li>
 
-              <li>
-                <Link
-                  to="/#templates"
-                  className="block hover:text-[#24c2f2] transition-all duration-300 hover:translate-x-1"
-                >
-                  Templates
-                </Link>
-              </li>
             </ul>
+
           </div>
 
-          {/* Column 4 - Services */}
+          {/* SERVICES */}
           <div>
-            <h3 className="text-xl font-semibold mb-6">
+
+            <h3 className="text-lg font-semibold mb-4">
               Services
             </h3>
 
-            <ul className="space-y-4 text-gray-400">
+            <ul className="space-y-3 text-gray-400 text-[15px]">
+
               <li>
+
                 <Link
-                  to="/#seo-services"
-                  className="block hover:text-[#24c2f2] transition-all duration-300 hover:translate-x-1"
+                  to="/services/seo-services"
+                  className="block hover:text-[#24c2f2] transition-all duration-300"
                 >
                   SEO Services
                 </Link>
+
               </li>
 
               <li>
+
                 <Link
-                  to="/#web-design"
-                  className="block hover:text-[#24c2f2] transition-all duration-300 hover:translate-x-1"
+                  to="/services/web-design"
+                  className="block hover:text-[#24c2f2] transition-all duration-300"
                 >
                   Web Design
                 </Link>
+
               </li>
 
               <li>
+
                 <Link
-                  to="/#ui-ux-design"
-                  className="block hover:text-[#24c2f2] transition-all duration-300 hover:translate-x-1"
+                  to="/services/ui-ux-design"
+                  className="block hover:text-[#24c2f2] transition-all duration-300"
                 >
                   UI/UX Design
                 </Link>
+
               </li>
 
               <li>
+
                 <Link
-                  to="/#social-media-marketing"
-                  className="block hover:text-[#24c2f2] transition-all duration-300 hover:translate-x-1"
+                  to="/services/social-media-marketing"
+                  className="block hover:text-[#24c2f2] transition-all duration-300"
                 >
                   Social Media Marketing
                 </Link>
+
               </li>
+
             </ul>
+
           </div>
+
         </div>
 
-        {/* Bottom Footer */}
-        <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-sm">
+        {/* BOTTOM */}
+        <div className="border-t border-white/10 pt-5 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-sm">
+
           <p>
             © 2026 Nexify Media. All rights reserved.
           </p>
 
-          <div className="flex gap-6 flex-wrap justify-center">
+          <div className="flex gap-5 flex-wrap justify-center">
+
             <Link
               to="/privacy-policy"
               className="hover:text-[#24c2f2] transition-all duration-300"
@@ -250,7 +307,7 @@ export default function Footer() {
               to="/terms-and-conditions"
               className="hover:text-[#24c2f2] transition-all duration-300"
             >
-              Terms & Conditions
+              Terms
             </Link>
 
             <Link
@@ -259,9 +316,15 @@ export default function Footer() {
             >
               Disclaimer
             </Link>
+
           </div>
+
         </div>
+
       </div>
+
     </footer>
+
   );
+
 }
