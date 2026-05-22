@@ -213,7 +213,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  to="/ui-ux-design"
+                  to="/#ui-ux-design"
                   className="block hover:text-[#24c2f2] transition-all duration-300 hover:translate-x-1"
                 >
                   UI/UX Design
