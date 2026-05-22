@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
-import Navigation from "../../components/Navigation";
-import Footer from "../../components/Footer";
+import Navigation from "../../../components/Navigation";
+import Footer from "../../../components/Footer";
 import {
     CalendarDays,
     Clock3,
@@ -111,14 +111,17 @@ export default function UiUxFuture2026Page() {
                 </section>
 
                 {/* ARTICLE */}
-                <div className="max-w-7xl mx-auto px-6 lg:px-10 py-24">
-                    <div className="grid lg:grid-cols-[1fr_340px] gap-16">
+                <div className="max-w-7xl mx-auto px-6 lg:px-10 py-20">
+                    <div className="grid lg:grid-cols-[minmax(0,1fr)_320px] gap-14 items-start">
 
                         {/* ARTICLE */}
-                      <article className="min-w-0 max-w-4xl">
+                        <article className="min-w-0 max-w-4xl">
 
                             {/* Intro */}
-                            <div className="prose prose-lg max-w-none">
+                            <div
+                                id="introduction"
+                                className="prose prose-lg max-w-none"
+                            >
                                 <p className="text-xl text-gray-700 leading-9">
                                     UI/UX design is evolving rapidly as technology, user behavior,
                                     artificial intelligence, and digital experiences continue to
@@ -137,7 +140,10 @@ export default function UiUxFuture2026Page() {
                             </div>
 
                             {/* Section 1 */}
-                            <section className="mt-24">
+                            <section
+                                id="ai-uiux"
+                                className="mt-20"
+                            >
                                 <div className="flex items-center gap-4 mb-8">
                                     <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center shadow-lg shadow-cyan-200">
                                         <Brain className="w-7 h-7 text-white" />
@@ -163,7 +169,10 @@ export default function UiUxFuture2026Page() {
                             </section>
 
                             {/* Section 2 */}
-                            <section className="mt-24">
+                            <section
+                                id="mobile-design"
+                                className="mt-20"
+                            >
                                 <div className="flex items-center gap-4 mb-8">
                                     <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center shadow-lg shadow-cyan-200">
                                         <Smartphone className="w-7 h-7 text-white" />
@@ -188,7 +197,10 @@ export default function UiUxFuture2026Page() {
                             </section>
 
                             {/* Section 3 */}
-                            <section className="mt-24">
+                            <section
+  id="dashboard-trends"
+                                className="mt-20 rounded-3xl border border-cyan-100 bg-[#f8fbff] p-10"
+                            >
                                 <div className="flex items-center gap-4 mb-8">
                                     <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center shadow-lg shadow-cyan-200">
                                         <LayoutDashboard className="w-7 h-7 text-white" />
@@ -213,7 +225,9 @@ export default function UiUxFuture2026Page() {
                             </section>
 
                             {/* Key Trends */}
-                            <section className="mt-24 rounded-3xl border border-cyan-100 bg-[#f8fbff] p-10">
+                            <section
+  id="uiux-trends"
+  className="mt-20 rounded-3xl border border-cyan-100 bg-[#f8fbff] p-10">
                                 <h2 className="text-4xl font-bold">
                                     Top UI/UX Trends in 2026
                                 </h2>
@@ -244,7 +258,10 @@ export default function UiUxFuture2026Page() {
                             </section>
 
                             {/* Conclusion */}
-                            <section className="mt-24">
+                            <section
+                                id="final-thoughts"
+                                className="mt-20"
+                            >
                                 <h2 className="text-4xl font-bold">
                                     Final Thoughts
                                 </h2>
@@ -269,165 +286,123 @@ export default function UiUxFuture2026Page() {
                         </article>
 
                         {/* SIDEBAR */}
+                        {/* SIDEBAR */}
+                        {/* SIDEBAR */}
                         <aside className="hidden lg:block">
-                            <div className="sticky top-32 space-y-8">
 
-                                
-                                <div className="relative overflow-hidden rounded-3xl border border-cyan-100 bg-gradient-to-br from-cyan-50 to-blue-50 p-8">
-                                    <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-200/30 rounded-full blur-3xl" />
+                            <div className="space-y-6">
 
-                                    <div className="relative">
-                                        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-white text-2xl font-bold shadow-lg shadow-cyan-200">
-                                            N
+                               
+                                 
+
+                                {/* STICKY SECTION */}
+                                <div className="sticky top-24">
+
+                                    <div className="space-y-6">
+
+                                        {/* TABLE OF CONTENTS */}
+                                        <div className="rounded-3xl border border-gray-200 bg-white p-7 shadow-sm">
+
+                                            <div className="flex items-center gap-3">
+
+                                                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
+
+                                                    <Layers3 className="w-5 h-5 text-white" />
+
+                                                </div>
+
+                                                <h3 className="text-xl font-bold text-[#111827]">
+                                                    Table of Contents
+                                                </h3>
+
+                                            </div>
+
+                                            <div className="mt-8 space-y-2">
+
+                                                {[
+                                                    {
+                                                        title: "Introduction",
+                                                        id: "introduction",
+                                                    },
+                                                    {
+                                                        title: "AI-Powered UI/UX",
+                                                        id: "ai-uiux",
+                                                    },
+                                                    {
+                                                        title: "Mobile-First Design",
+                                                        id: "mobile-design",
+                                                    },
+                                                    {
+                                                        title: "Dashboard UI Trends",
+                                                        id: "dashboard-trends",
+                                                    },
+                                                    {
+                                                        title: "Top UI/UX Trends",
+                                                        id: "uiux-trends",
+                                                    },
+                                                    {
+                                                        title: "Final Thoughts",
+                                                        id: "final-thoughts",
+                                                    },
+                                                ].map((item, index) => (
+
+                                                    <a
+                                                        key={index}
+                                                        href={`#${item.id}`}
+                                                        className="group flex items-center justify-between rounded-2xl border border-transparent px-4 py-4 hover:border-cyan-100 hover:bg-cyan-50 transition-all duration-300"
+                                                    >
+
+                                                        <span className="text-gray-700 font-medium group-hover:text-cyan-600 transition-colors">
+                                                            {item.title}
+                                                        </span>
+
+                                                        <ArrowRight className="w-4 h-4 text-cyan-500 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+
+                                                    </a>
+
+                                                ))}
+
+                                            </div>
+
                                         </div>
 
-                                        <h3 className="mt-6 text-2xl font-bold text-[#111827]">
-                                            Written by Nexify Media
-                                        </h3>
+                                        {/* CTA */}
+                                        <div className="relative overflow-hidden rounded-3xl bg-[#111827] p-7 text-white">
 
-                                        <p className="mt-4 text-gray-600 leading-7">
-                                            Sharing insights on UI/UX design, SEO, digital marketing,
-                                            AI tools, affiliate marketing, and modern web experiences.
-                                        </p>
-                                    </div>
-                                </div>
+                                            <div className="absolute top-0 left-0 w-[200px] h-[200px] bg-cyan-500/20 rounded-full blur-3xl" />
 
-                                {/* Featured Article */}
-                                <div className="rounded-3xl border border-gray-200 bg-white p-8">
-                                    <div className="inline-flex rounded-full bg-cyan-100 px-4 py-2 text-sm font-medium text-cyan-700">
-                                        Featured Article
-                                    </div>
+                                            <div className="relative">
 
-                                    <h3 className="mt-6 text-2xl font-bold leading-tight text-[#111827]">
-                                        Best AI Tools for Digital Marketers in 2026
-                                    </h3>
+                                                <div className="inline-flex rounded-full bg-white/10 px-4 py-2 text-sm font-medium">
+                                                    UI/UX Services
+                                                </div>
 
-                                    <p className="mt-4 text-gray-600 leading-7">
-                                        Explore powerful AI tools helping marketers improve
-                                        productivity, content creation, and SEO workflows.
-                                    </p>
+                                                <h3 className="mt-5 text-3xl font-bold leading-tight">
+                                                    Need Modern UI/UX Design?
+                                                </h3>
 
-                                    <a
-                                        href="/best-ai-tools-for-marketers"
-                                        className="mt-6 inline-flex items-center text-cyan-600 font-semibold"
-                                    >
-                                        Read Article
+                                                <p className="mt-4 text-gray-300 leading-7">
+                                                    Explore UI/UX services for startups,
+                                                    SaaS platforms, and modern businesses.
+                                                </p>
 
-                                        <ArrowRight className="ml-2 w-4 h-4" />
-                                    </a>
-                                </div>
+                                                <a
+                                                    href="/services/ui-ux-design"
+                                                    className="mt-8 inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 font-semibold hover:scale-105 transition-all duration-300"
+                                                >
+                                                    Explore Services
 
-                                {/* Popular Categories */}
-                                <div className="rounded-3xl border border-gray-200 bg-white p-8">
-                                    <h3 className="text-2xl font-bold text-[#111827]">
-                                        Explore Topics
-                                    </h3>
+                                                    <ArrowRight className="ml-2 w-5 h-5" />
+                                                </a>
 
-                                    <div className="mt-6 space-y-4">
+                                            </div>
 
-                                        {[
-                                            "UI/UX Design",
-                                            "SEO",
-                                            "Digital Marketing",
-                                            "AI Tools",
-                                            "Affiliate Marketing",
-                                            "Web Design",
-                                        ].map((item, index) => (
-                                            <a
-                                                key={index}
-                                                href="#"
-                                                className="group flex items-center justify-between rounded-2xl border border-gray-100 px-5 py-4 hover:border-cyan-200 hover:bg-cyan-50 transition-all"
-                                            >
-                                                <span className="font-medium text-[#111827] group-hover:text-cyan-600">
-                                                    {item}
-                                                </span>
-
-                                                <ArrowRight className="w-4 h-4 text-cyan-500" />
-                                            </a>
-                                        ))}
-
-                                    </div>
-                                </div>
-
-                                {/* Trending Topics */}
-                                <div className="rounded-3xl border border-gray-200 bg-white p-8">
-                                    <h3 className="text-2xl font-bold text-[#111827]">
-                                        Trending Topics
-                                    </h3>
-
-                                    <div className="mt-6 flex flex-wrap gap-3">
-
-                                        {[
-                                            "AI UI Design",
-                                            "UX Trends",
-                                            "SEO 2026",
-                                            "SaaS Design",
-                                            "AI Marketing",
-                                            "Conversion UX",
-                                            "Web Accessibility",
-                                            "Modern Interfaces",
-                                        ].map((item, index) => (
-                                            <span
-                                                key={index}
-                                                className="rounded-full border border-cyan-100 bg-cyan-50 px-4 py-2 text-sm font-medium text-cyan-700"
-                                            >
-                                                {item}
-                                            </span>
-                                        ))}
-
-                                    </div>
-                                </div>
-
-                                {/* Free Resource CTA */}
-                                <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-cyan-500 to-blue-600 p-8 text-white">
-                                    <div className="absolute top-0 right-0 w-[200px] h-[200px] bg-white/10 rounded-full blur-3xl" />
-
-                                    <div className="relative">
-                                        <div className="inline-flex rounded-full bg-white/20 px-4 py-2 text-sm font-medium">
-                                            Free Resource
                                         </div>
 
-                                        <h3 className="mt-6 text-3xl font-bold leading-tight">
-                                            Free SEO Checklist for Startups
-                                        </h3>
-
-                                        <p className="mt-4 text-white/80 leading-7">
-                                            Download a modern SEO checklist designed to improve
-                                            visibility and organic growth.
-                                        </p>
-
-                                        <a
-                                            href="#"
-                                            className="mt-8 inline-flex items-center justify-center rounded-2xl bg-white px-6 py-3 font-semibold text-[#111827] hover:scale-105 transition-all duration-300"
-                                        >
-                                            Download Now
-                                        </a>
                                     </div>
                                 </div>
-
-                                {/* Services CTA */}
-                                <div className="relative overflow-hidden rounded-3xl bg-[#111827] p-8 text-white">
-                                    <div className="absolute top-0 left-0 w-[200px] h-[200px] bg-cyan-500/20 rounded-full blur-3xl" />
-
-                                    <div className="relative">
-                                        <h3 className="text-2xl font-bold leading-tight">
-                                            Need Modern UI/UX Design?
-                                        </h3>
-
-                                        <p className="mt-4 text-gray-300 leading-7">
-                                            Explore UI/UX services for startups and modern businesses.
-                                        </p>
-
-                                        <a
-                                            href="/services/ui-ux-design"
-                                            className="mt-6 inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3 font-semibold hover:scale-105 transition-all duration-300"
-                                        >
-                                            Explore Services
-                                        </a>
-                                    </div>
-                                </div>
-
                             </div>
+
                         </aside>
                     </div>
                 </div>
