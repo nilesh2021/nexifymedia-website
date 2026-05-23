@@ -1,27 +1,39 @@
-@import './fonts.css';
-@import './tailwind.css';
-@import './theme.css';
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+@import "tailwindcss";
 
 html {
   scroll-behavior: smooth;
 }
 
-.transition-colors {
-  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
-  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-  transition-duration: var(--tw-duration, var(--default-transition-duration));
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Google Sans", sans-serif;
+  background: #ffffff;
+  color: #111827;
 }
 
-.file {
-  background: f9fafb;
-  width: 100%;
-  padding: 20px;
-  border-radius: 16px;
-  border: 2px dashed #ddd;
-  color: #000;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Sora", sans-serif;
 }
 
-.file:hover {
-  border-color: #24c2f2;
+p,
+span,
+a,
+li {
+  font-family: "Figtree", sans-serif;
 }
 
+* {
+  box-sizing: border-box;
+}

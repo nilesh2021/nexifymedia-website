@@ -1,14 +1,11 @@
- 
 import { createRoot } from 'react-dom/client';
 import { HelmetProvider } from 'react-helmet-async';
-
+import './styles/index.css';
 import {
   BrowserRouter,
   Routes,
   Route,
 } from 'react-router-dom';
-
-import './styles/index.css';
 import App from './app/App';
 import CareersPage from './app/careers/page';
 import TermsAndConditionsPage from './app/terms-and-conditions/page';
@@ -31,6 +28,7 @@ import SocialMediaMarketingPage from './app/services/social-media-marketing/page
 import UiUxFuture2026Page from './app/blog/ui-ux/ui-ux-design-in-2026/page';
 import BlogPage from './app/blog/page';
 import BestAiToolsForCollegeStudentsPage from "./app/blog/ai-tools/best-ai-tools-for-college-students/page";
+
 createRoot(document.getElementById('root')!).render(
   <HelmetProvider>
     <BrowserRouter>
@@ -110,9 +108,9 @@ createRoot(document.getElementById('root')!).render(
           element={<BlogPage />}
         />
         <Route
-  path="/blog/ai-tools/best-ai-tools-for-college-students"
-  element={<BestAiToolsForCollegeStudentsPage />}
-/>
+          path="/blog/ai-tools/best-ai-tools-for-college-students"
+          element={<BestAiToolsForCollegeStudentsPage />}
+        />
       </Routes>
 
     </BrowserRouter>
