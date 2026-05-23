@@ -6,6 +6,9 @@ import {
   Brain,
   Sparkles,
 } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import Navigation from "../../../components/Navigation";
+import Footer from "../../../components/Footer";
 
  
 const tools = [
@@ -93,12 +96,95 @@ const tools = [
 
 export default function BestAIToolsStudentsPage() {
   return (
+
+    <> 
+<Navigation />
+  {/* SEO SECTION */}
+      <Helmet>
+        <title>
+          10 Best AI Tools for College Students in 2026 | Nexify Media
+        </title>
+
+        <meta
+          name="description"
+          content="Discover the best AI tools for college students in 2026 including ChatGPT, Grammarly, Canva AI, Notion AI, GitHub Copilot, and more for studying, coding, productivity, and research."
+        />
+
+        <meta
+          name="keywords"
+          content="best AI tools for students, AI tools for college students, ChatGPT for students, AI apps for students, best study tools 2026, productivity AI tools"
+        />
+
+        <meta
+          name="author"
+          content="Nexify Media"
+        />
+
+        <meta
+          name="robots"
+          content="index, follow"
+        />
+
+        {/* CANONICAL */}
+        <link
+          rel="canonical"
+          href="https://www.nexifymedia.co.in/blog/ai-tools/best-ai-tools-for-college-students"
+        />
+
+        {/* OPEN GRAPH */}
+        <meta
+          property="og:title"
+          content="10 Best AI Tools for College Students in 2026"
+        />
+
+        <meta
+          property="og:description"
+          content="Explore the top AI tools students use for studying, writing, coding, productivity, and presentations in 2026."
+        />
+
+        <meta
+          property="og:image"
+          content="https://www.nexifymedia.co.in/images/blog/ai-student.jpg"
+        />
+
+        <meta
+          property="og:url"
+          content="https://www.nexifymedia.co.in/blog/ai-tools/best-ai-tools-for-college-students"
+        />
+
+        <meta
+          property="og:type"
+          content="article"
+        />
+
+        {/* TWITTER */}
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+        />
+
+        <meta
+          name="twitter:title"
+          content="10 Best AI Tools for College Students in 2026"
+        />
+
+        <meta
+          name="twitter:description"
+          content="Discover powerful AI tools for students including ChatGPT, Grammarly, Canva AI, GitHub Copilot, and more."
+        />
+
+        <meta
+          name="twitter:image"
+          content="https://www.nexifymedia.co.in/images/blog/ai-student.jpg"
+        />
+      </Helmet>
+
     <main className="bg-black text-white min-h-screen">
       {/* HERO SECTION */}
       <section className="relative overflow-hidden border-b border-white/10 bg-gradient-to-b from-blue-950 via-slate-950 to-black py-24">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.2),transparent_40%)]" />
 
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="container mx-auto px-6 relative z-10 py-24">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* LEFT */}
             <div>
@@ -402,6 +488,9 @@ export default function BestAIToolsStudentsPage() {
           </aside>
         </div>
       </section>
-    </main>
+    </main> 
+    
+    <Footer />
+    </>
   );
 }

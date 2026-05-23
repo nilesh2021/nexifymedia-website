@@ -185,13 +185,13 @@ export default function BlogPage() {
         {/* BLOG SECTION */}
         <section
           id="featured-posts"
-          className="py-24"
+          className="py-16"
         >
 
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
             {/* CATEGORY FILTERS */}
-            <div className="flex flex-wrap gap-4 mb-16">
+            <div className="flex flex-wrap gap-4 mb-12">
 
               {[
                 "All",

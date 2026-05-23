@@ -27,7 +27,14 @@ import UiUxDesignPage from './app/services/ui-ux-design/page';
 import SocialMediaMarketingPage from './app/services/social-media-marketing/page';
 import UiUxFuture2026Page from './app/blog/ui-ux/ui-ux-design-in-2026/page';
 import BlogPage from './app/blog/page';
-import BestAiToolsForCollegeStudentsPage from "./app/blog/ai-tools/best-ai-tools-for-college-students/page";
+
+import BestAIToolsStudentsPage from './app/blog/ai-tools/best-ai-tools-for-college-students/page';
+import { Helmet } from 'react-helmet-async';
+import Navigation from './app/components/Navigation';
+import Footer from './app/components/Footer';
+import SeoForStartupsPage from './app/blog/seo/seo-for-startups/page';
+ 
+ 
 
 createRoot(document.getElementById('root')!).render(
   <HelmetProvider>
@@ -107,9 +114,14 @@ createRoot(document.getElementById('root')!).render(
           path="/blog"
           element={<BlogPage />}
         />
+        
         <Route
           path="/blog/ai-tools/best-ai-tools-for-college-students"
-          element={<BestAiToolsForCollegeStudentsPage />}
+          element={<BestAIToolsStudentsPage />}
+        />
+        <Route
+          path="/blog/seo/seo-for-startups"
+          element={<SeoForStartupsPage />}
         />
       </Routes>
 
