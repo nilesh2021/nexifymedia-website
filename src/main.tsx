@@ -33,8 +33,9 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import SeoForStartupsPage from './app/blog/seo/seo-for-startups/page';
- 
- 
+import WhatIsSeoPage from './app/blog/seo/what-is-seo/page';
+import UiUxDesignProcessExplainedPage from './app/blog/ui-ux/ui-ux-design-process-explained/page';
+import SaasDashboardDesignIdeasPage from './app/blog/ui-ux/saas-dashboard-design-ideas/page';
 
 createRoot(document.getElementById('root')!).render(
   <HelmetProvider>
@@ -122,6 +123,18 @@ createRoot(document.getElementById('root')!).render(
         <Route
           path="/blog/seo/seo-for-startups"
           element={<SeoForStartupsPage />}
+        />
+        <Route
+          path="/blog/seo/what-is-seo"
+          element={<WhatIsSeoPage />}
+        />
+        <Route
+          path="/blog/ui-ux/ui-ux-design-process-explained"
+          element={<UiUxDesignProcessExplainedPage />}
+        />
+        <Route
+          path="/blog/ui-ux/saas-dashboard-design-ideas"
+          element={<SaasDashboardDesignIdeasPage />}
         />
       </Routes>
 

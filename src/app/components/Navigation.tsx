@@ -106,7 +106,7 @@ export default function Navigation({
   const navLinkClass = `
     relative
     text-[15px]
-    font-medium
+    font-normal
     transition-all
     duration-300
     hover:text-[#24c2f2]

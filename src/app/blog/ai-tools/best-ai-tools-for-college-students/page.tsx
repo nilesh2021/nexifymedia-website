@@ -9,7 +9,7 @@ import {
 import { Helmet } from "react-helmet-async";
 import Navigation from "../../../components/Navigation";
 import Footer from "../../../components/Footer";
-
+import ScrollToTop from "../../../components/ScrollToTop";
  
 const tools = [
   {
@@ -489,7 +489,7 @@ export default function BestAIToolsStudentsPage() {
         </div>
       </section>
     </main> 
-    
+      <ScrollToTop />
     <Footer />
     </>
   );

@@ -13,6 +13,7 @@ import {
     Layers3,
     CheckCircle2,
 } from "lucide-react";
+import ScrollToTop from "../../../components/ScrollToTop";
 
 export default function UiUxFuture2026Page() {
     return (
@@ -408,7 +409,7 @@ export default function UiUxFuture2026Page() {
                 </div>
 
             </main>
-
+  <ScrollToTop />
             <Footer />
         </>
     );

@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import ScrollToTop from "../components/ScrollToTop";
 
 import BlogCard from "../components/blog/BlogCard";
 
@@ -38,6 +39,8 @@ export default function BlogPage() {
       </Helmet>
 
       <Navigation />
+
+      <ScrollToTop />
 
       <main className="min-h-screen bg-white">
 
@@ -206,7 +209,7 @@ export default function BlogPage() {
                   onClick={() =>
                     setActiveCategory(item)
                   }
-                  className={`rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 ${activeCategory === item
+                  className={`rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 cursor-pointer ${activeCategory === item
                     ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-200"
                     : "border border-gray-200 bg-white text-gray-700 hover:border-cyan-200 hover:text-cyan-600"
                     }`}

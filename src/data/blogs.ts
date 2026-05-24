@@ -127,6 +127,90 @@ export const blogs = [
   {
     id: 4,
 
+    title: "What is SEO?",
+
+    slug: "what-is-seo",
+
+    category: "seo",
+
+    categoryLabel: "SEO",
+
+    excerpt:
+      "Understand what SEO means, how search engines rank pages, and why SEO is essential for modern websites.",
+
+    image:
+      "https://images.unsplash.com/photo-1497493292307-31c376b6e479?q=80&w=1200&auto=format&fit=crop",
+
+    readTime: "7 min read",
+
+    date: "May 2026",
+
+    featured: false,
+
+    seoTitle:
+      "What is SEO? | Beginner's Guide to Search Engine Optimization",
+
+    seoDescription:
+      "Learn what SEO is, how search engines work, and why SEO is a must-have growth channel for your website.",
+
+    keywords: [
+      "SEO",
+      "What is SEO",
+      "Search engine optimization",
+      "SEO guide",
+      "SEO basics",
+    ],
+
+    accent: "from-emerald-500 to-green-600",
+
+    bgGlow: "bg-emerald-500/20",
+  },
+
+  {
+    id: 5,
+
+    title: "UI/UX Design Process Explained",
+
+    slug: "ui-ux-design-process-explained",
+
+    category: "ui-ux",
+
+    categoryLabel: "UI/UX",
+
+    excerpt:
+      "A step-by-step guide to the UI/UX design process, from research and strategy to prototyping and testing.",
+
+    image:
+      "https://images.unsplash.com/photo-1587614382346-acd5a01a71a1?q=80&w=1200&auto=format&fit=crop",
+
+    readTime: "8 min read",
+
+    date: "May 2026",
+
+    featured: false,
+
+    seoTitle:
+      "UI/UX Design Process Explained | Nexify Media",
+
+    seoDescription:
+      "Learn the UI/UX design process, including research, strategy, wireframes, prototyping, and testing for better digital products.",
+
+    keywords: [
+      "UI UX design process",
+      "design workflow",
+      "prototyping",
+      "user testing",
+      "UX strategy",
+    ],
+
+    accent: "from-cyan-500 to-blue-600",
+
+    bgGlow: "bg-cyan-500/20",
+  },
+
+  {
+    id: 6,
+
     title: "Best AI Tools for College Students in 2026",
 
     slug: "best-ai-tools-for-college-students",
@@ -168,7 +252,49 @@ export const blogs = [
   },
 
   {
-    id: 5,
+    id: 8,
+
+    title: "SaaS Dashboard Design Ideas",
+
+    slug: "saas-dashboard-design-ideas",
+
+    category: "ui-ux",
+
+    categoryLabel: "UI/UX",
+
+    excerpt:
+      "Explore essential principles and design ideas for creating effective SaaS dashboards that drive user adoption and engagement.",
+
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
+
+    readTime: "9 min read",
+
+    date: "May 2026",
+
+    featured: false,
+
+    seoTitle:
+      "SaaS Dashboard Design Ideas | Best Practices 2026",
+
+    seoDescription:
+      "Learn key principles and design patterns for creating effective SaaS dashboards that users love. Real-time data, customization, and best practices.",
+
+    keywords: [
+      "SaaS dashboard design",
+      "dashboard UI",
+      "data visualization",
+      "dashboard best practices",
+      "UX design",
+    ],
+
+    accent: "from-cyan-500 to-blue-600",
+
+    bgGlow: "bg-cyan-500/20",
+  },
+
+  {
+    id: 7,
 
     title: "Best ChatGPT Tools for Marketers",
 
