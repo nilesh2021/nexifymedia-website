@@ -183,7 +183,7 @@ export default function Navigation({
 
                 <span
                   className={`
-                    font-medium
+                    font-normal
                     transition-colors
                     duration-300
                     ${

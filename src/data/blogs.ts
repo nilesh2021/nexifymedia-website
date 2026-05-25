@@ -300,9 +300,9 @@ export const blogs = [
 
     slug: "best-chatgpt-tools-for-marketers",
 
-    category: "marketing",
+    category: "ai-tools",
 
-    categoryLabel: "Marketing",
+    categoryLabel: "AI Tools",
 
     excerpt:
       "Explore powerful ChatGPT tools marketers use for SEO, content creation, automation, social media, and productivity.",
@@ -334,4 +334,212 @@ export const blogs = [
 
     bgGlow: "bg-orange-500/20",
   },
+  {
+    id: 9,
+
+    title: "What is Digital Marketing?",
+
+    slug: "what-is-digital-marketing",
+
+    category: "digital-marketing",
+
+    categoryLabel: "Digital Marketing",
+
+    excerpt:
+      "Learn what digital marketing is, why it matters, and the main types of online marketing used to grow brands in 2026.",
+
+    image:
+      "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop",
+
+    readTime: "8 min read",
+
+    date: "May 2026",
+
+    featured: false,
+
+    seoTitle:
+      "What is Digital Marketing? | Types of Digital Marketing",
+
+    seoDescription:
+      "Explore the meaning of digital marketing, why it matters, and the key types of digital marketing channels for modern businesses.",
+
+    keywords: [
+      "digital marketing",
+      "types of digital marketing",
+      "online marketing",
+      "marketing strategy",
+      "digital marketing guide",
+    ],
+
+    accent: "from-cyan-500 to-blue-600",
+
+    bgGlow: "bg-cyan-500/20",
+  },
+  {
+  id: 10,
+
+  title: "Affiliate Marketing for Beginners in 2026",
+
+  slug: "affiliate-marketing-for-beginners",
+
+  category: "affiliate-marketing",
+
+  categoryLabel: "Affiliate Marketing",
+
+  excerpt:
+    "Learn how affiliate marketing works, how beginners make passive income online, and the best affiliate programs to join in 2026.",
+
+  image:
+    "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1200&auto=format&fit=crop",
+
+  readTime: "11 min read",
+
+  date: "May 2026",
+
+  featured: true,
+
+  seoTitle:
+    "Affiliate Marketing for Beginners in 2026 | Complete Guide",
+
+  seoDescription:
+    "Learn affiliate marketing step by step including affiliate programs, traffic sources, SEO, blogging, and passive income strategies for beginners.",
+
+  keywords: [
+    "affiliate marketing",
+    "affiliate marketing for beginners",
+    "how to make money online",
+    "passive income",
+    "affiliate programs",
+    "blogging for affiliate marketing",
+    "SEO affiliate marketing",
+  ],
+
+  accent: "from-pink-500 to-orange-500",
+
+  bgGlow: "bg-pink-500/20",
+},
+{
+  id: 11,
+
+  title: "Best AI Tools for Designers in 2026",
+
+  slug: "best-ai-tools-for-designers",
+
+  category: "ai-tools",
+
+  categoryLabel: "AI Tools",
+
+  excerpt:
+    "Discover the top AI tools designers use in 2026 for image creation, UI prototyping, motion design, and UX copy.",
+
+  image:
+    "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
+
+  readTime: "9 min read",
+
+  date: "May 2026",
+
+  featured: false,
+
+  seoTitle:
+    "Best AI Tools for Designers in 2026 | Creative Design AI",
+
+  seoDescription:
+    "Explore the best AI tools designers use for visual ideation, UI prototyping, motion graphics, color palettes, and UX copy.",
+
+  keywords: [
+    "AI tools for designers",
+    "design AI tools",
+    "creative AI",
+    "Adobe Firefly",
+    "Figma AI",
+  ],
+
+  accent: "from-fuchsia-500 to-pink-500",
+
+  bgGlow: "bg-fuchsia-500/20",
+  },
+  {
+    id: 12,
+
+    title: "Technical SEO Checklist",
+
+    slug: "technical-seo-checklist",
+
+    category: "seo",
+
+    categoryLabel: "SEO",
+
+    excerpt:
+      "Follow this technical SEO checklist for 2026 covering page speed, crawlability, indexation, structured data, mobile UX, and security.",
+
+    image:
+      "https://images.unsplash.com/photo-1510051643593-d2de5df9ea7d?q=80&w=1200&auto=format&fit=crop",
+
+    readTime: "8 min read",
+
+    date: "May 2026",
+
+    featured: false,
+
+    seoTitle:
+      "Technical SEO Checklist | Nexify Media",
+
+    seoDescription:
+      "Follow this technical SEO checklist for 2026 covering page speed, crawlability, indexation, structured data, mobile UX, and security.",
+
+    keywords: [
+      "technical seo checklist",
+      "technical seo",
+      "seo audit",
+      "site speed",
+      "structured data",
+    ],
+
+    accent: "from-cyan-500 to-blue-600",
+
+    bgGlow: "bg-cyan-500/20",
+  },
+  {
+    id: 13,
+
+    title: "Accessibility in UX Design",
+
+    slug: "accessibility-in-ux-design",
+
+    category: "ui-ux",
+
+    categoryLabel: "UI/UX",
+
+    excerpt:
+      "Practical accessibility best practices for UX designers: WCAG tips, keyboard navigation, ARIA, contrast, and testing for inclusive products.",
+
+    image:
+      "https://images.unsplash.com/photo-1587614382346-ac3f3c4d6c7a?q=80&w=1200&auto=format&fit=crop",
+
+    readTime: "8 min read",
+
+    date: "May 2026",
+
+    featured: false,
+
+    seoTitle:
+      "Accessibility in UX Design | Inclusive Design Best Practices",
+
+    seoDescription:
+      "Learn accessibility best practices for UX designers: WCAG guidance, color contrast, keyboard navigation, ARIA usage, and accessibility testing.",
+
+    keywords: [
+      "accessibility",
+      "UX design",
+      "inclusive design",
+      "WCAG",
+      "ARIA",
+    ],
+
+    accent: "from-indigo-500 to-violet-500",
+
+    bgGlow: "bg-indigo-500/20",
+  },
 ];
+

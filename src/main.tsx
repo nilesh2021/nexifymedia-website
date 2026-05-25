@@ -26,17 +26,24 @@ import WebDesignPage from './app/services/web-design/page';
 import UiUxDesignPage from './app/services/ui-ux-design/page';
 import SocialMediaMarketingPage from './app/services/social-media-marketing/page';
 import UiUxFuture2026Page from './app/blog/ui-ux/ui-ux-design-in-2026/page';
+import AccessibilityInUxDesignPage from './app/blog/ui-ux/accessibility-in-ux-design/page';
 import BlogPage from './app/blog/page';
 
 import BestAIToolsStudentsPage from './app/blog/ai-tools/best-ai-tools-for-college-students/page';
+ 
 import { Helmet } from 'react-helmet-async';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import SeoForStartupsPage from './app/blog/seo/seo-for-startups/page';
 import WhatIsSeoPage from './app/blog/seo/what-is-seo/page';
+import TechnicalSeoChecklistPage from './app/blog/seo/technical-seo-checklist/page';
 import UiUxDesignProcessExplainedPage from './app/blog/ui-ux/ui-ux-design-process-explained/page';
 import SaasDashboardDesignIdeasPage from './app/blog/ui-ux/saas-dashboard-design-ideas/page';
-
+import WhatIsDigitalMarketingPage from './app/blog/digital-marketing/what-is-digital-marketing/page';
+import AffiliateMarketingForBeginnersPage from './app/blog/affiliate-marketing/affiliate-marketing-for-beginners/page';
+ 
+import bestAiToolsForMarketers from './app/Resources/BestAiToolsForMarketers';
+import BestAiToolsForDesignersPage from './app/blog/ai-tools/best-ai-tools-for-designers/page';
 createRoot(document.getElementById('root')!).render(
   <HelmetProvider>
     <BrowserRouter>
@@ -112,6 +119,10 @@ createRoot(document.getElementById('root')!).render(
           element={<UiUxFuture2026Page />}
         />
         <Route
+          path="/blog/ui-ux/accessibility-in-ux-design"
+          element={<AccessibilityInUxDesignPage />}
+        />
+        <Route
           path="/blog"
           element={<BlogPage />}
         />
@@ -119,6 +130,10 @@ createRoot(document.getElementById('root')!).render(
         <Route
           path="/blog/ai-tools/best-ai-tools-for-college-students"
           element={<BestAIToolsStudentsPage />}
+        />
+        <Route
+          path="/blog/ai-tools/best-ai-tools-for-designers"
+          element={<BestAiToolsForDesignersPage />}
         />
         <Route
           path="/blog/seo/seo-for-startups"
@@ -129,12 +144,29 @@ createRoot(document.getElementById('root')!).render(
           element={<WhatIsSeoPage />}
         />
         <Route
+          path="/blog/seo/technical-seo-checklist"
+          element={<TechnicalSeoChecklistPage />}
+        />
+        <Route
           path="/blog/ui-ux/ui-ux-design-process-explained"
           element={<UiUxDesignProcessExplainedPage />}
         />
         <Route
           path="/blog/ui-ux/saas-dashboard-design-ideas"
           element={<SaasDashboardDesignIdeasPage />}
+        />
+        <Route
+          path="/blog/digital-marketing/what-is-digital-marketing"
+          element={<WhatIsDigitalMarketingPage />}
+        />
+        <Route
+          path="/blog/affiliate-marketing/affiliate-marketing-for-beginners"
+          element={<AffiliateMarketingForBeginnersPage />}
+        />
+    
+        <Route
+          path="/blog/ai-tools/best-ai-tools-for-designers"
+          element={<BestAiToolsForDesignersPage />}
         />
       </Routes>
 
