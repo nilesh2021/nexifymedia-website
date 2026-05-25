@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import BlogCard from "../components/blog/BlogCard";
 
 import { blogs } from "../../data/blogs";
+import { motion, AnimatePresence } from "framer-motion";
 
 const categories = [
   "All",
@@ -179,7 +180,19 @@ export default function BlogPage() {
 
                 ) : (
 
-                  <div className="grid gap-8 md:grid-cols-2">
+                 <AnimatePresence mode="wait">
+
+  <motion.div
+    key={selectedCategory + searchQuery + currentPage}
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: 10 }}
+    transition={{
+      duration: 0.45,
+      ease: "easeInOut",
+    }}
+    className="grid gap-8 md:grid-cols-2"
+  >
 
                     {paginatedBlogs.map((blog) => (
                       <BlogCard
@@ -194,7 +207,9 @@ export default function BlogPage() {
                       />
                     ))}
 
-                  </div>
+                  </motion.div>
+
+</AnimatePresence>
 
                 )}
 
