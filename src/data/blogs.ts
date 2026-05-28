@@ -541,5 +541,46 @@ export const blogs = [
 
     bgGlow: "bg-indigo-500/20",
   },
+  {
+    id: 14,
+
+    title: "Website Optimization Tips",
+
+    slug: "website-optimization-tips",
+
+    category: "seo",
+
+    categoryLabel: "SEO",
+
+    excerpt:
+      "Improve page speed, technical SEO, mobile UX, and overall website performance with practical optimization tips for modern websites.",
+
+    image:
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
+
+    readTime: "9 min read",
+
+    date: "May 2026",
+
+    featured: false,
+
+    seoTitle:
+      "Website Optimization Tips | Speed, SEO, and Better UX",
+
+    seoDescription:
+      "Discover website optimization tips for speed, technical SEO, mobile UX, performance, and modern site improvements.",
+
+    keywords: [
+      "website optimization",
+      "page speed",
+      "technical SEO",
+      "mobile UX",
+      "site performance",
+    ],
+
+    accent: "from-sky-500 to-cyan-500",
+
+    bgGlow: "bg-sky-500/20",
+  },
 ];
 

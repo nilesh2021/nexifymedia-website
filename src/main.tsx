@@ -37,6 +37,7 @@ import Footer from './app/components/Footer';
 import SeoForStartupsPage from './app/blog/seo/seo-for-startups/page';
 import WhatIsSeoPage from './app/blog/seo/what-is-seo/page';
 import TechnicalSeoChecklistPage from './app/blog/seo/technical-seo-checklist/page';
+import WebsiteOptimizationTipsPage from './app/blog/seo/website-optimization-tips/page';
 import UiUxDesignProcessExplainedPage from './app/blog/ui-ux/ui-ux-design-process-explained/page';
 import SaasDashboardDesignIdeasPage from './app/blog/ui-ux/saas-dashboard-design-ideas/page';
 import WhatIsDigitalMarketingPage from './app/blog/digital-marketing/what-is-digital-marketing/page';
@@ -146,6 +147,10 @@ createRoot(document.getElementById('root')!).render(
         <Route
           path="/blog/seo/technical-seo-checklist"
           element={<TechnicalSeoChecklistPage />}
+        />
+        <Route
+          path="/blog/seo/website-optimization-tips"
+          element={<WebsiteOptimizationTipsPage />}
         />
         <Route
           path="/blog/ui-ux/ui-ux-design-process-explained"
