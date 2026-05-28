@@ -7,7 +7,7 @@ import BlogCard from "../components/blog/BlogCard";
 
 import { blogs } from "../../data/blogs";
 import { motion, AnimatePresence } from "framer-motion";
-
+import Breadcrumbs from "../components/Breadcrumbs";
 const categories = [
   "All",
   "UI/UX",
@@ -66,19 +66,33 @@ export default function BlogPage() {
       <main className="bg-[#f5f7fb] min-h-screen">
 
         {/* HERO */}
-        <section className="relative overflow-hidden bg-[#071028] pt-32 pb-16">
+        <section className="relative overflow-hidden bg-[#071028] pt-24 pb-12">
 
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.25),transparent_35%)]" />
 
           <div className="container mx-auto px-6 relative z-10">
 
             <div className="max-w-4xl">
+<div className="mb-6 inline-flex rounded-full border border-white/10 bg-white/5 px-5 py-3 backdrop-blur-md">
 
+  <Breadcrumbs
+    items={[
+      {
+        label: "Home",
+        href: "/",
+      },
+      {
+        label: "Blog",
+      },
+    ]}
+  />
+
+</div>
               <span className="inline-flex items-center rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm font-medium text-cyan-300">
                 NexifyMedia Blog
               </span>
 
-              <h1 className="mt-6 text-5xl md:text-6xl font-black leading-tight text-white">
+              <h1 className="mt-6 text-4xl md:text-5xl font-black leading-tight text-white">
                 Digital Insights &
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                   {" "}
@@ -98,7 +112,7 @@ export default function BlogPage() {
         </section>
 
         {/* TOOLBAR */}
-        <section className="sticky top-0 z-30 border-b border-gray-200 bg-white/90 backdrop-blur-xl">
+        <section className="sticky top-[72px]z-30 border-b border-gray-200 bg-white/90 backdrop-blur-xl">
 
           <div className="container mx-auto px-6 py-5">
 
