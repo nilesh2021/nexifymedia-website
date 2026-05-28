@@ -13,6 +13,11 @@ import { Helmet } from "react-helmet-async";
 import Navigation from "../../../components/Navigation";
 import Footer from "../../../components/Footer";
 import ScrollToTop from "../../../components/ScrollToTop";
+import RelatedArticles from "../../../components/blog/RelatedArticles";
+import InlineArticleLink from "../../../components/blog/InlineArticleLink";
+import { getBlogLinks } from "../../../../data/blogInternalLinks";
+
+const pageLinks = getBlogLinks("what-is-digital-marketing");
 
 const digitalMarketingTypes = [
   {
@@ -193,7 +198,13 @@ export default function WhatIsDigitalMarketingPage() {
                 </p>
 
                 <p className="mt-4 text-gray-300 leading-8">
-                  Unlike traditional marketing, digital marketing provides measurable results, faster feedback, and the ability to tailor messages to specific audiences in real time.
+                  Unlike traditional marketing, digital marketing provides measurable results, faster feedback, and the ability to tailor messages to specific audiences in real time. Search is often the highest-intent channel—see our guide on{" "}
+                  <InlineArticleLink to="/blog/seo/what-is-seo">what SEO is</InlineArticleLink>{" "}
+                  and how to{" "}
+                  <InlineArticleLink to="/blog/digital-marketing/how-to-earn-money-from-digital-marketing">
+                    earn money from digital marketing
+                  </InlineArticleLink>{" "}
+                  once you understand the channels.
                 </p>
               </div>
 
@@ -287,27 +298,7 @@ export default function WhatIsDigitalMarketingPage() {
                   </p>
                 </div>
 
-                <div className="rounded-[32px] border border-gray-800 bg-gray-900/50 p-8">
-                  <h3 className="text-xl font-semibold text-white mb-4">Related articles</h3>
-                  <ul className="space-y-3 text-sm text-gray-400">
-                    <li>
-                      <a
-                        href="/blog/seo/what-is-seo"
-                        className="text-cyan-400 hover:text-cyan-300 transition"
-                      >
-                        → What is SEO?
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/blog"
-                        className="text-cyan-400 hover:text-cyan-300 transition"
-                      >
-                        → Blog home
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+                <RelatedArticles links={pageLinks} />
               </div>
             </aside>
           </div>

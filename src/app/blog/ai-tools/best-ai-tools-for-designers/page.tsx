@@ -12,6 +12,11 @@ import { Helmet } from "react-helmet-async";
 import Navigation from "../../../components/Navigation";
 import Footer from "../../../components/Footer";
 import ScrollToTop from "../../../components/ScrollToTop";
+import RelatedArticles from "../../../components/blog/RelatedArticles";
+import InlineArticleLink from "../../../components/blog/InlineArticleLink";
+import { getBlogLinks } from "../../../../data/blogInternalLinks";
+
+const pageLinks = getBlogLinks("best-ai-tools-for-designers");
 
 const tools = [
   {
@@ -225,7 +230,15 @@ export default function BestAiToolsForDesignersPage() {
                   AI tools help designers move faster, test more ideas, and focus on creativity instead of manual tasks. They can generate visuals, suggest layouts, write UX copy, and even animate designs.
                 </p>
                 <p className="mt-4 text-gray-300 leading-8">
-                  The best design AI tools work alongside your skills, giving you better inspiration, speed, and polish while you maintain full creative control.
+                  The best design AI tools work alongside your skills, giving you better inspiration, speed, and polish. Use them within a structured{" "}
+                  <InlineArticleLink to="/blog/ui-ux/ui-ux-design-process-explained">
+                    UI/UX design process
+                  </InlineArticleLink>{" "}
+                  and keep an eye on the{" "}
+                  <InlineArticleLink to="/blog/ui-ux/future-of-ui-design">
+                    future of UI design
+                  </InlineArticleLink>{" "}
+                  as you ship real projects.
                 </p>
               </div>
 
@@ -320,27 +333,7 @@ export default function BestAiToolsForDesignersPage() {
                   </p>
                 </div>
 
-                <div className="rounded-[32px] border border-gray-800 bg-gray-900/50 p-8">
-                  <h3 className="text-xl font-semibold text-white mb-4">Related articles</h3>
-                  <ul className="space-y-3 text-sm text-gray-400">
-                    <li>
-                      <a
-                        href="/blog/ai-tools/best-ai-tools-for-college-students"
-                        className="text-fuchsia-400 hover:text-fuchsia-300 transition"
-                      >
-                        → Best AI Tools for College Students
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/blog"
-                        className="text-fuchsia-400 hover:text-fuchsia-300 transition"
-                      >
-                        → Blog home
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+                <RelatedArticles links={pageLinks} />
               </div>
             </aside>
           </div>

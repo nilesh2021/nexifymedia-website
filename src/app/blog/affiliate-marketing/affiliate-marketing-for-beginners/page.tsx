@@ -13,6 +13,11 @@ import { Helmet } from "react-helmet-async";
 import Navigation from "../../../components/Navigation";
 import Footer from "../../../components/Footer";
 import ScrollToTop from "../../../components/ScrollToTop";
+import RelatedArticles from "../../../components/blog/RelatedArticles";
+import InlineArticleLink from "../../../components/blog/InlineArticleLink";
+import { getBlogLinks } from "../../../../data/blogInternalLinks";
+
+const pageLinks = getBlogLinks("affiliate-marketing-for-beginners");
 
 const affiliateSteps = [
   {
@@ -195,7 +200,13 @@ export default function AffiliateMarketingForBeginnersPage() {
                 </p>
 
                 <p className="mt-4 text-gray-300 leading-8">
-                  It's one of the most beginner-friendly ways to start earning online because there's no inventory, no customers to manage, and minimal startup costs. All you need is an audience or platform to promote from.
+                  It is one of the most beginner-friendly ways to start earning online because there is no inventory or upfront product cost. Pair affiliate promotions with a broader plan to{" "}
+                  <InlineArticleLink to="/blog/digital-marketing/how-to-earn-money-from-digital-marketing">
+                    earn money from digital marketing
+                  </InlineArticleLink>{" "}
+                  and organic traffic from{" "}
+                  <InlineArticleLink to="/blog/seo/what-is-seo">SEO</InlineArticleLink>{" "}
+                  so your links reach the right audience.
                 </p>
               </div>
 
@@ -394,27 +405,7 @@ export default function AffiliateMarketingForBeginnersPage() {
                   </ul>
                 </div>
 
-                <div className="rounded-[32px] border border-gray-800 bg-gray-900/50 p-8">
-                  <h3 className="text-xl font-semibold text-white mb-4">Related articles</h3>
-                  <ul className="space-y-3 text-sm text-gray-400">
-                    <li>
-                      <a
-                        href="/blog/digital-marketing/what-is-digital-marketing"
-                        className="text-pink-400 hover:text-pink-300 transition"
-                      >
-                        → What is Digital Marketing?
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/blog"
-                        className="text-pink-400 hover:text-pink-300 transition"
-                      >
-                        → Blog home
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+                <RelatedArticles links={pageLinks} />
               </div>
             </aside>
           </div>

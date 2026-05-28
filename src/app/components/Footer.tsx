@@ -225,6 +225,28 @@ export default function Footer() {
 
               </li>
 
+              <li>
+
+                <Link
+                  to="/blog/seo/what-is-seo"
+                  className="block hover:text-[#24c2f2] transition-all duration-300"
+                >
+                  What is SEO?
+                </Link>
+
+              </li>
+
+              <li>
+
+                <Link
+                  to="/blog/digital-marketing/how-to-earn-money-from-digital-marketing"
+                  className="block hover:text-[#24c2f2] transition-all duration-300"
+                >
+                  Earn with Digital Marketing
+                </Link>
+
+              </li>
+
             </ul>
 
           </div>

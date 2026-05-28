@@ -10,6 +10,11 @@ import { Helmet } from "react-helmet-async";
 import Navigation from "../../../components/Navigation";
 import Footer from "../../../components/Footer";
 import ScrollToTop from "../../../components/ScrollToTop";
+import RelatedArticles from "../../../components/blog/RelatedArticles";
+import InlineArticleLink from "../../../components/blog/InlineArticleLink";
+import { getBlogLinks } from "../../../../data/blogInternalLinks";
+
+const pageLinks = getBlogLinks("what-is-seo");
 
 const seoBasics = [
   {
@@ -221,7 +226,11 @@ export default function WhatIsSeoPage() {
                       <h3 className="text-2xl font-bold">Technical SEO</h3>
                     </div>
                     <p className="mt-6 text-gray-300 leading-8">
-                      Technical SEO ensures search engines can crawl and index your site. It covers speed, site structure, mobile friendliness, and schema markup.
+                      Technical SEO ensures search engines can crawl and index your site. It covers speed, site structure, mobile friendliness, and schema markup. Use our{" "}
+                      <InlineArticleLink to="/blog/seo/technical-seo-checklist">technical SEO checklist</InlineArticleLink>{" "}
+                      and{" "}
+                      <InlineArticleLink to="/blog/seo/website-optimization-tips">website optimization tips</InlineArticleLink>{" "}
+                      to audit fundamentals before scaling content.
                     </p>
                   </div>
 
@@ -324,27 +333,10 @@ export default function WhatIsSeoPage() {
                     </div>
                   ))}
 
-                  <a
-                    href="/blog/seo/seo-for-startups"
-                    className="group flex items-center justify-between rounded-2xl border border-white/10 bg-cyan-500/10 p-4 transition hover:border-cyan-400/30 hover:bg-cyan-500/10"
-                  >
-                    <span className="text-sm text-gray-300 group-hover:text-white">
-                      SEO for Startups
-                    </span>
-                    <ArrowRight className="h-4 w-4 text-cyan-400" />
-                  </a>
-
-                  <a
-                    href="/blog"
-                    className="group flex items-center justify-between rounded-2xl border border-white/10 bg-black/30 p-4 transition hover:border-emerald-500/30 hover:bg-emerald-500/5"
-                  >
-                    <span className="text-sm text-gray-300 group-hover:text-white">
-                      Explore More Articles
-                    </span>
-                    <ArrowRight className="h-4 w-4 text-emerald-400" />
-                  </a>
                 </div>
               </div>
+
+              <RelatedArticles links={pageLinks} />
             </aside>
           </div>
         </section>

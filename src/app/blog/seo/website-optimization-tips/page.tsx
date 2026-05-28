@@ -3,6 +3,11 @@ import { Helmet } from "react-helmet-async";
 import Navigation from "../../../components/Navigation";
 import Footer from "../../../components/Footer";
 import ScrollToTop from "../../../components/ScrollToTop";
+import RelatedArticles from "../../../components/blog/RelatedArticles";
+import InlineArticleLink from "../../../components/blog/InlineArticleLink";
+import { getBlogLinks } from "../../../../data/blogInternalLinks";
+
+const pageLinks = getBlogLinks("website-optimization-tips");
 
 const tactics = [
   {
@@ -151,7 +156,11 @@ export default function WebsiteOptimizationTipsPage() {
                 <div className="rounded-[32px] border border-white/10 bg-white/5 p-8">
                   <h3 className="text-2xl font-bold">What to measure</h3>
                   <p className="mt-4 text-gray-300 leading-7">
-                    Track metrics like Largest Contentful Paint, First Input Delay, and Cumulative Layout Shift to understand how real users experience your site.
+                    Track metrics like Largest Contentful Paint, First Input Delay, and Cumulative Layout Shift to understand how real users experience your site. These overlap with{" "}
+                    <InlineArticleLink to="/blog/seo/technical-seo-checklist">technical SEO priorities</InlineArticleLink>{" "}
+                    and the core ideas in our{" "}
+                    <InlineArticleLink to="/blog/seo/what-is-seo">SEO beginner guide</InlineArticleLink>
+                    .
                   </p>
                 </div>
                 <div className="rounded-[32px] border border-white/10 bg-white/5 p-8">
@@ -185,21 +194,7 @@ export default function WebsiteOptimizationTipsPage() {
                     <li>Audit broken links and redirects.</li>
                   </ul>
                 </div>
-                <div className="rounded-[32px] border border-gray-800 bg-gray-900/50 p-8">
-                  <h3 className="text-xl font-semibold text-white mb-4">Related SEO posts</h3>
-                  <ul className="space-y-3 text-sm text-gray-400">
-                    <li>
-                      <a href="/blog/seo/technical-seo-checklist" className="text-cyan-400 hover:text-cyan-300 transition">
-                        → Technical SEO Checklist
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/blog/seo/what-is-seo" className="text-cyan-400 hover:text-cyan-300 transition">
-                        → What is SEO?
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+                <RelatedArticles links={pageLinks} />
               </div>
             </aside>
           </div>

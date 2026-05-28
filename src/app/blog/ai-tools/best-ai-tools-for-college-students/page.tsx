@@ -10,6 +10,10 @@ import { Helmet } from "react-helmet-async";
 import Navigation from "../../../components/Navigation";
 import Footer from "../../../components/Footer";
 import ScrollToTop from "../../../components/ScrollToTop";
+import RelatedArticles from "../../../components/blog/RelatedArticles";
+import { getBlogLinks } from "../../../../data/blogInternalLinks";
+
+const pageLinks = getBlogLinks("best-ai-tools-for-college-students");
  
 const tools = [
   {
@@ -459,32 +463,7 @@ export default function BestAIToolsStudentsPage() {
 
           {/* SIDEBAR */}
           <aside className="sticky top-24 h-fit">
-            <div className="rounded-[32px] border border-white/10 bg-white/5 p-8">
-              <h3 className="text-2xl font-bold">
-                Related Articles
-              </h3>
-
-              <div className="mt-8 space-y-5">
-                {[
-                  "Best AI Tools for Designers",
-                  "How Students Can Use ChatGPT",
-                  "Best Productivity Apps for Students",
-                  "Top Freelancing Skills in 2026",
-                ].map((item, index) => (
-                  <a
-                    key={index}
-                    href="#"
-                    className="group flex items-center justify-between rounded-2xl border border-white/10 bg-black/30 p-4 transition hover:border-blue-500/30 hover:bg-blue-500/5"
-                  >
-                    <span className="text-sm text-gray-300 group-hover:text-white">
-                      {item}
-                    </span>
-
-                    <ArrowRight className="h-4 w-4 text-blue-400" />
-                  </a>
-                ))}
-              </div>
-            </div>
+            <RelatedArticles links={pageLinks} />
           </aside>
         </div>
       </section>

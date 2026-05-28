@@ -14,6 +14,11 @@ import { Helmet } from "react-helmet-async";
 import Navigation from "../../../components/Navigation";
 import Footer from "../../../components/Footer";
 import ScrollToTop from "../../../components/ScrollToTop";
+import RelatedArticles from "../../../components/blog/RelatedArticles";
+import InlineArticleLink from "../../../components/blog/InlineArticleLink";
+import { getBlogLinks } from "../../../../data/blogInternalLinks";
+
+const pageLinks = getBlogLinks("seo-for-startups");
 
 const seoStrategies = [
   {
@@ -220,7 +225,13 @@ export default function SeoForStartupsPage() {
                   In 2026, startups face intense competition online.
                   Strong SEO strategies help businesses rank on Google,
                   attract targeted users, and build long-term authority
-                  in their industry.
+                  in their industry. Start with{" "}
+                  <InlineArticleLink to="/blog/seo/what-is-seo">SEO fundamentals</InlineArticleLink>{" "}
+                  and pair organic growth with a broader{" "}
+                  <InlineArticleLink to="/blog/digital-marketing/what-is-digital-marketing">
+                    digital marketing strategy
+                  </InlineArticleLink>
+                  .
                 </p>
               </div>
 
@@ -426,35 +437,7 @@ export default function SeoForStartupsPage() {
 
             {/* SIDEBAR */}
             <aside className="sticky top-24 h-fit">
-              <div className="rounded-[32px] border border-white/10 bg-white/5 p-8">
-                <h3 className="text-2xl font-bold">
-                  Related Articles
-                </h3>
-
-                <div className="mt-8 space-y-5">
-                  <a
-                    href="/blog/ai-tools/best-ai-tools-for-college-students"
-                    className="group flex items-center justify-between rounded-2xl border border-white/10 bg-black/30 p-4 transition hover:border-emerald-500/30 hover:bg-emerald-500/5"
-                  >
-                    <span className="text-sm text-gray-300 group-hover:text-white">
-                      Best AI Tools for Students
-                    </span>
-
-                    <ArrowRight className="h-4 w-4 text-emerald-400" />
-                  </a>
-
-                  <a
-                    href="/blog"
-                    className="group flex items-center justify-between rounded-2xl border border-white/10 bg-black/30 p-4 transition hover:border-emerald-500/30 hover:bg-emerald-500/5"
-                  >
-                    <span className="text-sm text-gray-300 group-hover:text-white">
-                      Explore More Blog Articles
-                    </span>
-
-                    <ArrowRight className="h-4 w-4 text-emerald-400" />
-                  </a>
-                </div>
-              </div>
+              <RelatedArticles links={pageLinks} />
             </aside>
           </div>
         </section>

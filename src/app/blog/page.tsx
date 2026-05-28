@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
@@ -98,7 +99,7 @@ export default function BlogPage() {
         </section>
 
         {/* TOOLBAR */}
-        <section className="sticky top-[72px]z-30 border-b border-gray-200 bg-white/90 backdrop-blur-xl">
+        <section className="sticky top-[72px] z-30 border-b border-gray-200 bg-white/90 backdrop-blur-xl">
 
           <div className="container mx-auto px-6 py-5">
 
@@ -203,7 +204,11 @@ export default function BlogPage() {
                         category={blog.categoryLabel}
                         readTime={blog.readTime}
                         date={blog.date}
-                        link={`/blog/${blog.category}/${blog.slug}`}
+                        link={
+                          "linkPath" in blog && blog.linkPath
+                            ? blog.linkPath
+                            : `/blog/${blog.category}/${blog.slug}`
+                        }
                       />
                     ))}
 
@@ -342,6 +347,58 @@ export default function BlogPage() {
 
                   </div>
 
+                </div>
+
+                {/* TOPIC HUBS — pillar pages for internal linking */}
+                <div className="rounded-3xl border border-gray-100 bg-white p-7 shadow-sm">
+                  <h3 className="text-2xl font-bold text-gray-900">
+                    Explore by topic
+                  </h3>
+                  <p className="mt-2 text-sm text-gray-500 leading-6">
+                    Start with our pillar guides, then dive into related articles in each cluster.
+                  </p>
+                  <ul className="mt-6 space-y-3 text-sm">
+                    <li>
+                      <Link
+                        to="/blog/seo/what-is-seo"
+                        className="font-medium text-gray-800 hover:text-cyan-600 transition"
+                      >
+                        SEO basics &amp; search fundamentals
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/blog/digital-marketing/what-is-digital-marketing"
+                        className="font-medium text-gray-800 hover:text-cyan-600 transition"
+                      >
+                        Digital marketing channels explained
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/blog/ui-ux/ui-ux-design-in-2026"
+                        className="font-medium text-gray-800 hover:text-cyan-600 transition"
+                      >
+                        UI/UX design trends for 2026
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/blog/digital-marketing/how-to-earn-money-from-digital-marketing"
+                        className="font-medium text-gray-800 hover:text-cyan-600 transition"
+                      >
+                        Earn money from digital marketing
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/blog/affiliate-marketing/affiliate-marketing-for-beginners"
+                        className="font-medium text-gray-800 hover:text-cyan-600 transition"
+                      >
+                        Affiliate marketing for beginners
+                      </Link>
+                    </li>
+                  </ul>
                 </div>
 
                 {/* CTA */}

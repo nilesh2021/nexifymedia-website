@@ -14,6 +14,11 @@ import {
     CheckCircle2,
 } from "lucide-react";
 import ScrollToTop from "../../../components/ScrollToTop";
+import RelatedArticles from "../../../components/blog/RelatedArticles";
+import InlineArticleLink from "../../../components/blog/InlineArticleLink";
+import { getBlogLinks } from "../../../../data/blogInternalLinks";
+
+const pageLinks = getBlogLinks("ui-ux-design-in-2026");
 
 export default function UiUxFuture2026Page() {
     return (
@@ -46,7 +51,7 @@ export default function UiUxFuture2026Page() {
 
                 <link
                     rel="canonical"
-                    href="https://nexifymedia.co.in/blog/ui-ux-design-in-2026"
+                    href="https://www.nexifymedia.co.in/blog/ui-ux/ui-ux-design-in-2026"
                 />
             </Helmet>
 
@@ -134,9 +139,15 @@ export default function UiUxFuture2026Page() {
                                 <p className="mt-8 text-gray-600 leading-8">
                                     Modern users expect faster interfaces, personalized experiences,
                                     seamless navigation, and intuitive digital products across web,
-                                    mobile, and SaaS platforms. This is why UI/UX design has become
-                                    one of the most important aspects of modern digital business
-                                    growth.
+                                    mobile, and SaaS platforms. Strong{" "}
+                                    <InlineArticleLink to="/blog/ui-ux/accessibility-in-ux-design" variant="light">
+                                        accessibility practices
+                                    </InlineArticleLink>{" "}
+                                    and a clear{" "}
+                                    <InlineArticleLink to="/blog/ui-ux/ui-ux-design-process-explained" variant="light">
+                                        design process
+                                    </InlineArticleLink>{" "}
+                                    help teams meet those expectations at scale.
                                 </p>
                             </div>
 
@@ -366,6 +377,8 @@ export default function UiUxFuture2026Page() {
                                             </div>
 
                                         </div>
+
+                                        <RelatedArticles links={pageLinks} variant="light" />
 
                                         {/* CTA */}
                                         <div className="relative overflow-hidden rounded-3xl bg-[#111827] p-7 text-white">

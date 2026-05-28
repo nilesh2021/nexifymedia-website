@@ -3,6 +3,11 @@ import { Helmet } from "react-helmet-async";
 import Navigation from "../../../components/Navigation";
 import Footer from "../../../components/Footer";
 import ScrollToTop from "../../../components/ScrollToTop";
+import RelatedArticles from "../../../components/blog/RelatedArticles";
+import InlineArticleLink from "../../../components/blog/InlineArticleLink";
+import { getBlogLinks } from "../../../../data/blogInternalLinks";
+
+const pageLinks = getBlogLinks("accessibility-in-ux-design");
 
 export default function AccessibilityInUxDesignPage() {
   return (
@@ -96,7 +101,13 @@ export default function AccessibilityInUxDesignPage() {
 
               <section id="why" className="mb-8">
                 <h2 className="text-2xl font-bold">Why accessibility matters in UX</h2>
-                <p className="text-gray-300">Accessible products work better for everyone — they expand reach, reduce friction, and improve SEO. Accessibility is both an ethical responsibility and a pragmatic business advantage.</p>
+                <p className="text-gray-300">
+                  Accessible products work better for everyone — they expand reach, reduce friction, and support{" "}
+                  <InlineArticleLink to="/blog/seo/website-optimization-tips">website performance and SEO</InlineArticleLink>
+                  . Accessibility fits naturally into a structured{" "}
+                  <InlineArticleLink to="/blog/ui-ux/ui-ux-design-process-explained">UI/UX design process</InlineArticleLink>{" "}
+                  and is both an ethical responsibility and a pragmatic business advantage.
+                </p>
               </section>
 
               <section id="principles" className="mb-8 grid gap-6 lg:grid-cols-2">
@@ -170,6 +181,8 @@ export default function AccessibilityInUxDesignPage() {
                     <li><a href="https://deque.com/axe/" className="text-cyan-400 hover:text-cyan-300">axe — Accessibility testing</a></li>
                   </ul>
                 </div>
+
+                <RelatedArticles links={pageLinks} />
               </div>
             </aside>
           </div>

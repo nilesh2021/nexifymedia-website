@@ -12,6 +12,11 @@ import { Helmet } from "react-helmet-async";
 import Navigation from "../../../components/Navigation";
 import Footer from "../../../components/Footer";
 import ScrollToTop from "../../../components/ScrollToTop";
+import RelatedArticles from "../../../components/blog/RelatedArticles";
+import InlineArticleLink from "../../../components/blog/InlineArticleLink";
+import { getBlogLinks } from "../../../../data/blogInternalLinks";
+
+const pageLinks = getBlogLinks("technical-seo-checklist");
 
 const checklistItems = [
   {
@@ -165,7 +170,13 @@ export default function TechnicalSeoChecklistPage() {
                   </span>
                 </h1>
                 <p className="mt-6 text-lg text-gray-300 leading-relaxed">
-                  Technical SEO is the foundation of organic search success. This checklist helps you fix crawlability, speed, indexation, structured data, and mobile issues before they hurt rankings.
+                  Technical SEO is the foundation of organic search success. This checklist helps you fix crawlability, speed, indexation, structured data, and mobile issues before they hurt rankings. New to the topic? Read{" "}
+                  <InlineArticleLink to="/blog/seo/what-is-seo">what SEO is</InlineArticleLink>{" "}
+                  first, then apply these steps alongside our{" "}
+                  <InlineArticleLink to="/blog/seo/website-optimization-tips">
+                    website optimization tips
+                  </InlineArticleLink>
+                  .
                 </p>
                 <div className="mt-8 flex flex-wrap gap-4">
                   <a
@@ -290,27 +301,7 @@ export default function TechnicalSeoChecklistPage() {
                     Run this checklist every quarter or before major site updates. Technical SEO is the guardrail that keeps your content visible and fast.
                   </p>
                 </div>
-                <div className="rounded-[32px] border border-gray-800 bg-gray-900/50 p-8">
-                  <h3 className="text-xl font-semibold text-white mb-4">Related SEO posts</h3>
-                  <ul className="space-y-3 text-sm text-gray-400">
-                    <li>
-                      <a
-                        href="/blog/seo/what-is-seo"
-                        className="text-cyan-400 hover:text-cyan-300 transition"
-                      >
-                        → What is SEO?
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/blog/seo/seo-for-startups"
-                        className="text-cyan-400 hover:text-cyan-300 transition"
-                      >
-                        → SEO for Startups
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+                <RelatedArticles links={pageLinks} />
               </div>
             </aside>
           </div>

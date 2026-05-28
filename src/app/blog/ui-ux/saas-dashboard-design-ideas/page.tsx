@@ -11,6 +11,11 @@ import { Helmet } from "react-helmet-async";
 import Navigation from "../../../components/Navigation";
 import Footer from "../../../components/Footer";
 import Breadcrumbs from "../../../components/Breadcrumbs";
+import RelatedArticles from "../../../components/blog/RelatedArticles";
+import InlineArticleLink from "../../../components/blog/InlineArticleLink";
+import { getBlogLinks } from "../../../../data/blogInternalLinks";
+
+const pageLinks = getBlogLinks("saas-dashboard-design-ideas");
 const dashboardPrinciples = [
   {
     title: "Real-time data visualization",
@@ -230,7 +235,11 @@ export default function SaasDashboardDesignIdeasPage() {
                   The best dashboards are intuitive enough that users need minimal training.
                 </p>
                 <p className="mt-4 text-gray-300 leading-8">
-                  In 2026, users expect dashboards that are fast, mobile-responsive, and adaptable to their workflow. A dashboard that works only on desktop or takes 30 seconds to load will frustrate users and hurt adoption.
+                  In 2026, users expect dashboards that are fast, mobile-responsive, and adaptable to their workflow. Apply these ideas alongside our{" "}
+                  <InlineArticleLink to="/blog/ui-ux/ui-ux-design-process-explained">UI/UX design process</InlineArticleLink>{" "}
+                  and broader{" "}
+                  <InlineArticleLink to="/blog/ui-ux/ui-ux-design-in-2026">UI/UX trends for 2026</InlineArticleLink>{" "}
+                  so layout, hierarchy, and performance stay aligned.
                 </p>
               </div>
 
@@ -357,23 +366,10 @@ export default function SaasDashboardDesignIdeasPage() {
                     </div>
                   ))}
 
-                  <a
-                    href="/blog/ui-ux/ui-ux-design-process-explained"
-                    className="group flex items-center justify-between rounded-2xl border border-white/10 bg-cyan-500/10 p-4 transition hover:border-cyan-400/30 hover:bg-cyan-500/10"
-                  >
-                    <span className="text-sm text-gray-300 group-hover:text-white">UI/UX Design Process</span>
-                    <ArrowRight className="h-4 w-4 text-cyan-400" />
-                  </a>
-
-                  <a
-                    href="/blog"
-                    className="group flex items-center justify-between rounded-2xl border border-white/10 bg-black/30 p-4 transition hover:border-emerald-500/30 hover:bg-emerald-500/5"
-                  >
-                    <span className="text-sm text-gray-300 group-hover:text-white">Explore More Articles</span>
-                    <ArrowRight className="h-4 w-4 text-emerald-400" />
-                  </a>
                 </div>
               </div>
+
+              <RelatedArticles links={pageLinks} />
             </aside>
           </div>
         </section>

@@ -300,6 +300,8 @@ export const blogs = [
 
     slug: "best-chatgpt-tools-for-marketers",
 
+    linkPath: "/best-chatgpt-tools-for-marketers",
+
     category: "ai-tools",
 
     categoryLabel: "AI Tools",
@@ -581,6 +583,129 @@ export const blogs = [
     accent: "from-sky-500 to-cyan-500",
 
     bgGlow: "bg-sky-500/20",
+  },
+  {
+    id: 15,
+
+    title: "SEO Interview Questions",
+
+    slug: "seo-interview-questions",
+
+    category: "seo",
+
+    categoryLabel: "SEO",
+
+    excerpt:
+      "Prepare for SEO job interviews with 10 basic and advanced questions and answers on keywords, backlinks, technical SEO, and E-E-A-T.",
+
+    image:
+      "https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=1200&auto=format&fit=crop",
+
+    readTime: "10 min read",
+
+    date: "May 2026",
+
+    featured: false,
+
+    seoTitle:
+      "SEO Interview Questions | Basic & Advanced Answers",
+
+    seoDescription:
+      "10 basic and advanced SEO interview questions with answers for freshers, specialists, and technical SEO roles.",
+
+    keywords: [
+      "SEO interview questions",
+      "SEO interview answers",
+      "SEO jobs",
+      "technical SEO interview",
+      "SEO fresher questions",
+    ],
+
+    accent: "from-emerald-500 to-green-600",
+
+    bgGlow: "bg-emerald-500/20",
+  },
+  {
+    id: 16,
+
+    title: "Digital Marketing Interview Questions",
+
+    slug: "digital-marketing-interview-questions",
+
+    category: "digital-marketing",
+
+    categoryLabel: "Digital Marketing",
+
+    excerpt:
+      "Prepare for digital marketing internship interviews with 10 basic and 5 advanced questions on social media, content, analytics, and campaign metrics.",
+
+    image:
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop",
+
+    readTime: "9 min read",
+
+    date: "May 2026",
+
+    featured: false,
+
+    seoTitle:
+      "Digital Marketing Interview Questions for Internship | 2026 Guide",
+
+    seoDescription:
+      "10 basic and 5 advanced digital marketing interview questions with answers for internship and fresher roles. Covers SEO, social media, CTR, conversions, and tools.",
+
+    keywords: [
+      "digital marketing interview questions",
+      "digital marketing internship",
+      "marketing intern interview",
+      "digital marketing fresher",
+      "social media interview questions",
+    ],
+
+    accent: "from-cyan-500 to-blue-600",
+
+    bgGlow: "bg-cyan-500/20",
+  },
+  {
+    id: 17,
+
+    title: "How to Earn Money from Digital Marketing",
+
+    slug: "how-to-earn-money-from-digital-marketing",
+
+    category: "digital-marketing",
+
+    categoryLabel: "Digital Marketing",
+
+    excerpt:
+      "Learn proven ways to earn from digital marketing in 2026: freelancing, agencies, affiliate marketing, content monetization, PPC, and SEO consulting.",
+
+    image:
+      "https://images.unsplash.com/photo-1556740758-90de374c12ad?q=80&w=1200&auto=format&fit=crop",
+
+    readTime: "11 min read",
+
+    date: "May 2026",
+
+    featured: true,
+
+    seoTitle:
+      "How to Earn Money from Digital Marketing in 2026 | Complete Guide",
+
+    seoDescription:
+      "Discover how to make money with digital marketing through freelancing, affiliate income, content creation, agencies, PPC management, and SEO services.",
+
+    keywords: [
+      "earn money from digital marketing",
+      "make money online marketing",
+      "digital marketing income",
+      "freelance digital marketing",
+      "digital marketing side hustle",
+    ],
+
+    accent: "from-cyan-500 to-blue-600",
+
+    bgGlow: "bg-cyan-500/20",
   },
 ];
 

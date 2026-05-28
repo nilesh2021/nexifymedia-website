@@ -1,39 +1,57 @@
 import fs from "fs";
 import path from "path";
 import { SitemapStream, streamToPromise } from "sitemap";
-import blogs from "../data/blogs.json" with { type: "json" };
 
 const BASE_URL = "https://nexifymedia.co.in";
 
-// App folder path
 const appDirectory = path.resolve("src/app");
 
-// Folders to ignore
 const ignoreFolders = ["components"];
 
-// Get all app routes automatically
-function getRoutes(dir, baseRoute = "") {
+/** Routes registered in main.tsx (non-blog app pages). */
+const staticAppRoutes = [
+  "/careers",
+  "/privacy-policy",
+  "/terms-and-conditions",
+  "/disclaimer",
+  "/affiliate-disclosure",
+  "/cookie-policy",
+  "/seo-internship-pune",
+  "/seo-internship-mumbai",
+  "/remote-seo-internship",
+  "/best-ai-tools-for-marketers",
+  "/best-chatgpt-tools-for-marketers",
+  "/services",
+  "/services/seo-services",
+  "/services/web-design",
+  "/services/ui-ux-design",
+  "/services/social-media-marketing",
+  "/blog",
+];
+
+/**
+ * Collect blog article URLs only from leaf folders with a non-empty page.tsx.
+ * Example: /blog/seo/what-is-seo
+ */
+function collectBlogArticleRoutes(dir, baseRoute) {
+  let routes = [];
   const items = fs.readdirSync(dir, { withFileTypes: true });
 
-  let routes = [];
-
   for (const item of items) {
-    if (item.isDirectory()) {
-      if (ignoreFolders.includes(item.name)) continue;
+    if (!item.isDirectory()) continue;
 
-      const fullPath = path.join(dir, item.name);
+    const subPath = path.join(dir, item.name);
+    const route = `${baseRoute}/${item.name}`;
+    const pageFile = path.join(subPath, "page.tsx");
 
-      const route =
-        item.name === "app"
-          ? ""
-          : `${baseRoute}/${item.name}`;
-
-      routes.push(route);
-
-      routes = routes.concat(
-        getRoutes(fullPath, route)
-      );
+    if (fs.existsSync(pageFile)) {
+      const content = fs.readFileSync(pageFile, "utf8").trim();
+      if (content.length > 0) {
+        routes.push(route);
+      }
     }
+
+    routes = routes.concat(collectBlogArticleRoutes(subPath, route));
   }
 
   return routes;
@@ -44,17 +62,13 @@ async function generateSitemap() {
     hostname: BASE_URL,
   });
 
-  // Homepage
   sitemap.write({
     url: "/",
     changefreq: "daily",
     priority: 1.0,
   });
 
-  // Auto routes
-  const routes = getRoutes(appDirectory);
-
-  routes.forEach((route) => {
+  staticAppRoutes.forEach((route) => {
     sitemap.write({
       url: route,
       changefreq: "weekly",
@@ -62,23 +76,24 @@ async function generateSitemap() {
     });
   });
 
-  // Blog pages
-  blogs.forEach((blog) => {
-    sitemap.write({
-      url: `/blog/${blog.slug}`,
-      changefreq: "weekly",
-      priority: 0.7,
+  const blogRoot = path.join(appDirectory, "blog");
+  if (fs.existsSync(blogRoot)) {
+    const blogRoutes = collectBlogArticleRoutes(blogRoot, "/blog");
+    blogRoutes.forEach((route) => {
+      if (route === "/blog") return;
+      sitemap.write({
+        url: route,
+        changefreq: "weekly",
+        priority: 0.7,
+      });
     });
-  });
+  }
 
   sitemap.end();
 
   const sitemapOutput = await streamToPromise(sitemap);
 
-  fs.writeFileSync(
-    "./public/sitemap.xml",
-    sitemapOutput.toString()
-  );
+  fs.writeFileSync("./public/sitemap.xml", sitemapOutput.toString());
 
   console.log("✅ Full sitemap generated!");
 }
