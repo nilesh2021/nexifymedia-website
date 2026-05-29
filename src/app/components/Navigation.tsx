@@ -135,7 +135,7 @@ export default function Navigation({
         duration-500
         ${
           isScrolled
-            ? 'bg-white/75 backdrop-blur-xl shadow-lg border-b border-[#202851]/10 py-4'
+            ? 'bg-white/95 backdrop-blur-xl shadow-lg border-b border-[#202851]/10 py-4'
             : 'bg-transparent py-6'
         }
       `}
@@ -170,7 +170,7 @@ export default function Navigation({
                   sm:text-[20px]
                   font-bold
                   transition-colors
-                  duration-300
+                  duration-300 
                   ${
                     isScrolled
                       ? 'text-[#202851]'
@@ -181,26 +181,28 @@ export default function Navigation({
 
                 Nexify
 
-                <span
+                <span 
                   className={`
                     font-normal
                     transition-colors
                     duration-300
+                    f 
                     ${
                       isScrolled
                         ? 'text-gray-500'
                         : 'text-gray-300'
                     }
                   `}
+                  style={{ fontSize: '18px', fontWeight: 'lighter' }}
                 >
-                  Media
+                  &nbsp;Media
                 </span>
 
               </span>
 
-              <span className="text-[11px] uppercase tracking-[0.25em] text-[#24c2f2] mt-1">
+              <span className="text-[10px] uppercase  text-[#24c2f2] mt-1">
 
-                Digital Agency
+               Design • Development • Growth
 
               </span>
 

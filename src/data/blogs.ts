@@ -707,5 +707,47 @@ export const blogs = [
 
     bgGlow: "bg-cyan-500/20",
   },
+  {
+    id: 18,
+
+    title: "How to Use ChatGPT for Digital Marketing",
+
+    slug: "how-to-use-chatgpt",
+
+
+     category: "ai-tools",
+
+  categoryLabel: "AI Tools",
+
+    excerpt:
+      "Learn proven ways to use ChatGPT for digital marketing in 2026: freelancing, agencies, affiliate marketing, content monetization, PPC, and SEO consulting.",
+
+    image:
+      "https://images.unsplash.com/photo-1556740758-90de374c12ad?q=80&w=1200&auto=format&fit=crop",
+
+    readTime: "11 min read",
+
+    date: "May 2026",
+
+    featured: true,
+
+    seoTitle:
+      "How to Use ChatGPT for Digital Marketing in 2026 | Complete Guide",
+
+    seoDescription:
+      "Discover how to use ChatGPT for digital marketing through freelancing, affiliate income, content creation, agencies, PPC management, and SEO services.",
+
+    keywords: [
+      "how to use ChatGPT for digital marketing",
+      "ChatGPT marketing tips",
+      "AI tools for marketers",
+      "digital marketing with AI",
+      "ChatGPT for content creation",
+    ],
+
+    accent: "from-cyan-500 to-blue-600",
+
+    bgGlow: "bg-cyan-500/20",
+  },
 ];
 

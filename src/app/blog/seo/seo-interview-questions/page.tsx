@@ -13,6 +13,7 @@ import ScrollToTop from "../../../components/ScrollToTop";
 import RelatedArticles from "../../../components/blog/RelatedArticles";
 import InlineArticleLink from "../../../components/blog/InlineArticleLink";
 import { getBlogLinks } from "../../../../data/blogInternalLinks";
+import jsPDF from "jspdf";
 
 const pageLinks = getBlogLinks("seo-interview-questions");
 
@@ -108,7 +109,70 @@ const tocItems = [
   { title: "Advanced Questions", id: "advanced-questions" },
   { title: "Interview Tips", id: "interview-tips" },
 ];
+const downloadPDF = () => {
+  const doc = new jsPDF();
 
+  let y = 20;
+
+  doc.setFontSize(20);
+  doc.text("SEO Interview Questions & Answers", 20, y);
+
+  y += 15;
+
+  doc.setFontSize(14);
+  doc.text("Basic SEO Questions", 20, y);
+
+  y += 10;
+
+  basicQuestions.forEach((item, index) => {
+    doc.setFontSize(12);
+
+    const question = `${index + 1}. ${item.question}`;
+    const answer = item.answer;
+
+    const splitQuestion = doc.splitTextToSize(question, 170);
+    const splitAnswer = doc.splitTextToSize(answer, 170);
+
+    doc.text(splitQuestion, 20, y);
+    y += splitQuestion.length * 7;
+
+    doc.text(splitAnswer, 20, y);
+    y += splitAnswer.length * 7 + 10;
+
+    if (y > 260) {
+      doc.addPage();
+      y = 20;
+    }
+  });
+
+  doc.setFontSize(14);
+  doc.text("Advanced SEO Questions", 20, y);
+
+  y += 10;
+
+  advancedQuestions.forEach((item, index) => {
+    doc.setFontSize(12);
+
+    const question = `A${index + 1}. ${item.question}`;
+    const answer = item.answer;
+
+    const splitQuestion = doc.splitTextToSize(question, 170);
+    const splitAnswer = doc.splitTextToSize(answer, 170);
+
+    doc.text(splitQuestion, 20, y);
+    y += splitQuestion.length * 7;
+
+    doc.text(splitAnswer, 20, y);
+    y += splitAnswer.length * 7 + 10;
+
+    if (y > 260) {
+      doc.addPage();
+      y = 20;
+    }
+  });
+
+  doc.save("seo-interview-questions.pdf");
+};
 export default function SeoInterviewQuestionsPage() {
   return (
     <>
@@ -240,6 +304,29 @@ export default function SeoInterviewQuestionsPage() {
                 </p>
               </div>
 
+              <div className="rounded-[32px] border border-emerald-500/20 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 p-8">
+  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+    <div>
+      <h2 className="text-3xl font-bold text-white">
+        Download SEO Interview Questions PDF
+      </h2>
+
+      <p className="mt-4 text-gray-300 leading-7 max-w-2xl">
+        Get all SEO interview questions and answers in a free downloadable PDF
+        format for quick revision before interviews.
+      </p>
+    </div>
+
+    <button
+      onClick={downloadPDF}
+      className="inline-flex items-center justify-center rounded-2xl bg-emerald-600 hover:bg-emerald-500 px-6 py-4 font-semibold transition text-white"
+    >
+      Download PDF
+      <ArrowRight className="ml-2 h-5 w-5" />
+    </button>
+  </div>
+</div>
+
               <div id="basic-questions" className="space-y-8">
                 <div className="flex items-center gap-4">
                   <div className="rounded-2xl bg-emerald-500/10 p-4">
@@ -315,47 +402,7 @@ export default function SeoInterviewQuestionsPage() {
                 </div>
               </div>
 
-              <div
-                id="interview-tips"
-                className="rounded-[32px] border border-white/10 bg-white/5 p-8"
-              >
-                <div className="flex items-center gap-4">
-                  <div className="rounded-2xl bg-gradient-to-r from-emerald-500 to-cyan-500 p-4">
-                    <Sparkles className="h-8 w-8 text-white" />
-                  </div>
-                  <h2 className="text-3xl font-bold">Quick interview tips</h2>
-                </div>
-                <ul className="mt-8 space-y-4 text-gray-300 leading-8">
-                  <li className="flex gap-3">
-                    <span className="mt-1 text-emerald-400">•</span>
-                    <span>
-                      Mention tools you have used: Search Console, Analytics,
-                      Ahrefs, Screaming Frog, or PageSpeed Insights.
-                    </span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="mt-1 text-emerald-400">•</span>
-                    <span>
-                      Share one real example—a blog you optimized, a site audit
-                      you ran, or a keyword that drove traffic.
-                    </span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="mt-1 text-emerald-400">•</span>
-                    <span>
-                      Connect SEO to business goals: leads, sales, or brand
-                      visibility—not just rankings.
-                    </span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="mt-1 text-emerald-400">•</span>
-                    <span>
-                      Stay honest if you do not know something; explain how you
-                      would research and learn it.
-                    </span>
-                  </li>
-                </ul>
-              </div>
+           
             </article>
 
             <aside className="space-y-6">

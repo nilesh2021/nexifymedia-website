@@ -158,6 +158,32 @@ export const blogInternalLinks: Record<string, BlogLinkSet> = {
     ],
     service: { href: "/blog", label: "More guides on our blog" },
   },
+
+  "how-to-use-chatgpt": {
+    related: [
+      {
+        href: "/blog/ai-tools/best-ai-tools-for-college-students",
+        label: "Best AI tools for students",
+      },
+      {
+        href: "/blog/digital-marketing/how-to-earn-money-from-digital-marketing",
+        label: "Earn money from digital marketing",
+      },
+      {
+        href: "/blog/affiliate-marketing/affiliate-marketing-for-beginners",
+        label: "Affiliate marketing for beginners",
+      },
+      {
+        href: "/blog/seo/seo-interview-questions",
+        label: "SEO interview questions",
+      },
+    ],
+
+    service: {
+      href: "/blog",
+      label: "Explore more AI guides",
+    },
+  },
   "best-ai-tools-for-designers": {
     related: [
       { href: "/blog/ai-tools/best-ai-tools-for-college-students", label: "AI tools for students" },
@@ -167,6 +193,7 @@ export const blogInternalLinks: Record<string, BlogLinkSet> = {
     ],
     service: { href: "/services/ui-ux-design", label: "UI/UX design services" },
   },
+
 };
 
 export function getBlogLinks(slug: string): BlogLinkSet {

@@ -68,16 +68,16 @@ export default function Footer() {
 
                   Nexify
                   <span className="font-medium text-gray-300">
-                    Media
+                    &nbsp;Media
                   </span>
 
                 </span>
 
-                <span className="text-[10px] uppercase tracking-[0.2em] text-[#24c2f2] mt-1">
+                  <span className="text-[10px] uppercase  text-[#24c2f2] mt-1">
 
-                  Digital Agency
+               Design • Development • Growth
 
-                </span>
+              </span>
 
               </div>
 

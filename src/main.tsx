@@ -43,6 +43,7 @@ import DigitalMarketingInterviewQuestionsPage from './app/blog/digital-marketing
 import HowToEarnMoneyFromDigitalMarketingPage from './app/blog/digital-marketing/how-to-earn-money-from-digital-marketing/page';
 import AffiliateMarketingForBeginnersPage from './app/blog/affiliate-marketing/affiliate-marketing-for-beginners/page';
 import BestAiToolsForDesignersPage from './app/blog/ai-tools/best-ai-tools-for-designers/page';
+import HowToUseChatGPTPage from './app/blog/ai-tools/how-to-use-chatgpt/page';
 createRoot(document.getElementById('root')!).render(
   <HelmetProvider>
     <BrowserRouter>
@@ -181,6 +182,10 @@ createRoot(document.getElementById('root')!).render(
         <Route
           path="/blog/affiliate-marketing/affiliate-marketing-for-beginners"
           element={<AffiliateMarketingForBeginnersPage />}
+        />
+        <Route
+          path="/blog/ai-tools/how-to-use-chatgpt"
+          element={<HowToUseChatGPTPage />}
         />
       </Routes>
 
