@@ -749,5 +749,46 @@ export const blogs = [
 
     bgGlow: "bg-cyan-500/20",
   },
+  {
+  id: 19,
+
+  title: "How to Create and Sell Digital Products Using ChatGPT in 2026",
+
+  slug: "create-and-sell-digital-products-using-chatgpt",
+
+  category: "ai-tools",
+
+  categoryLabel: "AI Tools",
+
+  excerpt:
+    "Learn how to create ebooks, templates, courses, prompt packs, and other digital products using ChatGPT.",
+
+  image:
+    "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop",
+
+  readTime: "12 min read",
+
+  date: "May 2026",
+
+  featured: false,
+
+  seoTitle:
+    "How to Create and Sell Digital Products Using ChatGPT in 2026",
+
+  seoDescription:
+    "Complete guide to creating, packaging, marketing, and selling digital products using ChatGPT and AI tools.",
+
+  keywords: [
+    "create digital products with ChatGPT",
+    "sell digital products online",
+    "AI digital products",
+    "ChatGPT business ideas",
+    "passive income with AI",
+  ],
+
+  accent: "from-green-500 to-emerald-600",
+
+  bgGlow: "bg-green-500/20",
+}
 ];
 

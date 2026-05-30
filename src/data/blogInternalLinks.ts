@@ -184,6 +184,7 @@ export const blogInternalLinks: Record<string, BlogLinkSet> = {
       label: "Explore more AI guides",
     },
   },
+  
   "best-ai-tools-for-designers": {
     related: [
       { href: "/blog/ai-tools/best-ai-tools-for-college-students", label: "AI tools for students" },
@@ -193,6 +194,30 @@ export const blogInternalLinks: Record<string, BlogLinkSet> = {
     ],
     service: { href: "/services/ui-ux-design", label: "UI/UX design services" },
   },
+  "create-and-sell-digital-products-using-chatgpt": {
+  related: [
+    {
+      href: "/blog/ai-tools/how-to-use-chatgpt",
+      label: "How to use ChatGPT",
+    },
+    {
+      href: "/blog/ai-tools/chatgpt-vs-gemini-vs-claude",
+      label: "ChatGPT vs Gemini vs Claude",
+    },
+    {
+      href: "/blog/digital-marketing/how-to-earn-money-from-digital-marketing",
+      label: "How to earn money from digital marketing",
+    },
+    {
+      href: "/blog/affiliate-marketing/affiliate-marketing-for-beginners",
+      label: "Affiliate marketing for beginners",
+    },
+  ],
+  service: {
+    href: "/services/digital-marketing",
+    label: "Digital marketing services",
+  },
+},
 
 };
 

@@ -44,6 +44,9 @@ import HowToEarnMoneyFromDigitalMarketingPage from './app/blog/digital-marketing
 import AffiliateMarketingForBeginnersPage from './app/blog/affiliate-marketing/affiliate-marketing-for-beginners/page';
 import BestAiToolsForDesignersPage from './app/blog/ai-tools/best-ai-tools-for-designers/page';
 import HowToUseChatGPTPage from './app/blog/ai-tools/how-to-use-chatgpt/page';
+import CreateAndSellDigitalProductsUsingChatGPTPage from "./app/blog/ai-tools/create-and-sell-digital-products-using-chatgpt/page";
+import ClaudeLandingPage from "./app/landing/claudeLandingpage/page"; 
+
 createRoot(document.getElementById('root')!).render(
   <HelmetProvider>
     <BrowserRouter>
@@ -130,7 +133,7 @@ createRoot(document.getElementById('root')!).render(
           path="/blog"
           element={<BlogPage />}
         />
-        
+
         <Route
           path="/blog/ai-tools/best-ai-tools-for-college-students"
           element={<BestAIToolsStudentsPage />}
@@ -187,6 +190,15 @@ createRoot(document.getElementById('root')!).render(
           path="/blog/ai-tools/how-to-use-chatgpt"
           element={<HowToUseChatGPTPage />}
         />
+        <Route
+          path="/blog/ai-tools/create-and-sell-digital-products-using-chatgpt"
+          element={<CreateAndSellDigitalProductsUsingChatGPTPage />}
+        />
+
+        <Route
+  path="/claude-ai"
+  element={<ClaudeLandingPage />}
+/>
       </Routes>
 
     </BrowserRouter>
