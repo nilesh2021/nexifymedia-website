@@ -1,105 +1,107 @@
 import { Helmet } from "react-helmet-async";
-import Navigation from "../../components/Navigation";
-import Footer from "../../components/Footer";
+import Navigation from "../../../components/Navigation"
+import Footer from "../../../components/Footer";
+ 
 
 import {
-  Monitor,
-  Smartphone,
-  LayoutDashboard,
-  PencilRuler,
-  Sparkles,
-  Layers3,
-  ArrowRight,
-  CheckCircle2,
-  Palette,
-  Figma,
+  Instagram,
+  Facebook,
+  Linkedin,
+  Megaphone,
+  BarChart3,
   Users,
   TrendingUp,
+  ArrowRight,
+  CheckCircle2,
+  LineChart,
+  PenSquare,
+  Target,
+  Globe,
 } from "lucide-react";
 
-export default function UiUxDesignPage() {
-  const uiuxServices = [
+export default function SocialMediaMarketingPage() {
+  const smmServices = [
     {
-      title: "Website UI Design",
+      title: "Social Media Strategy",
       description:
-        "Modern responsive website interfaces designed for better engagement and conversions.",
-      icon: Monitor,
+        "Custom social media strategies designed to grow brand visibility and audience engagement.",
+      icon: Target,
     },
     {
-      title: "Mobile App Design",
+      title: "Content Creation",
       description:
-        "User-friendly mobile app interfaces focused on usability and seamless experiences.",
-      icon: Smartphone,
+        "Creative social media content including graphics, captions, reels, and campaign creatives.",
+      icon: PenSquare,
     },
     {
-      title: "Dashboard Design",
+      title: "Instagram Marketing",
       description:
-        "Clean and scalable SaaS dashboard interfaces with better information hierarchy.",
-      icon: LayoutDashboard,
+        "Build stronger engagement and grow your audience through Instagram marketing strategies.",
+      icon: Instagram,
     },
     {
-      title: "Wireframing",
+      title: "Facebook Marketing",
       description:
-        "Strategic wireframes and user flows to improve structure and usability.",
-      icon: PencilRuler,
+        "Increase reach, engagement, and conversions with Facebook marketing campaigns.",
+      icon: Facebook,
     },
     {
-      title: "UX Optimization",
+      title: "LinkedIn Marketing",
       description:
-        "Improve user journeys, accessibility, and interaction experiences.",
-      icon: Sparkles,
+        "Professional LinkedIn marketing solutions for B2B businesses and startups.",
+      icon: Linkedin,
     },
     {
-      title: "Design Systems",
+      title: "Performance Analytics",
       description:
-        "Consistent UI systems and reusable components for scalable products.",
-      icon: Layers3,
+        "Track campaign performance, engagement metrics, and audience growth effectively.",
+      icon: BarChart3,
     },
   ];
 
   const process = [
     {
       step: "Research",
-      icon: Users,
+      icon: Globe,
     },
     {
-      step: "Wireframing",
-      icon: PencilRuler,
+      step: "Strategy",
+      icon: Target,
     },
     {
-      step: "UI Design",
-      icon: Palette,
+      step: "Content Creation",
+      icon: PenSquare,
     },
     {
-      step: "Prototype",
-      icon: Figma,
+      step: "Campaign Growth",
+      icon: Megaphone,
     },
     {
-      step: "Optimization",
-      icon: TrendingUp,
+      step: "Analytics",
+      icon: LineChart,
     },
   ];
 
   const faqs = [
     {
-      question: "Why is UI/UX design important?",
+      question: "Why is social media marketing important?",
       answer:
-        "UI/UX design improves usability, engagement, user satisfaction, and conversion rates for websites and digital products.",
+        "Social media marketing helps businesses improve brand awareness, audience engagement, lead generation, and customer relationships.",
     },
     {
-      question: "Do you design mobile apps?",
+      question: "Do you create social media content?",
       answer:
-        "Yes. We design user-friendly mobile app interfaces for startups, SaaS platforms, and businesses.",
+        "Yes. We create modern social media content including graphics, captions, campaign creatives, and engagement-focused posts.",
     },
     {
-      question: "Do you provide wireframes and prototypes?",
+      question: "Which platforms do you manage?",
       answer:
-        "Yes. We create wireframes, user flows, and interactive prototypes before final UI design.",
+        "We work with Instagram, Facebook, LinkedIn, and other major social media platforms depending on business goals.",
     },
     {
-      question: "Can you redesign existing websites?",
+      question: "Can social media marketing help startups?",
       answer:
-        "Absolutely. We help businesses modernize outdated interfaces and improve user experience.",
+        "Absolutely. Social media marketing helps startups build visibility, trust, and audience engagement online.",
     },
   ];
 
@@ -107,48 +109,46 @@ export default function UiUxDesignPage() {
     <>
       <Helmet>
         <title>
-          UI/UX Design Services for Modern Businesses | Nexify Media
+          Social Media Marketing Services | Nexify Media
         </title>
 
         <meta
           name="description"
-          content="Nexify Media provides professional UI/UX design services including web design, mobile app UI design, wireframing, dashboard design, UX optimization, and modern interface solutions for startups and businesses worldwide."
+          content="Nexify Media provides professional social media marketing services including Instagram marketing, Facebook marketing, LinkedIn marketing, content creation, social media strategy, and audience growth solutions for businesses worldwide."
         />
 
         <meta
           name="keywords"
           content="
-          UI UX design services,
-          UI UX designer,
-          web UI design,
-          mobile app UI design,
-          UX design services,
-          dashboard UI design,
-          SaaS UI design,
-          wireframing services,
-          user experience design,
-          interface design,
-          UI UX company,
-          UI UX agency,
-          modern web design,
-          startup UI UX design
+          social media marketing services,
+          social media agency,
+          Instagram marketing,
+          Facebook marketing,
+          LinkedIn marketing,
+          content creation services,
+          social media strategy,
+          digital marketing agency,
+          social media management,
+          audience growth,
+          brand marketing,
+          startup marketing
         "
         />
 
         <link
           rel="canonical"
-          href="https://nexifymedia.co.in/services/ui-ux-design"
+          href="https://nexifymedia.co.in/services/social-media-marketing"
         />
 
         {/* Open Graph */}
         <meta
           property="og:title"
-          content="UI/UX Design Services | Nexify Media"
+          content="Social Media Marketing Services | Nexify Media"
         />
 
         <meta
           property="og:description"
-          content="Professional UI/UX design services focused on modern interfaces, usability, and conversion-focused digital experiences."
+          content="Professional social media marketing services focused on audience growth, engagement, and brand visibility."
         />
 
         <meta
@@ -158,7 +158,7 @@ export default function UiUxDesignPage() {
 
         <meta
           property="og:url"
-          content="https://nexifymedia.co.in/services/ui-ux-design"
+          content="https://nexifymedia.co.in/services/social-media-marketing"
         />
 
         {/* Schema */}
@@ -168,9 +168,9 @@ export default function UiUxDesignPage() {
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
             "name": "Nexify Media",
-            "url": "https://nexifymedia.co.in/services/ui-ux-design",
-            "serviceType": "UI UX Design Services",
-            "description": "Professional UI/UX design services including website UI design, dashboard design, wireframing, mobile app UI design, and user experience optimization.",
+            "url": "https://nexifymedia.co.in/services/social-media-marketing",
+            "serviceType": "Social Media Marketing Services",
+            "description": "Professional social media marketing services including Instagram marketing, Facebook marketing, LinkedIn marketing, and content creation.",
             "areaServed": "Worldwide"
           }
           `}
@@ -201,40 +201,41 @@ export default function UiUxDesignPage() {
                 <div className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse" />
 
                 <span className="text-sm font-medium text-cyan-700">
-                  UI/UX Design Solutions
+                  Social Media Growth Solutions
                 </span>
               </div>
 
               {/* Heading */}
               <h1 className="mt-8 text-5xl md:text-7xl font-bold tracking-tight leading-[1.05] text-[#111827]">
-                UI/UX Design That
+                Social Media Marketing That
                 <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">
                   {" "}
-                  Enhances User Experience
+                  Builds Brand Growth
                 </span>
               </h1>
 
               {/* Description */}
               <p className="mt-8 text-xl text-gray-600 leading-9 max-w-2xl">
-                Nexify Media creates modern UI/UX designs focused on usability,
-                engagement, and conversion-driven digital experiences for
-                startups, SaaS platforms, and modern businesses.
+                Nexify Media helps businesses grow online through strategic
+                social media marketing, audience engagement, content creation,
+                and performance-driven campaigns.
               </p>
 
               {/* Supporting SEO Text */}
               <p className="mt-6 text-gray-600 leading-8 max-w-2xl">
-                Our UI/UX design services include website design, mobile app UI,
-                dashboard interfaces, wireframing, user experience optimization,
-                and scalable design systems for digital products worldwide.
+                Our social media marketing services include Instagram marketing,
+                Facebook campaigns, LinkedIn growth strategies, content
+                creation, and audience engagement solutions for modern brands
+                worldwide.
               </p>
 
               {/* Buttons */}
               <div className="mt-12 flex flex-wrap gap-5">
                 <a
-                  href="#uiux-services"
+                  href="#smm-services"
                   className="inline-flex items-center justify-center rounded-2xl bg-[#111827] px-8 py-4 text-white font-semibold hover:scale-105 transition-all duration-300 shadow-2xl shadow-black/10"
                 >
-                  Explore UI/UX Services
+                  Explore SMM Services
                 </a>
 
                 <a
@@ -250,22 +251,22 @@ export default function UiUxDesignPage() {
 
         {/* SERVICES INCLUDED */}
         <section
-          id="uiux-services"
+          id="smm-services"
           className="bg-[#f8fbff] py-24 border-t border-gray-100"
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <div className="text-center max-w-3xl mx-auto">
               <span className="text-cyan-600 font-medium">
-                UI/UX Services Included
+                Social Media Services Included
               </span>
 
               <h2 className="mt-4 text-4xl md:text-5xl font-bold">
-                Complete UI/UX Design Solutions
+                Complete Social Media Marketing Solutions
               </h2>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-              {uiuxServices.map((service, index) => {
+              {smmServices.map((service, index) => {
                 const Icon = service.icon;
 
                 return (
@@ -306,11 +307,11 @@ export default function UiUxDesignPage() {
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <div className="text-center max-w-3xl mx-auto">
               <span className="text-cyan-600 font-medium">
-                Our Design Process
+                Our Marketing Process
               </span>
 
               <h2 className="mt-4 text-4xl md:text-5xl font-bold">
-                How We Approach UI/UX Design
+                How We Approach Social Media Marketing
               </h2>
             </div>
 
@@ -346,26 +347,25 @@ export default function UiUxDesignPage() {
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <div className="text-center max-w-3xl mx-auto">
               <span className="text-cyan-600 font-medium">
-                Benefits of UI/UX Design
+                Benefits of Social Media Marketing
               </span>
 
               <h2 className="mt-4 text-4xl md:text-5xl font-bold">
-                Why UI/UX Matters for Digital Products
+                Why Social Media Marketing Matters
               </h2>
 
               <p className="mt-6 text-lg text-gray-600">
-                Great UI/UX design improves usability, increases engagement,
-                and creates better customer experiences across digital
-                platforms.
+                Social media marketing helps businesses improve visibility,
+                build stronger customer relationships, and grow online.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
               {[
-                "Improve User Experience",
-                "Increase Engagement",
-                "Boost Conversion Rates",
-                "Build Brand Trust",
+                "Increase Brand Awareness",
+                "Improve Audience Engagement",
+                "Generate More Leads",
+                "Build Customer Trust",
               ].map((item, index) => (
                 <div
                   key={index}
@@ -393,7 +393,7 @@ export default function UiUxDesignPage() {
               </span>
 
               <h2 className="mt-4 text-4xl md:text-5xl font-bold">
-                UI/UX Design FAQs
+                Social Media Marketing FAQs
               </h2>
             </div>
 
@@ -424,12 +424,13 @@ export default function UiUxDesignPage() {
 
           <div className="relative max-w-5xl mx-auto px-6 lg:px-10 text-center">
             <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-              Ready To Create Better User Experiences?
+              Ready To Grow Your Brand On Social Media?
             </h2>
 
             <p className="mt-6 text-lg text-gray-300 leading-relaxed">
-              Let’s design modern digital experiences that improve usability,
-              increase engagement, and help your business grow online.
+              Let’s create powerful social media marketing strategies that help
+              your business increase visibility, engagement, and long-term
+              growth online.
             </p>
 
             <div className="mt-10">
@@ -437,7 +438,7 @@ export default function UiUxDesignPage() {
                 href="/#contact"
                 className="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 font-semibold hover:scale-105 transition-all duration-300 shadow-2xl shadow-cyan-500/20"
               >
-                Start Your UI/UX Project
+                Start Your Marketing Project
               </a>
             </div>
           </div>

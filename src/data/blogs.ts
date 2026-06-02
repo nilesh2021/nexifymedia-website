@@ -776,7 +776,7 @@ export const blogs = [
     "How to Create and Sell Digital Products Using ChatGPT in 2026",
 
   seoDescription:
-    "Complete guide to creating, packaging, marketing, and selling digital products using ChatGPT and AI tools.",
+    "Learn how to create, package, market and sell profitable digital products using ChatGPT and AI tools.",
 
   keywords: [
     "create digital products with ChatGPT",

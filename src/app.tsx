@@ -2,14 +2,15 @@ import { useEffect } from 'react';
 
 import { Helmet } from 'react-helmet-async';
 
-import Navigation from './components/Navigation';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import About from './components/About';
-import Footer from './components/Footer';
-import ScrollToTop from './components/ScrollToTop';
-import ContactSection from './components/ContactSection';
-import FeaturedWork from './components/FeaturedWork';
+import Navigation from './app/components/Navigation';
+import Hero from './app/components/Hero';
+import Services from './app/components/Services';
+import About from './app/components/About';
+import Footer from './app/components/Footer';
+import ScrollToTop from './app/components/ScrollToTop';
+import ContactSection from './app/components/ContactSection';
+import FeaturedWork from './app/components/FeaturedWork';
+ 
 
 export default function App() {
 

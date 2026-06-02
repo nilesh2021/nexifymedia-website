@@ -1,12 +1,13 @@
 import { createRoot } from 'react-dom/client';
 import { HelmetProvider } from 'react-helmet-async';
 import './styles/index.css';
+
 import {
   BrowserRouter,
   Routes,
   Route,
 } from 'react-router-dom';
-import App from './app/App';
+
 import CareersPage from './app/careers/page';
 import TermsAndConditionsPage from './app/terms-and-conditions/page';
 import DisclaimerPage from './app/disclaimer/page';
@@ -21,10 +22,10 @@ import BestAiToolsForMarketers from './app/Resources/BestAiToolsForMarketers';
 import BestChatgptToolsForMarketers from './app/Resources/BestChatgptToolsForMarketers';
 
 import ServicesPage from './app/services/page';
-import SeoServicesPage from './app/services/seo-services/page';
-import WebDesignPage from './app/services/web-design/page';
-import UiUxDesignPage from './app/services/ui-ux-design/page';
-import SocialMediaMarketingPage from './app/services/social-media-marketing/page';
+import SeoServicesPage from './app/landing/services/seo-services/page';
+import WebDesignPage from './app/landing/services/web-design/page';
+import UiUxDesignPage from './app/landing/services/ui-ux-design/page';
+import SocialMediaMarketingPage from './app/landing/services/social-media-marketing/page';
 import UiUxFuture2026Page from './app/blog/ui-ux/ui-ux-design-in-2026/page';
 import FutureOfUiDesignPage from './app/blog/ui-ux/future-of-ui-design/page';
 import AccessibilityInUxDesignPage from './app/blog/ui-ux/accessibility-in-ux-design/page';
@@ -45,7 +46,9 @@ import AffiliateMarketingForBeginnersPage from './app/blog/affiliate-marketing/a
 import BestAiToolsForDesignersPage from './app/blog/ai-tools/best-ai-tools-for-designers/page';
 import HowToUseChatGPTPage from './app/blog/ai-tools/how-to-use-chatgpt/page';
 import CreateAndSellDigitalProductsUsingChatGPTPage from "./app/blog/ai-tools/create-and-sell-digital-products-using-chatgpt/page";
-import ClaudeLandingPage from "./app/landing/claudeLandingpage/page"; 
+import ClaudeLandingPage from "./app/landing/ai-tools/claudeLandingpage/page";
+import DataEntryRemoteJob from "./app/careers/data-entry-remote-job/page";
+import App from "./app";
 
 createRoot(document.getElementById('root')!).render(
   <HelmetProvider>
@@ -196,11 +199,17 @@ createRoot(document.getElementById('root')!).render(
         />
 
         <Route
-  path="/claude-ai"
-  element={<ClaudeLandingPage />}
-/>
-      </Routes>
+          path="/claude-ai"
+          element={<ClaudeLandingPage />}
+        />
 
+        <Route
+          path="/careers/data-entry-remote-job"
+          element={<DataEntryRemoteJob />}
+        />
+
+
+      </Routes>
     </BrowserRouter>
 
   </HelmetProvider>
