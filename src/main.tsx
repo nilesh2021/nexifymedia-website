@@ -48,6 +48,9 @@ import HowToUseChatGPTPage from './app/blog/ai-tools/how-to-use-chatgpt/page';
 import CreateAndSellDigitalProductsUsingChatGPTPage from "./app/blog/ai-tools/create-and-sell-digital-products-using-chatgpt/page";
 import ClaudeLandingPage from "./app/landing/ai-tools/claudeLandingpage/page";
 import DataEntryRemoteJob from "./app/careers/data-entry-remote-job/page";
+import ContentWriterJob from "./app/careers/content-writer-job/page";
+import SeoExecutiveJob from "./app/careers/seo-executive-job/page";
+import UiUxDesignerJob from "./app/careers/ui-ux-designer-job/page";
 import App from "./app";
 
 createRoot(document.getElementById('root')!).render(
@@ -207,8 +210,17 @@ createRoot(document.getElementById('root')!).render(
           path="/careers/data-entry-remote-job"
           element={<DataEntryRemoteJob />}
         />
-
-
+<Route
+  path="/careers/content-writer-job"
+  element={<ContentWriterJob />}
+/><Route
+  path="/careers/seo-executive-job"
+  element={<SeoExecutiveJob />}
+/>
+<Route
+  path="/careers/ui-ux-designer-job"
+  element={<UiUxDesignerJob />}
+/>
       </Routes>
     </BrowserRouter>
 
