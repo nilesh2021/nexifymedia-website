@@ -5,77 +5,107 @@ import Footer from "../../components/Footer";
 import { useState } from "react";
 
 export default function UiUxDesignerJob() {
+    const [loading, setLoading] = useState(false);
     const [showModal, setShowModal] = useState(false);
     const [name, setName] = useState("");
     const [phone, setPhone] = useState("");
     const [email, setEmail] = useState("");
     const [resume, setResume] = useState("");
-const [openFaq, setOpenFaq] = useState<number | null>(0);
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
+    const [openFaq, setOpenFaq] = useState<number | null>(0);
+   const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
 
-        try {
-            await fetch(
-                "https://script.google.com/macros/s/AKfycbxRaUoQNewWCzj8MQHEUkQplWd8oAUBxrCfa-7Optv5jtcEO4U5N_zzPZncjx-LWYLB/exec",
-                {
-                    method: "POST",
-                    mode: "no-cors",
-                    body: JSON.stringify({
-                        name,
-                        phone,
-                        email,
-                        resume,
-                        jobTitle: "UI UX Designer Job",
-                    }),
-                }
-            );
+  setLoading(true);
 
-            alert("Application Submitted Successfully!");
+  try {
+    await fetch(
+      "https://script.google.com/macros/s/AKfycbxRaUoQNewWCzj8MQHEUkQplWd8oAUBxrCfa-7Optv5jtcEO4U5N_zzPZncjx-LWYLB/exec",
+      {
+        method: "POST",
+        mode: "no-cors",
+        body: JSON.stringify({
+          name,
+          phone,
+          email,
+          resume,
+          jobTitle: "UI UX Designer Job",
+        }),
+      }
+    );
 
-            setName("");
-            setPhone("");
-            setEmail("");
-            setResume("");
-            setShowModal(false);
+    alert("Application Submitted Successfully!");
 
-        } catch (error) {
-            console.error(error);
-            alert("Something went wrong.");
-        }
-    };
+    setName("");
+    setPhone("");
+    setEmail("");
+    setResume("");
+    setShowModal(false);
+  } catch (error) {
+    console.error(error);
+    alert("Something went wrong.");
+  } finally {
+    setLoading(false);
+  }
+};
     return (
 
         <>
             <Helmet>
-                <title>
-                    UI UX Designer Job 2026 | Remote UI UX Designer Jobs | Nexify Media
-                </title>
 
-                <meta
-                    name="description"
-                    content="Apply for UI UX Designer Jobs at Nexify Media. Remote UI UX opportunities for freshers and experienced designers. Work with Figma, wireframing, prototyping, user research, and modern web and mobile applications."
-                />
+  <title>
+    UI UX Designer Jobs 2026 | Remote UI UX Jobs | Work From Home | Nexify Media
+  </title>
 
-                <meta
-                    name="keywords"
-                    content="ui ux designer jobs, ui designer jobs, ux designer jobs, figma designer jobs, remote ui ux jobs, ui ux jobs for freshers, product designer jobs, work from home ui ux jobs"
-                />
+  <meta
+    name="description"
+    content="Apply for Remote UI UX Designer Jobs at Nexify Media. Hiring freshers and experienced designers for UI Design, UX Design, Figma, Wireframing, Prototyping, User Research, Mobile App Design, and Website Design projects. Work from home opportunities available."
+  />
 
-                <meta
-                    property="og:title"
-                    content="UI UX Designer Job | Nexify Media"
-                />
+  <meta
+    name="keywords"
+    content="ui ux designer jobs, remote ui ux jobs, work from home ui ux jobs, ui designer jobs, ux designer jobs, figma designer jobs, product designer jobs, ui ux jobs for freshers, ui ux internship, junior ui ux designer jobs, web designer jobs, mobile app designer jobs, user experience designer jobs, user interface designer jobs"
+  />
 
-                <meta
-                    property="og:description"
-                    content="Design meaningful digital experiences for web and mobile products. Work remotely with our team using Figma, user research, wireframing, and prototyping."
-                />
+  <meta
+    property="og:title"
+    content="Remote UI UX Designer Jobs | Work From Home Opportunities"
+  />
 
-                <link
-                    rel="canonical"
-                    href="https://nexifymedia.co.in/careers/ui-ux-designer-job"
-                />
-            </Helmet>
+  <meta
+    property="og:description"
+    content="Join Nexify Media as a UI UX Designer. Work on websites, mobile apps, wireframes, prototypes, design systems, and user research projects from anywhere."
+  />
+
+  <meta property="og:type" content="website" />
+
+  <meta
+    property="og:url"
+    content="https://nexifymedia.co.in/careers/ui-ux-designer-job"
+  />
+
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large"
+  />
+
+  <link
+    rel="canonical"
+    href="https://nexifymedia.co.in/careers/ui-ux-designer-job"
+  />
+ 
+            <script type="application/ld+json">
+{JSON.stringify({
+  "jobLocationType": "TELECOMMUTE",
+  "employmentType": "FULL_TIME",
+  "datePosted": "2026-06-06",
+  "validThrough": "2026-12-31",
+  "applicantLocationRequirements": {
+    "@type": "Country",
+    "name": "India"
+  }
+})}
+</script>
+</Helmet>
             <Navigation />
 
             {/* HERO */}
@@ -99,7 +129,7 @@ const [openFaq, setOpenFaq] = useState<number | null>(0);
                     </span>
 
                     <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
-                        UI UX Designer
+                         Remote UI UX Designer  
                         <span className="text-cyan-400">
                             &nbsp;Job
                         </span>
@@ -138,7 +168,7 @@ const [openFaq, setOpenFaq] = useState<number | null>(0);
 
                             <div>
                                 <p className="text-slate-500 text-sm">Salary</p>
-                                <h3 className="font-bold text-xl">₹5K - ₹10K</h3>
+                                <h3 className="font-bold text-xl">₹5K - ₹40K</h3>
                             </div>
 
                             <button
@@ -183,30 +213,43 @@ const [openFaq, setOpenFaq] = useState<number | null>(0);
                                 </h2>
 
                                 <ul className="space-y-4 text-slate-700">
-                                    <li>✓ Create wireframes and user flows</li>
-                                    <li>✓ Design responsive web and mobile interfaces</li>
-                                    <li>✓ Build interactive prototypes in Figma</li>
-                                    <li>✓ Conduct user research and usability testing</li>
-                                    <li>✓ Maintain design systems and UI consistency</li>
-                                    <li>✓ Collaborate with developers and stakeholders</li>
+                                   <ul className="space-y-4 text-slate-700">
+  <li>✓ Knowledge of Figma</li>
+  <li>✓ Understanding of UX principles</li>
+  <li>✓ Basic wireframing and prototyping skills</li>
+  <li>✓ Strong visual design sense</li>
+  <li>✓ Understanding of responsive design</li>
+  <li>✓ Portfolio of design projects (preferred)</li>
+</ul>
                                 </ul>
                             </div>
 
-                            <div className="bg-white rounded-3xl p-8 shadow-sm">
-                                <h2 className="text-3xl font-bold mb-6">
-                                    Requirements
-                                </h2>
+                           <div className="bg-white rounded-3xl p-8 shadow-sm">
+  <h2 className="text-3xl font-bold mb-6">
+    Skills Required
+  </h2>
 
-                                <ul className="space-y-4 text-slate-700">
-                                    <li>✓ Create wireframes and user flows</li>
-                                    <li>✓ Design responsive web and mobile interfaces</li>
-                                    <li>✓ Build interactive prototypes in Figma</li>
-                                    <li>✓ Conduct user research and usability testing</li>
-                                    <li>✓ Maintain design systems and UI consistency</li>
-                                    <li>✓ Collaborate with developers and stakeholders</li>
-                                </ul>
-                            </div>
-                           
+  <div className="flex flex-wrap gap-3">
+    {[
+      "Figma",
+      "Wireframing",
+      "Prototyping",
+      "User Research",
+      "Design Systems",
+      "Responsive Design",
+      "Mobile UI",
+      "UX Thinking"
+    ].map(skill => (
+      <span
+        key={skill}
+        className="px-4 py-2 bg-cyan-50 text-cyan-700 rounded-full text-sm font-medium"
+      >
+        {skill}
+      </span>
+    ))}
+  </div>
+</div>
+
                             <section className="bg-white rounded-3xl shadow-sm p-8 mt-8">
                                 <h2 className="text-3xl font-bold mb-6">
                                     Remote UI UX Designer Jobs
@@ -234,113 +277,115 @@ const [openFaq, setOpenFaq] = useState<number | null>(0);
                                 </h3>
 
                                 <ul className="list-disc pl-6 space-y-2 text-slate-700">
-                                    <li>Freshers looking for work from home jobs</li>
-                                    <li>Students seeking part-time online jobs</li>
-                                    <li>Housewives looking for flexible remote work</li>
-                                    <li>Professionals seeking additional income opportunities</li>
-                                    <li>Candidates with basic computer and typing skills</li>
-                                </ul>
+  <li>UI UX Design Freshers</li>
+  <li>Figma Designers</li>
+  <li>Web Designers transitioning to UI UX</li>
+  <li>Graphic Designers interested in Product Design</li>
+  <li>Design Students building their portfolio</li>
+  <li>Freelance UI UX Designers</li>
+  <li>Candidates passionate about user experience and interface design</li>
+</ul>
                             </section>
-                            
-                         <section className="bg-white rounded-3xl shadow-sm p-8 mt-8">
-    <h2 className="text-3xl font-bold mb-6">
-        Frequently Asked Questions
-    </h2>
 
-    <div className="space-y-4">
+                            <section className="bg-white rounded-3xl shadow-sm p-8 mt-8">
+                                <h2 className="text-3xl font-bold mb-6">
+                                    Frequently Asked Questions
+                                </h2>
 
-        {/* FAQ 1 */}
-        <div className="border rounded-2xl overflow-hidden">
-            <button
-                className="w-full flex items-center justify-between p-5 text-left font-semibold hover:bg-slate-50 transition"
-                onClick={() => setOpenFaq(openFaq === 1 ? null : 1)}
-            >
-                <span>Can freshers apply?</span>
-                <span>{openFaq === 1 ? "−" : "+"}</span>
-            </button>
+                                <div className="space-y-4">
 
-            {openFaq === 1 && (
-                <div className="px-5 pb-5 text-slate-600">
-                    Freshers with a strong portfolio and knowledge of Figma,
-                    wireframing, and UX principles are encouraged to apply.
-                </div>
-            )}
-        </div>
+                                    {/* FAQ 1 */}
+                                    <div className="border rounded-2xl overflow-hidden">
+                                        <button
+                                            className="w-full flex items-center justify-between p-5 text-left font-semibold hover:bg-slate-50 transition"
+                                            onClick={() => setOpenFaq(openFaq === 1 ? null : 1)}
+                                        >
+                                            <span>Can freshers apply?</span>
+                                            <span>{openFaq === 1 ? "−" : "+"}</span>
+                                        </button>
 
-        {/* FAQ 2 */}
-        <div className="border rounded-2xl overflow-hidden">
-            <button
-                className="w-full flex items-center justify-between p-5 text-left font-semibold hover:bg-slate-50 transition"
-                onClick={() => setOpenFaq(openFaq === 2 ? null : 2)}
-            >
-                <span>Is this a remote UI UX Designer job?</span>
-                <span>{openFaq === 2 ? "−" : "+"}</span>
-            </button>
+                                        {openFaq === 1 && (
+                                            <div className="px-5 pb-5 text-slate-600">
+                                                Freshers with a strong portfolio and knowledge of Figma,
+                                                wireframing, and UX principles are encouraged to apply.
+                                            </div>
+                                        )}
+                                    </div>
 
-            {openFaq === 2 && (
-                <div className="px-5 pb-5 text-slate-600">
-                    Yes. This is a fully remote position, allowing designers to
-                    work from anywhere with a stable internet connection.
-                </div>
-            )}
-        </div>
+                                    {/* FAQ 2 */}
+                                    <div className="border rounded-2xl overflow-hidden">
+                                        <button
+                                            className="w-full flex items-center justify-between p-5 text-left font-semibold hover:bg-slate-50 transition"
+                                            onClick={() => setOpenFaq(openFaq === 2 ? null : 2)}
+                                        >
+                                            <span>Is this a remote UI UX Designer job?</span>
+                                            <span>{openFaq === 2 ? "−" : "+"}</span>
+                                        </button>
 
-        {/* FAQ 3 */}
-        <div className="border rounded-2xl overflow-hidden">
-            <button
-                className="w-full flex items-center justify-between p-5 text-left font-semibold hover:bg-slate-50 transition"
-                onClick={() => setOpenFaq(openFaq === 3 ? null : 3)}
-            >
-                <span>Which design tools are required?</span>
-                <span>{openFaq === 3 ? "−" : "+"}</span>
-            </button>
+                                        {openFaq === 2 && (
+                                            <div className="px-5 pb-5 text-slate-600">
+                                                Yes. This is a fully remote position, allowing designers to
+                                                work from anywhere with a stable internet connection.
+                                            </div>
+                                        )}
+                                    </div>
 
-            {openFaq === 3 && (
-                <div className="px-5 pb-5 text-slate-600">
-                    Figma is the primary design tool. Knowledge of Adobe XD,
-                    Photoshop, Illustrator, or other design tools is a plus.
-                </div>
-            )}
-        </div>
+                                    {/* FAQ 3 */}
+                                    <div className="border rounded-2xl overflow-hidden">
+                                        <button
+                                            className="w-full flex items-center justify-between p-5 text-left font-semibold hover:bg-slate-50 transition"
+                                            onClick={() => setOpenFaq(openFaq === 3 ? null : 3)}
+                                        >
+                                            <span>Which design tools are required?</span>
+                                            <span>{openFaq === 3 ? "−" : "+"}</span>
+                                        </button>
 
-        {/* FAQ 4 */}
-        <div className="border rounded-2xl overflow-hidden">
-            <button
-                className="w-full flex items-center justify-between p-5 text-left font-semibold hover:bg-slate-50 transition"
-                onClick={() => setOpenFaq(openFaq === 4 ? null : 4)}
-            >
-                <span>Do I need a portfolio?</span>
-                <span>{openFaq === 4 ? "−" : "+"}</span>
-            </button>
+                                        {openFaq === 3 && (
+                                            <div className="px-5 pb-5 text-slate-600">
+                                                Figma is the primary design tool. Knowledge of Adobe XD,
+                                                Photoshop, Illustrator, or other design tools is a plus.
+                                            </div>
+                                        )}
+                                    </div>
 
-            {openFaq === 4 && (
-                <div className="px-5 pb-5 text-slate-600">
-                    Yes. A portfolio showcasing your UI UX projects, case studies,
-                    wireframes, prototypes, or design work is highly recommended.
-                </div>
-            )}
-        </div>
+                                    {/* FAQ 4 */}
+                                    <div className="border rounded-2xl overflow-hidden">
+                                        <button
+                                            className="w-full flex items-center justify-between p-5 text-left font-semibold hover:bg-slate-50 transition"
+                                            onClick={() => setOpenFaq(openFaq === 4 ? null : 4)}
+                                        >
+                                            <span>Do I need a portfolio?</span>
+                                            <span>{openFaq === 4 ? "−" : "+"}</span>
+                                        </button>
 
-        {/* FAQ 5 */}
-        <div className="border rounded-2xl overflow-hidden">
-            <button
-                className="w-full flex items-center justify-between p-5 text-left font-semibold hover:bg-slate-50 transition"
-                onClick={() => setOpenFaq(openFaq === 5 ? null : 5)}
-            >
-                <span>What kind of projects will I work on?</span>
-                <span>{openFaq === 5 ? "−" : "+"}</span>
-            </button>
+                                        {openFaq === 4 && (
+                                            <div className="px-5 pb-5 text-slate-600">
+                                                Yes. A portfolio showcasing your UI UX projects, case studies,
+                                                wireframes, prototypes, or design work is highly recommended.
+                                            </div>
+                                        )}
+                                    </div>
 
-            {openFaq === 5 && (
-                <div className="px-5 pb-5 text-slate-600">
-                    You may work on websites, mobile applications, SaaS dashboards,
-                    landing pages, design systems, and other digital products.
-                </div>
-            )}
-        </div>
+                                    {/* FAQ 5 */}
+                                    <div className="border rounded-2xl overflow-hidden">
+                                        <button
+                                            className="w-full flex items-center justify-between p-5 text-left font-semibold hover:bg-slate-50 transition"
+                                            onClick={() => setOpenFaq(openFaq === 5 ? null : 5)}
+                                        >
+                                            <span>What kind of projects will I work on?</span>
+                                            <span>{openFaq === 5 ? "−" : "+"}</span>
+                                        </button>
 
-    </div>
-</section>
+                                        {openFaq === 5 && (
+                                            <div className="px-5 pb-5 text-slate-600">
+                                                You may work on websites, mobile applications, SaaS dashboards,
+                                                landing pages, design systems, and other digital products.
+                                            </div>
+                                        )}
+                                    </div>
+
+                                </div>
+                            </section>
                         </div>
 
                         {/* SIDEBAR */}
@@ -364,10 +409,10 @@ const [openFaq, setOpenFaq] = useState<number | null>(0);
                                     className="mt-3 items-center px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:scale-105 transition"
                                 >
                                     Apply Now
-                                </button> 
+                                </button>
 
 
-                                
+
                             </div>
 
                         </div>
@@ -386,7 +431,7 @@ const [openFaq, setOpenFaq] = useState<number | null>(0);
                         <button
                             type="button"
                             onClick={() => setShowModal(false)}
-                            className="absolute top-5 right-5 text-2xl text-slate-500 hover:text-slate-900"
+                            className="mt-6 w-full rounded-xl absolute top-5 right-5 text-2xl text-slate-500 hover:text-slate-900"
                         >
                             ×
                         </button>
@@ -430,24 +475,53 @@ const [openFaq, setOpenFaq] = useState<number | null>(0);
 
                             <input
                                 type="url"
-                                placeholder="Google Drive Resume Link"
+                                placeholder="Portfolio / Resume URL (Optional)"
                                 value={resume}
                                 onChange={(e) => setResume(e.target.value)}
                                 className="w-full rounded-xl border border-slate-300 p-4"
                             />
 
-                            <button
-                                type="submit"
-                                className="w-full rounded-xl bg-blue-600 py-4 font-semibold text-white hover:bg-blue-700"
-                            >
-                                Submit Application
-                            </button>
+                           <button
+  type="submit"
+  disabled={loading}
+  className="w-full rounded-xl bg-blue-600 py-4 font-semibold text-white hover:bg-blue-700 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+>
+  {loading ? (
+    <>
+      <svg
+        className="h-5 w-5 animate-spin"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <circle
+          className="opacity-25"
+          cx="12"
+          cy="12"
+          r="10"
+          stroke="currentColor"
+          strokeWidth="4"
+        />
+        <path
+          className="opacity-75"
+          fill="currentColor"
+          d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+        />
+      </svg>
+
+      Submitting...
+    </>
+  ) : (
+    "Submit Application"
+  )}
+</button>
 
                         </form>
                     </div>
                 </div>
             )}
             <Footer />
+           
         </>
 
     );
