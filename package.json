@@ -4,9 +4,11 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "build": "node src/scripts/generate-sitemap.js && vite build",
+    
     "dev": "vite",
-    "generate-sitemap": "node src/scripts/generate-sitemap.js"
+    
+    "build": "node src/scripts/generate-sitemap.cjs && vite build",
+    "generate-sitemap": "node src/scripts/generate-sitemap.cjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
