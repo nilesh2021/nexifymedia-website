@@ -35,21 +35,25 @@ export default function ScrollToTop() {
   };
 
   return (
-    <button
-      onClick={scrollToTop}
-      className={`cursor-pointer fixed bottom-6 right-6 z-[9999]
-      w-14 h-14 rounded-full
-      bg-gradient-to-r from-[#24c2f2] to-[#202851]
-      text-white shadow-2xl
-      flex items-center justify-center
-      transition-all duration-300 hover:scale-110
-      ${
-        isVisible
-          ? 'opacity-100 translate-y-0'
-          : 'opacity-0 translate-y-10 pointer-events-none'
-      }`}
-    >
-      <ChevronUp className="w-6 h-6" />
-    </button>
+ <button
+  onClick={scrollToTop}
+  className={`cursor-pointer fixed bottom-6 right-6 z-[9999]
+  w-14 h-14 rounded-2xl
+  bg-[#081120]
+  border border-cyan-500/30
+  text-cyan-400
+  shadow-2xl shadow-cyan-500/10
+  flex items-center justify-center
+  transition-all duration-300
+  hover:bg-cyan-500 hover:text-white
+  hover:scale-110
+  ${
+    isVisible
+      ? 'opacity-100 translate-y-0'
+      : 'opacity-0 translate-y-10 pointer-events-none'
+  }`}
+>
+  <ChevronUp className="w-6 h-6" />
+</button>
   );
 }

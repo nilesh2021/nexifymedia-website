@@ -119,59 +119,45 @@ const handleSubmit = async (e: React.FormEvent) => {
             </section>
 
             {/* JOB INFO BAR */}
-            <section className="-mt-12 relative z-10">
-                <div className="max-w-6xl mx-auto px-6">
-                    <div className="bg-white rounded-3xl shadow-xl p-8">
-                        <div className="grid md:grid-cols-4 gap-8">
+        <section className="-mt-12 relative z-10">
+  <div className="max-w-6xl mx-auto px-6">
+    <div className="bg-white rounded-3xl shadow-xl p-8">
 
-                            <div>
-                                <p className="text-slate-500 text-sm">
-                                    Location
-                                </p>
-                                <h3 className="font-bold text-xl">
-                                    Remote
-                                </h3>
-                            </div>
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
 
-                            <div>
-                                <p className="text-slate-500 text-sm">
-                                    Job Type
-                                </p>
-                                <h3 className="font-bold text-xl">
-                                    Part-Time
-                                </h3>
-                            </div>
+        <div>
+          <p className="text-slate-500 text-sm">Location</p>
+          <h3 className="font-bold text-xl">Remote</h3>
+        </div>
 
-                            <div>
-                                <p className="text-slate-500 text-sm">
-                                    Experience
-                                </p>
-                                <h3 className="font-bold text-xl">
-                                    0-2 Years
-                                </h3>
-                            </div>
+        <div>
+          <p className="text-slate-500 text-sm">Job Type</p>
+          <h3 className="font-bold text-xl">Part-Time</h3>
+        </div>
 
-                            <div>
-                                <p className="text-slate-500 text-sm">
-                                    Salary
-                                </p>
-                                <h3 className="font-bold text-xl">
-                                    ₹5K - ₹10K
-                                </h3>
-                            </div>
-                            <button
-                                type="button"
-                                onClick={() => setShowModal(true)}
-                                className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:scale-105 transition-all duration-300"
-                            >
-                                Apply Now
-                            </button>
-                        </div>
+        <div>
+          <p className="text-slate-500 text-sm">Experience</p>
+          <h3 className="font-bold text-xl">0-2 Years</h3>
+        </div>
 
+        <div>
+          <p className="text-slate-500 text-sm">Salary</p>
+          <h3 className="font-bold text-xl">₹5K - ₹10K</h3>
+        </div>
 
-                    </div>
-                </div>
-            </section>
+        <button
+          type="button"
+          onClick={() => setShowModal(true)}
+          className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:scale-105 transition-all duration-300"
+        >
+          Apply Now
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+</section>
 
             {/* CONTENT */}
             <main className="bg-slate-50 py-20">
